@@ -28,6 +28,6 @@
 	</section>
 <% end_loop %>
 <div class="global-nav show-for-large-up">
-	<img src="{$ThemeDir}/images/uiowa.png" class="uiowa" />
+	<a href="http://uiowa.edu/" class="uiowa" target="_blank"><img src="{$ThemeDir}/images/uiowa.png" /></a>
 </div>
-<a href="#{$Children.Limit(1,1).First.URLSegment}" class="show-for-large-up"><img src="{$ThemeDir}/images/arrow.png" class="arrow" /></a>
+<div class="show-for-large-up"><img src="{$ThemeDir}/images/arrow.png" class="arrow" /></div>
