@@ -28,8 +28,6 @@ module.exports = function(grunt) {
     concat: {
       js:{
         src: [
-          '<%=globalConfig.themeDir %>/vendor/ui_002.js',
-          '<%=globalConfig.themeDir %>/vendor/ui.js',
           //'<%=globalConfig.themeDir %>/bower_components/foundation/js/foundation.min.js',
           '<%=globalConfig.themeDir %>/javascript/*.js'
         ],

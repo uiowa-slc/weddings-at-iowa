@@ -3,24 +3,94 @@
 //@import "imports/styles";
 @import "imports/ui";
 
+.global-nav{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+
+	.uiowa{
+		img{
+			width: 200px;
+			display: none;
+			@media #{$large-up}{
+				display: block;
+			}
+		}
+	}
+}
+
+.arrow{
+	position: fixed;
+	bottom: 0;
+	right: 50%;
+	left: 50%;
+}
+
+
 .HomePage{
 	section{
+		&.first{
+			.content-container{
+				.logo-container{
+					@media #{$large-up}{
+						margin-top: 20px;
+					}
+				}
+			}
+		}		
 		height: 100%;
 		background-size: cover;
 		background-attachment: fixed;
+		background-position: 50% 50%;
 		.content-container{
-			background-color: rgba(255,255,255,0.85);
-			background-image: url('../images/pattern.png');
-			background-repeat: no-repeat;
-			background-position: 79% -10%;
-			background-size: contain;
+
+			background-color: rgba(255,255,255,0.92);
 			padding: 10px 0;
 			border-top: 1px solid #666;
 			border-bottom: 1px solid #666;
+			padding-bottom: 0;
+
+			text-align: center;
+			@media #{$large-up}{
+				text-align: left;
+			}
+
+			.location-text p{
+				font-size: rem-calc(18);
+			}
+
+			.button-group{
+				margin-top: 20px;
+			}
+
+			.mobile-buttons{
+				text-align: center;
+			}
 
 			.logo-container{
+				
+				@media #{$large-up}{
+					margin-top: 45px;
+					background-repeat: no-repeat;
+					background-position: 90% 0;
+					background-size: contain;
+				}
 
+				img.logo{
+					display: block;
+				}
 			}
+			.sponsors{
+				text-align: right;
+				font-size: rem-calc(17);
+				a{
+					display: inline-block;
+					&:after{
+						content: ' - '
+					}
+				}				
+			}
+
 		}
 	}
 }

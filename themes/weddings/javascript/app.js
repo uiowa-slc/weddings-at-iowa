@@ -1,3 +1,8 @@
-	        $(function() {
-	            $('#rotate > ul').tabs({ fx: { opacity: 'toggle' } }).tabs('rotate', 7000);
-	        });
+$('.arrow').click(function(){
+	$('.arrow').fadeOut();
+});
+
+$(window).scroll(function() {
+	$('.arrow').fadeOut();
+});
+
