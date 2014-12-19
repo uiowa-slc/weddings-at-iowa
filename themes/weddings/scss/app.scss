@@ -1,0 +1,26 @@
+@import "imports/settings";
+@import "foundation";
+//@import "imports/styles";
+@import "imports/ui";
+
+.HomePage{
+	section{
+		height: 100%;
+		background-size: cover;
+		background-attachment: fixed;
+		.content-container{
+			background-color: rgba(255,255,255,0.85);
+			background-image: url('../images/pattern.png');
+			background-repeat: no-repeat;
+			background-position: 79% -10%;
+			background-size: contain;
+			padding: 10px 0;
+			border-top: 1px solid #666;
+			border-bottom: 1px solid #666;
+
+			.logo-container{
+
+			}
+		}
+	}
+}
