@@ -7,14 +7,10 @@
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-
 	.uiowa{
-		img{
-			width: 200px;
-			display: none;
-			@media #{$large-up}{
-				display: block;
-			}
+		width: 170px;
+		@media #{$xlarge-up}{
+
 		}
 	}
 }

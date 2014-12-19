@@ -27,7 +27,7 @@
 		</div>
 	</section>
 <% end_loop %>
-<div class="global-nav">
-	<a href="http://uiowa.edu" class="uiowa"><img src="{$ThemeDir}/images/uiowa.png" /></a>
+<div class="global-nav show-for-large-up">
+	<img src="{$ThemeDir}/images/uiowa.png" class="uiowa" />
 </div>
-<a href="#{$Children.Limit(1,1).First.URLSegment}"><img src="{$ThemeDir}/images/arrow.png" class="arrow" /></a>
+<a href="#{$Children.Limit(1,1).First.URLSegment}" class="show-for-large-up"><img src="{$ThemeDir}/images/arrow.png" class="arrow" /></a>
