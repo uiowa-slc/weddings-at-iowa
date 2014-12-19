@@ -21,7 +21,7 @@
 				</div>
 				<div class="large-4 <% if $First %>large-pull-8<% end_if %> columns">
 				<div class="logo-container clearfix">
-					<img src="{$ThemeDir}/images/logo.png" class="logo right" alt="Logo for Weddings at Iowa" />
+					<img src="{$ThemeDir}/images/logo.png" class="logo" alt="Logo for Weddings at Iowa" />
 				</div>
 			</div>
 		</div>

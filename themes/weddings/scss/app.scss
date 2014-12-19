@@ -64,7 +64,7 @@
 			}
 
 			.logo-container{
-				
+				text-align: center;
 				@media #{$large-up}{
 					margin-top: 45px;
 					background-repeat: no-repeat;
@@ -73,7 +73,11 @@
 				}
 
 				img.logo{
-					display: block;
+
+					@media #{$large-up}{
+						display: block;
+						float: right;
+					}
 				}
 			}
 			.sponsors{
