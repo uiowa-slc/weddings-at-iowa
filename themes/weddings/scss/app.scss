@@ -36,7 +36,10 @@
 		}		
 		height: 100%;
 		background-size: cover;
-		background-attachment: fixed;
+		@media #{$large-up}{
+			background-attachment: fixed;
+		}
+
 		background-position: 50% 50%;
 		.content-container{
 
