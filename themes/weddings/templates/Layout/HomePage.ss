@@ -13,14 +13,14 @@
 					</ul>
 					<div class="mobile-buttons hide-for-large-up">
 						<hr />
-						<a href="#">Iowa Memorial Union</a>, 
-						<a href="#">University Catering</a>, 
-						<a href="#">Iowa House Hotel</a>, 
-						<a href="#">The University Club</a>
+						<a href="http://imu.uiowa.edu/event-services/weddings/" target="_blank">Iowa Memorial Union</a>, 
+						<a href="http://catering.uiowa.edu/weddings" target="_blank">University Catering</a>, 
+						<a href="http://iowahousehotel.com/" target="_blank">Iowa House Hotel</a>, 
+						<a href="http://uclub.uiowa.edu/weddings/" target="_blank">The University Club</a>
 					</div>
 				</div>
 				<div class="large-4 <% if $First %>large-pull-8<% end_if %> columns">
-				<div class="logo-container clearfix">
+				<div class="logo-container clearfix <% if not First %>show-for-large-up<% end_if %>">
 					<img src="{$ThemeDir}/images/logo.png" class="logo" alt="Logo for Weddings at Iowa" />
 				</div>
 			</div>
