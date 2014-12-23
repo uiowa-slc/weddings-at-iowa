@@ -20,11 +20,11 @@ class HomePageTab extends SiteTree {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldToTab('Root.Main', new TextField('LocationTitle', 'Bold First Title:'));
+		//$fields->addFieldToTab('Root.Main', new TextField('LocationTitle', 'Location name:'));
 		$fields->addFieldToTab('Root.Main', new TextField('LocationLink', 'Location URL'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('LocationText', 'Secondary Title:'));
-		$fields->addFieldToTab('Root.Images', new UploadField('FeatureImage', 'Feature Box Image'));
-		$fields->removeFieldFromTab("Root.Content", "Content");
+		$fields->addFieldToTab('Root.Main', new UploadField('FeatureImage', 'Location Large Image'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('LocationText', 'Location text:'));
+		$fields->removeByName("Content");
 
 		return $fields;
 

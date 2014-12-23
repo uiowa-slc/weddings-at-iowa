@@ -34,7 +34,7 @@
 				}
 			}
 		}		
-		height: 100%;
+		min-height: 800px;
 		background-size: cover;
 		@media #{$large-up}{
 			background-attachment: fixed;
@@ -47,11 +47,10 @@
 			padding: 10px 0;
 			border-top: 1px solid #666;
 			border-bottom: 1px solid #666;
-			padding-bottom: 0;
-
 			text-align: center;
 			@media #{$large-up}{
 				text-align: left;
+				padding-bottom: 0;
 			}
 
 			.location-text p{
@@ -60,6 +59,13 @@
 
 			.button-group{
 				margin-top: 20px;
+				.button.small{
+					font-size: rem-calc(13);
+					@media #{$xlarge-up}{
+						font-size: rem-calc(16);
+					}
+
+				}
 			}
 
 			.mobile-buttons{
