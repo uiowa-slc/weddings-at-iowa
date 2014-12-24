@@ -34,7 +34,7 @@
 				}
 			}
 		}		
-		min-height: 800px;
+		min-height: 1300px;
 		background-size: cover;
 		@media #{$large-up}{
 			background-attachment: fixed;
@@ -87,7 +87,7 @@
 
 					@media #{$large-up}{
 						display: block;
-						height: 150px;
+						height: auto;
 						float: right;
 					}
 				}
