@@ -14,12 +14,20 @@
 		}
 	}
 }
+.arrow-container{
+	position: fixed;
+    bottom: 20%; /* or whatever position is desired */
+    left: 0;
+    right: 0;
+    height: 0;
+    /* center all inline content */
+    text-align: center;
+}
 
 .arrow{
-	position: fixed;
-	bottom: 0;
-	right: 50%;
-	left: 50%;
+  display: inline-block;
+    /* reset container's center alignment */
+    text-align: left;
 }
 
 
@@ -34,10 +42,11 @@
 				}
 			}
 		}		
-		min-height: 1300px;
+		min-height: 1200px;
 		background-size: cover;
 		@media #{$large-up}{
 			background-attachment: fixed;
+			min-height: 1300px;
 		}
 
 		background-position: 50% 50%;

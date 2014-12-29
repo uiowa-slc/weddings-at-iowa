@@ -30,4 +30,4 @@
 <div class="global-nav show-for-large-up">
 	<a href="http://uiowa.edu/" class="uiowa" target="_blank"><img src="{$ThemeDir}/images/uiowa.png" /></a>
 </div>
-<div class="show-for-large-up"><img src="{$ThemeDir}/images/arrow.png" class="arrow" /></div>
+<div class="arrow-container"><img src="{$ThemeDir}/images/arrow.png" class="arrow" /></div>
