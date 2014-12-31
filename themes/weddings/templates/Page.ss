@@ -13,6 +13,8 @@
 	<title>$SiteConfig.Title - The University of Iowa</title>
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/app.css" />
 	<script src="{$ThemeDir}/bower_components/modernizr/modernizr.js"></script>
+	<script src="//use.typekit.net/vds3rxz.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body class="$ClassName">
