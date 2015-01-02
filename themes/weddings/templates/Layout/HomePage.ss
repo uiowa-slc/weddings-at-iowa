@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="large-8 <% if $First %>large-push-4<% end_if %> columns">
 					<h2>$Title</h2>
-					<div class="location-text">$LocationText.Summary(100) <a href="$LocationLink">Learn More</a></div>
+					<div class="location-text">$LocationText.Summary(100) <% if not $First %><a href="$LocationLink">Learn More</a><% else %>Scroll down to learn more.<% end_if %></div>
 					<ul class="button-group show-for-large-up round">
 						<li><a href="http://imu.uiowa.edu/event-services/weddings/" class="button small" target="_blank">Iowa Memorial Union</a></li>
 						<li><a href="http://catering.uiowa.edu/weddings" class="button small" target="_blank">University Catering</a></li>
