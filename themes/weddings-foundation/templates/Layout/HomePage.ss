@@ -8,13 +8,13 @@
 	
 	<ul class="resource-card-list">
 		<h5>Venues</h5>
-		<% loop $getVenues %>
+		<% loop $getVenues.Limit(4) %>
 	  		<% include card %>
 	  	<% end_loop %>
 	</ul>
 	<ul class="resource-card-list">
 		<h5>Services</h5>
-		 <% loop $getServices %>
+		 <% loop $getServices.Limit(4) %>
 	  		<% include card %>
 	  	<% end_loop %>
 	</ul>
