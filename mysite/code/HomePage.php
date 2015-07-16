@@ -29,7 +29,19 @@ class HomePage extends Page {
 class HomePage_Controller extends Page_Controller {
 	public function Tabs(){
       return HomePageTab::get()->filter(array('ParentID' => $this->ID));
-	}	
+	}
+
+
+   public function getVenues(){
+      $venues = VenuePage::get();
+      return $venues;
+
+   }	
+
+   public function getServices(){
+      $services = ServicePage::get();
+      return $services;
+   }
 }
 
 

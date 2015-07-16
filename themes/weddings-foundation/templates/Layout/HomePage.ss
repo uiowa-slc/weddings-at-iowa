@@ -7,24 +7,16 @@
 <div class="row">
 	
 	<ul class="resource-card-list">
-
-		<% with Page("venues") %>
+		<h5>Venues</h5>
+		<% loop $getVenues %>
 	  		<% include card %>
-	  	<% end_with %>
+	  	<% end_loop %>
 	</ul>
 	<ul class="resource-card-list">
-	  <li class="resource-card"><img src="http://lorempixel.com/200/200/"><h2>Lorem ipsum dolor sit amet</h2>
-
-	</li>
-	  <li class="resource-card"><img src="http://lorempixel.com/200/200/"><h2>Lorem ipsum dolor sit amet</h2>
-
-	</li>
-	  <li class="resource-card"><img src="http://lorempixel.com/200/200/"><h2>Lorem ipsum dolor sit amet</h2>
-
-	</li>
-	  <li class="resource-card"><img src="http://lorempixel.com/200/200/"><h2>Lorem ipsum dolor sit amet</h2>
-
-	</li>
+		<h5>Services</h5>
+		 <% loop $getServices %>
+	  		<% include card %>
+	  	<% end_loop %>
 	</ul>
 
 </div>
