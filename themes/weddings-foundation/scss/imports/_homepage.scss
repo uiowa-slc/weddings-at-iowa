@@ -1,0 +1,32 @@
+.HomePage {
+    .bg-container {
+        background-image: url("http://lorempixel.com/1920/1080/");
+        background-color: #333;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 700px;
+        margin-bottom: 50px;
+        @media #{$medium-up} {
+            min-height: 600px;
+        }
+    }
+    .tagline {
+        padding-top: 250px;
+        font-size: rem-calc(36);
+        line-height: 1em;
+        @media #{$medium-up} {
+            font-size: rem-calc(72);
+            line-height: 0.9em;
+        }
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        
+       
+    }
+   
+
+      
+}

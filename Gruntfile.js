@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   var globalConfig = {
-    themeDir: 'themes/weddings'
+    themeDir: 'themes/weddings-foundation'
   };
 
   // Project configuration.

@@ -1,0 +1,47 @@
+.resource-card-list{
+	list-style-type: none; 
+	margin: 0;
+	padding: 0;
+	@include block-grid(
+		$per-row: 4
+	);
+
+
+	@media #{$large-up}{
+		@include block-grid(
+			$per-row: 4
+		);
+
+	}
+
+	&.small{
+		@include block-grid(
+			$per-row: 2
+		);
+
+
+	}
+
+	.resource-card{
+		margin-bottom: 0;
+	}
+
+	li{
+		list-style-type: none; 
+		
+
+		a{
+			color: $body-font-color;
+
+		}
+		span{
+			color: $anchor-font-color;
+		}
+	}
+
+	li img{
+		display: block;
+	}
+
+
+}
