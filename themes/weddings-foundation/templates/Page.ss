@@ -18,14 +18,16 @@
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
+	<script src="//use.typekit.net/vds3rxz.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
 </head>
 <body class="$ClassName.ATT">
-
+	<%-- include DivisionBarFoundation --%>
 	<header class="header" role="banner">
-		<div class="fixed contain-to-grid">
-			<% include TopBar %>
-		</div>
+		<div class="row text-center">
+			<a href="#"><img src="{$ThemeDir}/images/logo.png" /></a>
+		</div>	
 	</header>
 
 	<div class="main typography" role="main">

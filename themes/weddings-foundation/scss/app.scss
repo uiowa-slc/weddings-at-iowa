@@ -1,11 +1,14 @@
+
 @import "settings";
 @import "foundation";
+
 @import "imports/homepage";
 @import "imports/cards";
 @import "imports/serviceholder";
 @import "imports/venueholder";
+@import "imports/flexslider";
 
 .main {
-	padding-top: 32px;
+	//padding-top: 32px;
 	min-height: 320px;
 }

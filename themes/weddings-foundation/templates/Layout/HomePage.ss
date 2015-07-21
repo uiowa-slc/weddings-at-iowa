@@ -1,4 +1,3 @@
-<h1 class="header">Marraige at Iowa</h1>
 <div class="bg-container">
 	<span class="tagline">GET MARRIED TODAY</span>
 		

@@ -28,7 +28,8 @@ module.exports = function(grunt) {
     concat: {
       js:{
         src: [
-          //'<%=globalConfig.themeDir %>/bower_components/foundation/js/foundation.min.js',
+         // '<%=globalConfig.themeDir %>/bower_components/foundation/js/foundation.min.js',
+          '<%=globalConfig.themeDir %>/bower_components/flexslider/jquery.flexslider.js',
           '<%=globalConfig.themeDir %>/javascript/*.js'
         ],
         dest: '<%=globalConfig.themeDir %>/build/build.src.js'
