@@ -29,7 +29,8 @@ module.exports = function(grunt) {
       js:{
         src: [
          // '<%=globalConfig.themeDir %>/bower_components/foundation/js/foundation.min.js',
-          '<%=globalConfig.themeDir %>/bower_components/flexslider/jquery.flexslider.js',
+         // '<%=globalConfig.themeDir %>/bower_components/flexslider/jquery.flexslider.js',
+          '<%=globalConfig.themeDir %>/bower_components/flickity/dist/flickity.pkgd.js',
           '<%=globalConfig.themeDir %>/javascript/*.js'
         ],
         dest: '<%=globalConfig.themeDir %>/build/build.src.js'

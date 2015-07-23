@@ -27,6 +27,26 @@
        
     }
    
+   .homepage-hero-slider{
+        .cell{
+            width: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        .homepage-hero-slider-content {
+            padding: 300px 0;
+            text-align: center;
+            font-size: rem-calc(32);
+
+            p{
+                font-size: rem-calc(48);
+                color: black;
+               background: rgba(#fff, 0.5);
+
+            }
+        }
+   }
 
       
 }

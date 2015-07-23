@@ -1,5 +1,7 @@
 <li class="resource-card">
 	<a href='{$URLSegment}'>
-	<img src="http://lorempixel.com/200/200/">
-	<h2>$Title</h2></a>
+	<img src="http://lorempixel.com/500/300/" data-pin-hover="true">
+	<h3>$Title</h3>
+	<p> Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis.</p>
+	</a>
 </li>

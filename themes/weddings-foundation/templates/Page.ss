@@ -4,7 +4,11 @@
 	<% base_tag %>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> - $SiteConfig.Title</title>
+	<% if $URLSegment = 'home' %>
+		<title>$SiteConfig.Title - The University of Iowa</title>
+	<% else %>
+		<title>$Title - $SiteConfig.Title - The University of Iowa</title>
+	<% end_if %>
 	<meta name="description" content="$MetaDescription.ATT" />
 	<%--http://ogp.me/--%>
 	<meta property="og:site_name" content="$SiteConfig.Title.ATT" />
@@ -26,9 +30,24 @@
 	<%-- include DivisionBarFoundation --%>
 	<header class="header" role="banner">
 		<div class="row text-center">
-			<a href="#"><img src="{$ThemeDir}/images/logo.png" /></a>
+			<a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a>
 		</div>	
 	</header>
+
+	<!--<div class="cbp-af-header">
+		<div class="cbp-af-inner">
+			<h1><a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a></h1>
+			<nav>
+				<a href="#">Broccoli</a>
+				<a href="#">Almonds</a>
+				<a href="#">Pears</a>
+				<a href="#">Oranges</a>
+			</nav>
+		</div>
+	</div>-->
+
+
+
 
 	<div class="main typography" role="main">
 		$Layout
@@ -60,6 +79,8 @@
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
-	<script src="$ThemeDir/javascript/app.js"></script>
+	<script src="$ThemeDir/build/build.src.js"></script>
+	<!-- Please call pinit.js only once per page -->
+	<script type="text/javascript" async defer  data-pin-color="white" data-pin-height="28" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
 </body>
 </html>

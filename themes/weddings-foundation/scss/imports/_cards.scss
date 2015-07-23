@@ -1,16 +1,21 @@
 .resource-card-list{
 	list-style-type: none; 
 	margin: 0;
-	padding: 0;
+	
 	@include block-grid(
-		$per-row: 4
+		$per-row: 1
 	);
 
-
+	@media #{$medium-up}{
+		@include block-grid(
+			$per-row: 2
+		);
+	}
 	@media #{$large-up}{
 		@include block-grid(
 			$per-row: 4
 		);
+		padding: 0 $column-gutter/2;
 
 	}
 
