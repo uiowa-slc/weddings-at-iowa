@@ -7,10 +7,17 @@
 		"silverstripe/framework": "3.1.13",
 		"silverstripe-themes/simple": "*",
 		"silverstripe/userforms": "*",
-		"silverstripe/tagfield": "*"
+		"silverstripe/tagfield": "*",
+		"md/division-bar" : "*"
 	},
 	"config": {
 		"process-timeout": 600	
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"       
+        }
+    ]
 }

@@ -8,7 +8,11 @@
 @import "imports/serviceholder";
 @import "imports/venueholder";
 @import "imports/flickity";
+@import "layout/footer/config";
+@import "layout/footer/footer";
 
+@import "../../../division-bar/scss/division-bar-foundation";
+@import "../../../division-bar/scss/md-bar";
 .main {
 	//padding-top: 32px;
 	min-height: 320px;

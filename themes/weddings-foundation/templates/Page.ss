@@ -27,7 +27,7 @@
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
 </head>
 <body class="$ClassName.ATT">
-	<%-- include DivisionBarFoundation --%>
+	<% include DivisionBarFoundation %>
 	<header class="header" role="banner">
 		<div class="row text-center">
 			<a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a>
@@ -60,14 +60,9 @@
 			</div>
 		</div>
 	</nav>
+	<% include Footer %>
+	<% include MdBar %>
 
-	<footer class="footer" role="contentinfo">
-		<div class="row">
-			<div class="large-12 columns">
-				<p>&copy; $Now.Year $SiteConfig.Title</p>
-			</div>
-		</div>
-	</footer>
 
 	<%--Login Modal--%>
 	<div id="login-form-modal" class="reveal-modal medium" data-reveal>
