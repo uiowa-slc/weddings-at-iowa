@@ -4,6 +4,7 @@
   "private": "true",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "flickity": "~1.1.0"
+    "flickity": "~1.1.0",
+    "blazy" : "*"
   }
 }

@@ -7,6 +7,16 @@ $('#start-jr').on('click', function() {
 	$(document).foundation('joyride','start');
 });
 
+
+var bLazy = new Blazy({
+  selector: 'img,.lazy',
+    breakpoints: [{
+        width: 420 // max-width
+        ,
+        src: 'data-src-small'
+    }
+   ]
+});
 // Can also be used with $(document).ready()
 $(window).load(function() {
 

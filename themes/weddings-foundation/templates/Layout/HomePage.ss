@@ -1,6 +1,6 @@
 <div class="gallery homepage-hero-slider">
 
-    <div data-pin-hover="true" class="cell" style="background-image: url('{$ThemeDir}/images/home-slider-1.jpg')">
+    <div data-pin-hover="true" class="cell lazy" data-src="{$ThemeDir}/images/home-slider-1.jpg">
     	<div class="homepage-hero-slider-content" >
 	    	<p>Plan your big day, the Iowa way.</p>
 	    	<a href="#" class="button large">Learn more about Danforth Chapel</a>
