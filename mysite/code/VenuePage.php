@@ -4,6 +4,7 @@ class VenuePage extends Page {
 
 	private static $many_many = array (
 		'Services' => 'ServicePage',
+		'Testimonial' => 'Testimonial',
 
 
 	);

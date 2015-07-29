@@ -7,10 +7,15 @@ class Testimonial extends DataObject {
 
 	);
 
+	private static $has_one = array (
+		'Image' => 'Image',
+	);
+
 	private static $db = array (
 		'Quote' => 'Text',
 		'Name' => 'Text',
-		'Photo' => 'Photo',
+		
+		
 	);
 
 }

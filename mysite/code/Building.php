@@ -1,14 +1,14 @@
 <?php
-class Building extends DataOject {
+class Building extends DataObject {
 
-	private static $has_many = array (
+	private static $has_one = array (
 		'Venues' => 'VenuePage',
-
+		
 		);
 
 
 	private static $db = array (
-		'Title' => 'Integer',
+		'Title' => 'Text',
 		'Description' => 'HTMLText',
 		'WebsiteLink' => 'Text',
 

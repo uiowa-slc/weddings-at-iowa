@@ -11,9 +11,9 @@ class HomePage extends Page {
       'Content4' => 'HTMLText',
      
    );
-   private static $has_one = array(
- 
-   );
+   // private static $has_one = array(
+   //    'Image' => 'Image',
+   // );
 
    private static $allowed_children = array('HomePageTab');
    
@@ -42,9 +42,14 @@ class HomePage_Controller extends Page_Controller {
       $services = ServicePage::get();
       return $services;
    }
+
+   public function getTestimonials() {
+      $testimonials = Testimonial::get()->limit(20);
+      return $testimonials;
+   }
+
+
+
 }
-
-
-
 
 ?>
