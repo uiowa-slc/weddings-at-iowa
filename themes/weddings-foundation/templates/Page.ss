@@ -27,24 +27,36 @@
 	<!--<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>-->
 </head>
 <body class="$ClassName.ATT">
-	<% include DivisionBarFoundation %>
-	<header class="header" role="banner">
+	<%-- include DivisionBarFoundation --%>
+	<!--<header class="header" role="banner">
 		<div class="row text-center">
 			<a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a>
 		</div>	
-	</header>
+	</header>-->
 
-	<!--<div class="cbp-af-header">
+	<div class="cbp-af-header">
 		<div class="cbp-af-inner">
-			<h1><a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a></h1>
-			<nav>
+
+			<div class="row">
+				<div class="large-3 columns dept-logo text-left">
+					<p><img src="{$ThemeDir}/images/uiowa.png" alt="The University of Iowa" /></p>
+				</div>
+				<div class="large-6 columns">
+					<h1 class="text-center"><a href="{$BaseHref}">Weddings <small><em>at</em></small> Iowa</a></h1>
+				</div>
+				<div class="large-3 columns dept-logo">
+				<p class="text-right"><img src="{$ThemeDir}/images/dsl.png" alt="Division of Student Life" /></p>
+				</div>					
+			</div>
+
+			<!--<nav>
 				<a href="#">Broccoli</a>
 				<a href="#">Almonds</a>
 				<a href="#">Pears</a>
 				<a href="#">Oranges</a>
-			</nav>
+			</nav>-->
 		</div>
-	</div>-->
+	</div>
 
 
 
@@ -53,23 +65,10 @@
 		$Layout
 	</div>
 
-	<nav role="navigation">
-		<div class="row">
-			<div class="large-12 columns">
-				<% include Breadcrumbs %>
-			</div>
-		</div>
-	</nav>
 	<% include Footer %>
 	<% include MdBar %>
 
 
-	<%--Login Modal--%>
-	<div id="login-form-modal" class="reveal-modal medium" data-reveal>
-		<h2>Login</h2>
-		$LoginForm
-		<a class="close-reveal-modal">&#215;</a>
-	</div>
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

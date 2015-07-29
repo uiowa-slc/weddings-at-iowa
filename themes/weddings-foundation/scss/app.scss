@@ -13,7 +13,14 @@
 
 @import "../../../division-bar/scss/division-bar-foundation";
 @import "../../../division-bar/scss/md-bar";
+
 .main {
-	//padding-top: 32px;
+	padding-top: 200px;
 	min-height: 320px;
+}
+
+
+
+h2{
+	text-transform: uppercase;
 }

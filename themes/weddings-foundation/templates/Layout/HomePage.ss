@@ -15,7 +15,6 @@
 </div>
 <div class="row">
 	<div class="large-12 columns">
-		<hr />
 		<ul class="resource-card-list">
 			<h2 class="text-center">Featured Venues</h2>
 			<% loop $Venues.Limit(4) %>
