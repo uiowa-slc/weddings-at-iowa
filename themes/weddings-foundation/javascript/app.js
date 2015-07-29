@@ -2,11 +2,6 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-// trigger for joyride demo in KitchenSink demo
-$('#start-jr').on('click', function() {
-	$(document).foundation('joyride','start');
-});
-
 
 var bLazy = new Blazy({
   selector: 'img,.lazy',
@@ -104,7 +99,7 @@ var flky = new Flickity( '.gallery', {
 
 
 
-
+/*
 var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,
@@ -138,4 +133,4 @@ var cbpAnimatedHeader = (function() {
 
 	init();
 
-})();
+})();*/

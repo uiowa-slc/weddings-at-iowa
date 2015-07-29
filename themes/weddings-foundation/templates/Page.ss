@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 	<script src="//use.typekit.net/vds3rxz.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
+	<!--<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>-->
 </head>
 <body class="$ClassName.ATT">
 	<% include DivisionBarFoundation %>
@@ -72,8 +72,7 @@
 	</div>
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
-	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="$ThemeDir/build/build.src.js"></script>
 	<!-- Please call pinit.js only once per page -->
 	<script type="text/javascript" async defer  data-pin-color="white" data-pin-height="28" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
