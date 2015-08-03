@@ -38,14 +38,14 @@
 		<div class="cbp-af-inner">
 
 			<div class="row">
-				<div class="large-3 columns dept-logo text-left">
+				<div class="xlarge-3 medium-2 columns dept-logo uiowa">
 					<p><img src="{$ThemeDir}/images/uiowa.png" alt="The University of Iowa" /></p>
 				</div>
-				<div class="large-6 columns">
+				<div class="xlarge-6 medium-8 columns">
 					<h1 class="text-center"><a href="{$BaseHref}">Weddings <small><em>at</em></small> Iowa</a></h1>
 				</div>
-				<div class="large-3 columns dept-logo">
-				<p class="text-right"><img src="{$ThemeDir}/images/dsl.png" alt="Division of Student Life" /></p>
+				<div class="xlarge-3 medium-2 columns dept-logo dsl">
+				<p><img src="{$ThemeDir}/images/dsl.png" alt="Division of Student Life" /></p>
 				</div>					
 			</div>
 
