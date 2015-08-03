@@ -4,6 +4,15 @@
     	<div class="homepage-hero-slider-content" >
 	    	<p>Plan your big day, the Iowa way.</p>
 	    	<a href="#" class="button large">Learn more about Danforth Chapel</a>
+
+
+	    	<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fweddingsatiowa.com%2F&media=http%3A%2F%2Fweddingsatiowa.com%2Fassets%2FUploads%2F9622071955-25c89f8b78-k.jpg&description=Next%20stop%3A%20Pinterest" class="button" >Pin Danforth Chapel</a>
+
+
+<!-- Please call pinit.js only once per page -->
+<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+
+
     	</div>
     </div>
     <div data-pin-hover="true" class="cell" style="background-image: url('{$ThemeDir}/images/home-slider-2.jpg')">
@@ -51,6 +60,8 @@
 	</div>
 
 </div>
+
+
 
 <%-- 
 
