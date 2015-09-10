@@ -21,8 +21,6 @@
   <figure class="pic-3"></figure>
   <figure class="pic-4"></figure>
 </div>
-
-<hr />
 <div class="testimonial-container" style="background-image: url('{$ThemeDir}/images/home-slider-2.jpg')">
 	<% loop $Testimonials.Limit(1) %>
 		<% include TestimonialCard %>
