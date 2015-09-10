@@ -48,13 +48,6 @@
 				<p><img src="{$ThemeDir}/images/dsl.png" alt="Division of Student Life" /></p>
 				</div>					
 			</div>
-
-			<!--<nav>
-				<a href="#">Broccoli</a>
-				<a href="#">Almonds</a>
-				<a href="#">Pears</a>
-				<a href="#">Oranges</a>
-			</nav>-->
 		</div>
 	</div>
 

@@ -1,7 +1,7 @@
 $header-height-md: 100px;
 $header-height-md-shrink: 45px;
 
-$header-height-lg: 200px;
+$header-height-lg: 150px;
 $header-height-lg-shrink: 100px;
 
 .cbp-af-header {
@@ -9,7 +9,7 @@ $header-height-lg-shrink: 100px;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: rgba($white, 0.9);
+	background: rgba($white, 0.75);
 	z-index: 10000;
 	transition: height 0.3s;
 	@media #{$medium-up}{
@@ -81,10 +81,10 @@ $header-height-lg-shrink: 100px;
 		display: block;
 		font-family: classico-urw;
 		text-align: center;
-		
+		font-size: rem-calc(24);
 		@media #{$medium-up}{
 			line-height: $header-height-md;
-			font-size: rem-calc(38);
+			font-size: rem-calc(32);
 		}
 		@media #{$large-up}{
 			margin: 0;

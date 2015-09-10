@@ -5,6 +5,7 @@
 @import "imports/header";
 @import "imports/homepage";
 @import "imports/cards";
+@import "imports/testimonials";
 @import "imports/serviceholder";
 @import "imports/venueholder";
 @import "imports/flickity";
@@ -22,5 +23,10 @@
 
 
 h2{
+	text-transform: uppercase;
+}
+
+button, .button{
+	font-family: $header-font-family;
 	text-transform: uppercase;
 }
