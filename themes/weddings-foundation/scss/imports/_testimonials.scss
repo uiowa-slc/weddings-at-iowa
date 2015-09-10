@@ -1,0 +1,21 @@
+.testimonial-container{
+		background-size: cover;
+		background-position: 50% 50%;
+	.testimonial{
+		padding: $column-gutter 0;
+		background: rgba(#333, 0.7);
+		@media #{$large-up}{
+			padding: 100px 0;
+		}
+
+	}
+	.testimonial .quote{
+		padding: rem-calc(48) rem-calc(22);
+		color: white;
+		font-size: rem-calc(48);
+		
+		
+	}
+
+
+}
