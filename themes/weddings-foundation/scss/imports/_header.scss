@@ -10,9 +10,9 @@ $header-height-lg-shrink: 100px;
 	left: 0;
 	width: 100%;
 	background: rgba($white, 0.75);
-	z-index: 10000;
+	z-index: 1000;
 	transition: height 0.3s;
-	z-index: 1;
+	
 	@media #{$medium-up}{
 		height: $header-height-md;
 		position: fixed;

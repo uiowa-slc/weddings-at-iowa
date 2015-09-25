@@ -16,22 +16,21 @@
 </div>--%>
 
 <div class="pic-wrapper">
+	<div class="pic-wrapper-content-container">
+		<div class="row">
+			<div class="large-12 columns">
+				<p class="text-center">Test content</p>
+			</div>
+		</div>
+	</div>
   <figure class="pic-1"></figure>
   <figure class="pic-2"></figure>
   <figure class="pic-3"></figure>
   <figure class="pic-4"></figure>
 </div>
-<div class="testimonial-container" style="background-image: url('{$ThemeDir}/images/home-slider-2.jpg')">
-	<% loop $Testimonials.Limit(1) %>
-		<% include TestimonialCard %>
-  	<% end_loop %>
-</div>
+
 <div class="row">
 	<div class="large-12 columns">
-
-
-			<p class="text-center"><a href="testimonials/">See what people are saying &rarr;</a></p>
-
 		<ul class="resource-card-list">
 			<h2 class="text-center section-title">Featured venues</h2>
 			<% loop $Venues.Limit(4) %>
@@ -46,20 +45,11 @@
 		  	<% end_loop %>
 		  	<p class="text-center"><a href="services/">See all services &rarr;</a></p>
 		</ul>
-		
-
 	</div>
-
 </div>
-
-
-
-<%-- 
-
-		<ul class="resource-card-list">
-			<h2 class="text-center">Featured Testimonials</h2>
-			<% loop $Testimonials.Limit(4) %>
-		  		<% include Card %>
-		  		
-		  	<% end_loop %>
-		</ul> --%>
+<div class="testimonial-container" style="background-image: url('{$ThemeDir}/images/home-slider-2.jpg')">
+	<% loop $Testimonials.Limit(1) %>
+		<% include TestimonialCard %>
+  	<% end_loop %>
+	<p class="text-center"><a href="testimonials/">See what people are saying &rarr;</a></p>
+</div>
