@@ -96,6 +96,11 @@
   overflow: hidden;
   position: relative;
 
+  @media #{$medium-up}{
+    height: 500px;
+
+  }
+
   @media #{$large-up}{
     height: 800px;
   }
@@ -125,6 +130,20 @@ figure {
   -moz-animation: slideShow 24s linear infinite 0s;
   -webkit-animation: slideShow 24s linear infinite 0s;
   margin: 0;
+
+  background-position: 50% 0;
+  background-attachment: fixed;
+  background-size: 300%;
+  background-repeat: no-repeat;
+
+  @media #{$large-up}{
+    background-position: 50% 50%;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+//  background: url(../images/home-slider-1.jpg) no-repeat center center fixed;
 }
 
 figurecaption {
@@ -136,11 +155,8 @@ figurecaption {
 
 .pic-1 {
   opacity: 1;
-  background: url(../images/home-slider-1.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../images/home-slider-1.jpg);
+
 }
 
 .pic-2 {
@@ -148,11 +164,8 @@ figurecaption {
   -o-animation-delay: 6s;
   -moz--animation-delay: 6s;
   -webkit-animation-delay: 6s;
-  background: url(../images/home-slider-2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../images/home-slider-2.jpg);
+
 }
 
 .pic-3 {
@@ -160,11 +173,8 @@ figurecaption {
   -o-animation-delay: 12s;
   -moz--animation-delay: 12s;
   -webkit-animation-delay: 12s;
-  background: url(../images/home-slider-3.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../images/home-slider-3.jpg);
+
 }
 
 .pic-4 {
@@ -172,11 +182,8 @@ figurecaption {
   -o-animation-delay: 18s;
   -moz--animation-delay: 18s;
   -webkit-animation-delay: 18s;
-  background: url(../images/home-slider-2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../images/home-slider-2.jpg);
+
 }
 
 
