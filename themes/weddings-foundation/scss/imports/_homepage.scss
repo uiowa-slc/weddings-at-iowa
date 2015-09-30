@@ -5,23 +5,23 @@
 
 
     .cbp-af-header {
-        opacity: 0;
+        //opacity: 0;
         animation: headershow;
         animation-duration: 1s; 
         animation-timing-function: ease-out; 
-        animation-delay: 6.5s;
+        animation-delay: 0.6s;
         -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
         animation-fill-mode: forwards;
     }
 
-    @keyframes headershow {
+   /* @keyframes headershow {
       0% {
        opacity: 0;
       }
       100% {
         opacity: 1;
       }
-    }
+    }*/
     .bg-container {
         background-image: url("http://lorempixel.com/1920/1080/");
         background-color: #333;
@@ -70,6 +70,15 @@
         .homepage-hero-slider-content {
             padding: 300px 0;
             padding-top: 100px;
+            width: 100%;
+            font-family: $header-font-family;
+
+            h2{
+              font-size: rem-calc(64);
+            }
+            h1,h2,h3{
+              color: white;
+            }
             @media #{$medium-up} {
                 padding-top: 400px;
             }
@@ -81,6 +90,7 @@
                 color: white;
                background: rgba(#000, 0.5);
                line-height: 1;
+               padding: 20px;
 
             }
         }
@@ -92,8 +102,40 @@
 .pic-wrapper {
   //position: absolute;
   width: 100%;
-  height: 1000px;
+  height: 300px;
   overflow: hidden;
+  position: relative;
+
+  @media #{$medium-up}{
+    height: 500px;
+
+  }
+
+  @media #{$large-up}{
+    height: 800px;
+  }
+  .pic-wrapper-content-container{
+    position: absolute;
+    top: 50%;
+    //left: 50%;
+    z-index: 99;
+    color: white;
+    padding: 10px;
+    background-color: rgba(#333, 0.7);
+    width: 100%;
+    font-family: $header-font-family;
+
+    a{
+      color: lighten($anchor-font-color, 20);
+    }
+
+    h2{
+      font-size: rem-calc(64);
+    }
+    h1,h2,h3{
+      color: white;
+    }
+  }
 }
 
 figure {
@@ -110,6 +152,39 @@ figure {
   -moz-animation: slideShow 24s linear infinite 0s;
   -webkit-animation: slideShow 24s linear infinite 0s;
   margin: 0;
+
+
+  background-position: 50% 0;
+  background-attachment: fixed;
+  background-size: 300%;
+  background-repeat: no-repeat;
+
+  @media #{$large-up}{
+    background-position: 50% 50%;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .pin-button-container{
+    display: none;
+  }
+
+  &:hover{
+      .pin-button-container{
+        display: block;
+        position: absolute;
+        color: white;
+        font-size: 32px;
+        font-family: $header-font-family;
+        padding: 10px;
+        border: 3px solid white;
+        top: 20%;
+        left: 25%;
+      }
+  }
+
 }
 
 figurecaption {
@@ -121,11 +196,8 @@ figurecaption {
 
 .pic-1 {
   opacity: 1;
-  background: url(../images/home-slider-1.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../images/home-slider-1.jpg);
+
 }
 
 .pic-2 {
@@ -133,11 +205,8 @@ figurecaption {
   -o-animation-delay: 6s;
   -moz--animation-delay: 6s;
   -webkit-animation-delay: 6s;
-  background: url(../images/home-slider-2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../images/home-slider-2.jpg);
+
 }
 
 .pic-3 {
@@ -145,11 +214,8 @@ figurecaption {
   -o-animation-delay: 12s;
   -moz--animation-delay: 12s;
   -webkit-animation-delay: 12s;
-  background: url(../images/home-slider-3.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../images/home-slider-3.jpg);
+
 }
 
 .pic-4 {
@@ -157,11 +223,8 @@ figurecaption {
   -o-animation-delay: 18s;
   -moz--animation-delay: 18s;
   -webkit-animation-delay: 18s;
-  background: url(../images/home-slider-2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: url(../images/home-slider-2.jpg);
+
 }
 
 
