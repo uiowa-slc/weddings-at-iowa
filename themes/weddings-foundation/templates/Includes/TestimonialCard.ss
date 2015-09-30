@@ -5,7 +5,7 @@
 
 		<p class="quote">"Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. - $Title</p>
 
-		<span class="button">Keep reading...</span>
+		<div class="text-center"><span class="button">Keep reading...</span></div>
 
 		</div>
 	</div>
