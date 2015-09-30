@@ -1,6 +1,6 @@
 {
   "name": "flickity",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Touch, responsive, flickable galleries",
   "main": [
     "js/index.js",
@@ -14,7 +14,7 @@
     "get-style-property": "~1.0.4",
     "doc-ready": "~1.0.4",
     "classie": "~1.0.1",
-    "unidragger": "~1.1.2",
+    "unidragger": "~1.1.5",
     "fizzy-ui-utils": "~1.0.0",
     "tap-listener": "~1.1.1"
   },
@@ -52,14 +52,13 @@
     "notes.md"
   ],
   "homepage": "https://github.com/metafizzy/flickity",
-  "_release": "1.1.0",
+  "_release": "1.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.1.0",
-    "commit": "9136a51e2e9201434e6ba94056c130c3290385e2"
+    "tag": "v1.1.1",
+    "commit": "489521728e4c497bc130c47b0b24f62334c731ef"
   },
   "_source": "git://github.com/metafizzy/flickity.git",
   "_target": "~1.1.0",
-  "_originalSource": "flickity",
-  "_direct": true
+  "_originalSource": "flickity"
 }

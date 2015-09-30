@@ -51,8 +51,9 @@ http://flickity.metafizzy.co
   height: 63px;
   border: none;
   border-radius: 50%;
-  background: white;
-  background: hsla(0, 0%, 100%, 0.75);
+  background: none;
+  //background: white;
+  //background: hsla(0, 0%, 100%, 0.75);
   cursor: pointer;
   /* vertically center */
   -webkit-transform: translateY(-50%);
@@ -60,7 +61,8 @@ http://flickity.metafizzy.co
           transform: translateY(-50%);
 }
 
-.flickity-prev-next-button:hover { background: white; }
+.flickity-prev-next-button:hover { background: none; 
+}
 
 .flickity-prev-next-button:focus {
   outline: none;
@@ -99,7 +101,7 @@ http://flickity.metafizzy.co
 }
 
 .flickity-prev-next-button .arrow {
-  fill: #333;
+  fill: white;
 }
 
 /* color & size if no SVG - IE8 and Android 2.3 */
