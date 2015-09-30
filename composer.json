@@ -8,7 +8,8 @@
 		"silverstripe-themes/simple": "*",
 		"silverstripe/userforms": "*",
 		"silverstripe/tagfield": "*",
-		"md/division-bar" : "*"
+		"md/division-bar" : "*",
+		"undefinedoffset/sortablegridfield": "dev-master"
 	},
 	"config": {
 		"process-timeout": 600	

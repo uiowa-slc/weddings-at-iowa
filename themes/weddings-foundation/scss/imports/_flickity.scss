@@ -1,6 +1,34 @@
 /*! Flickity v1.1.0
 http://flickity.metafizzy.co
 ---------------------------------------------- */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.main-gallery {
+  background: #EEE;
+  height: 500px;
+  margin-bottom: 5rem;
+}
+
+.gallery-cell {
+  width: 100%;
+}
+
+@media screen and ( min-width: 768px ) {
+  /* half-width cells for larger devices */
+  .gallery-cell { 
+    width: 50%; 
+  }
+}
+
+.gallery-cell-image {
+  max-height: 100%;
+  max-width: 100%;
+}
 
 .flickity-enabled {
   position: relative;

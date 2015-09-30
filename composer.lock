@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "244e16bc8bb5cde2b68fd5ff0fa4213f",
+    "hash": "e0133395738891edd22f7ece4ee9fc9a",
     "packages": [
         {
             "name": "composer/installers",
@@ -111,7 +111,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/0728f204b28e5d3e6d06abede903108454eb455d",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/5315e4525031bbc4a7a54895bda531aef9da93ae",
                 "reference": "0728f204b28e5d3e6d06abede903108454eb455d",
                 "shasum": ""
             },
@@ -193,7 +193,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/5bf81665d7926041400d177c794d2552d46977ca",
+                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/9f471eb4ccff850d91c0120c3a3b59df523776b7",
                 "reference": "5bf81665d7926041400d177c794d2552d46977ca",
                 "shasum": ""
             },
@@ -325,7 +325,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-tagfield/zipball/5473c94a58f7e16ff1fc5a7a062b30e7b6fce7fd",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-tagfield/zipball/9eb9b35871beedac6ecd3dc1c1a5b762c81bc7c1",
                 "reference": "5473c94a58f7e16ff1fc5a7a062b30e7b6fce7fd",
                 "shasum": ""
             },
@@ -362,7 +362,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/007348df61565e05b3f256d0692a20d6c5503ef3",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/1f86836031a9e77b46771480c469fcb500b002aa",
                 "reference": "007348df61565e05b3f256d0692a20d6c5503ef3",
                 "shasum": ""
             },
@@ -396,12 +396,54 @@
                 "userforms"
             ],
             "time": "2015-07-22 22:20:21"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "282ea74a764d247f70c1c73c1400bcc322aade08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/282ea74a764d247f70c1c73c1400bcc322aade08",
+                "reference": "282ea74a764d247f70c1c73c1400bcc322aade08",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/framework": ">=3.0.1,<3.3"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "sortablegridfield"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds drag and drop functionality to SilverStripe 3.0's GridField",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2015-08-29 17:54:46"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "undefinedoffset/sortablegridfield": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

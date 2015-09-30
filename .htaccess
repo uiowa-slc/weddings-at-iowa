@@ -37,4 +37,7 @@ ErrorDocument 500 /assets/error-500.html
 	RewriteRule . %1/install.php? [R,L]
 
 </IfModule>
+
+php_flag display_errors on
+
 ### SILVERSTRIPE END ###

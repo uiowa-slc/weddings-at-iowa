@@ -19,7 +19,14 @@ $(window).load(function() {
 });
 
 
-
+var flkty = new Flickity( '.main-gallery', {
+  // options
+  cellAlign: 'center',
+  wrapAround: true,
+  contain: true,
+  imagesLoaded: true,
+  setGallerySize: false
+});
 
 var cbpAnimatedHeader = (function() {
 
