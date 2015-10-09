@@ -12,9 +12,12 @@
 
 	<!--Begin description and services-->
 	<div class="large-12 columns">
+		<% if $Content %>
 		<div class="large-5 columns initial-description">
 			$Content
 		</div>
+		<% end_if %>
+		<% if $Services %>
 		<div class="large-3 columns services">
 			<h3>Available Services:</h3>
 			<% loop $Services %>
@@ -23,38 +26,48 @@
 				</div>
 			<% end_loop %>
 		</div>
+		<% end_if %>
 		<div class="large-4 columns contact-info">
-			<h3>Connect with us:</h3>
-			<div class="large-7 columns">
-				<h5><b>Contact Info:</b></h5>
-				<p>
-					$ContactName</br>
-					$Address</br>
-					$CityState $ZipCode</br></br>
-					$PhoneNumber</br>
-					$Email</br>
-					<a href="http://{$Website}">$Website</a>
-				</p>
+			<div class="row">
+				<div class="large-12 columns block-header-container">
+					<h3 class="text-center">Connect with us:</h3>
+				</div>
 			</div>
-			<div class="large-5 columns">
-				<h5><b>Social Media:</b></h5>
-				<ul style="list-style-type:none; margin-left:0px">
-					<li style="margin-bottom:10px">
-						<a href="$Facebook" style="text-decoration:none; color: #333">
-							<img src="{$ThemeDir}/images/socicon-custom/facebook.png" />  &nbsp &nbsp Facebook 
-						</a>
-					</li>
-					<li style="margin-bottom:10px"> 
-						<a href="$Facebook" style="text-decoration:none; color: #333">
-							<img src="{$ThemeDir}/images/socicon-custom/twitter.png" />  &nbsp &nbsp Twitter 
-						</a>
-					</li>
-					<li style="margin-bottom:10px">
-						<a href="$Facebook" style="text-decoration:none; color: #333">
-							<img src="{$ThemeDir}/images/socicon-custom/instagram.png" />  &nbsp &nbsp Instagram 
-						</a>
-					</li>
-				</ul>
+
+			<div class="row">
+			
+				<% if $Address || $PhoneNumber || $Email %>
+				<div class="large-7 columns large-centered">
+					<h4><b>Contact Info:</b></h4>
+					<p>
+						$ContactName</br>
+						$Address</br>
+						$CityState $ZipCode</br></br>
+						$PhoneNumber</br>
+						$Email</br>
+						<a href="http://{$Website}">$Website</a>
+					</p>
+				</div>
+				<% end_if %>
+				<div class="large-5 columns large-centered">
+					<ul style="list-style-type:none; margin-left:0px">
+						<li style="margin-bottom:10px">
+							<a href="$Facebook" style="text-decoration:none; color: #333">
+								<img src="{$ThemeDir}/images/socicon-custom/facebook.png" />  &nbsp &nbsp Facebook 
+							</a>
+						</li>
+						<li style="margin-bottom:10px"> 
+							<a href="$Facebook" style="text-decoration:none; color: #333">
+								<img src="{$ThemeDir}/images/socicon-custom/twitter.png" />  &nbsp &nbsp Twitter 
+							</a>
+						</li>
+						<li style="margin-bottom:10px">
+							<a href="$Facebook" style="text-decoration:none; color: #333">
+								<img src="{$ThemeDir}/images/socicon-custom/instagram.png" />  &nbsp &nbsp Instagram 
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -90,10 +103,11 @@
 	</div>
 
 	<!--Begin Testimonials-->
+	<% if $Testimonials %>
 	<div class="large-12 columns center-header">
 		<h1>Testimonials</h1>
 	</div>
-
+	<% end_if %>
 	<!--Begin Related Venues-->
 	<div class="large-12 columns center-header">
 		<h1>Related Venues</h1>

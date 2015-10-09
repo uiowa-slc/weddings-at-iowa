@@ -9,9 +9,13 @@ http://flickity.metafizzy.co
 body { font-family: sans-serif; }
 
 .main-gallery {
-  background: #EEE;
+  
   height: 500px;
   margin-bottom: 5rem;
+
+  .flickity-viewport{
+    background: #EEE;
+  }
 }
 
 .gallery-cell {
