@@ -1,89 +1,105 @@
 .VenuePage {
 
 
-
-}
-
-.top-banner-image {
-	height: 400px;
-	background: no-repeat center;
-}
-
-.top-banner-title {
- 	position: relative;
- 	top: 90%;
- 	transform: translateY(-50%);
-}
-
-.top-banner-title-text {
-	h1 {
-		color: white;
-		background-color: rgba(51,51,51,0.6);
-		display: inline-block;
-		margin-right: 1rem;
-		margin-left: 1rem;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		font-style: bold;
-		font-size: 60px;
+	.top-banner-image {
+		height: 500px;
+		@media #{$large-up}{
+			height: 700px;
+		}
+		@media #{$xlarge-up}{
+			height: 900px;
+		}
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
 	}
 
-}
-
-.initial-description {
-	margin-bottom: 1.25rem;
-	margin-top: 1.75rem;
-	text-align: justify;
-    text-justify: inter-word;
-    padding-right: 30px;
-
-	p:first-letter {
-		font-size: 83px;
-		float: left;
-		height: 64px;
-		margin-right: 10px;
-		//border-radius: 5px;
-		line-height: 78px;
-		font-style: italic;
+	.top-banner-title {
+	 	position: relative;
+	 	top: 90%;
+	 	transform: translateY(-50%);
 	}
-}
 
-.services {
-	margin-bottom: 1.25rem;
-	margin-top: 1.25rem;
-}
+	.top-banner-title-text {
+		h1 {
+			color: white;
+			background-color: rgba(51,51,51,0.6);
+			display: inline-block;
+			margin-right: 1rem;
+			margin-left: 1rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			font-style: bold;
+			font-size: 60px;
+		}
 
-.contact-info {
-	margin-bottom: 1.25rem;
-	margin-top: 1.25rem;
-	background-color: #fafafa;
+	}
+
+	.initial-description {
+		margin-bottom: 1.25rem;
+		margin-top: 1.75rem;
+		text-align: justify;
+	    text-justify: inter-word;
+	    padding-right: 30px;
+
+		p:first-letter {
+			font-size: 83px;
+			float: left;
+			height: 64px;
+			margin-right: 10px;
+			//border-radius: 5px;
+			line-height: 78px;
+			font-style: italic;
+		}
+	}
+
+	.services {
+		margin-bottom: 1.25rem;
+		margin-top: 1.25rem;
+	}
+
+	.contact-info {
+		margin-bottom: 1.25rem;
+		margin-top: 1.25rem;
+		background-color: #fafafa;
+
+		h3{
+			text-transform: uppercase;
+			
+		}
+	}
+
+	.features{
+		margin: $column-gutter 0;
+	}
+
+	.description-links {
+		font-family: inherit;
+		font-size: 1rem;
+		font-weight: normal;
+		margin-bottom: 1.25rem;
+		margin-top: 1.25rem;
+		padding-left: 1em;
+
+	}
+
+	.center-header {
+
+		text-align: center;
+	}
+
+	.icon {
+		padding-left: 0px;
+		padding-right: 0px;
+		text-align: right;
+		margin-top: 5px;	
+	}
+
+	.feature-text {
+		text-align: justify;
+		text-justify: inter-word;
+	}
 
 
-}
 
-.description-links {
-	font-family: inherit;
-	font-size: 1rem;
-	font-weight: normal;
-	margin-bottom: 1.25rem;
-	margin-top: 1.25rem;
-	padding-left: 1em;
-
-}
-
-.center-header {
-
-	text-align: center;
-}
-
-.icon {
-	padding-left: 0px;
-	padding-right: 0px;
-	text-align: right;
-	margin-top: 5px;	
-}
-
-.feature-text {
-	text-align: justify;
-	text-justify: inter-word;
 }

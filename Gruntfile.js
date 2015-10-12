@@ -30,6 +30,10 @@ module.exports = function(grunt) {
         src: [
           'division-bar/js/division-bar.js',
           '<%=globalConfig.themeDir %>/bower_components/foundation/js/foundation.min.js',
+          '<%=globalConfig.themeDir %>/bower_components/formstone/src/js/core.js',
+          '<%=globalConfig.themeDir %>/bower_components/formstone/src/js/mediaquery.js',
+          '<%=globalConfig.themeDir %>/bower_components/formstone/src/js/swap.js',
+          '<%=globalConfig.themeDir %>/bower_components/formstone/src/js/navigation.js',
          // '<%=globalConfig.themeDir %>/bower_components/flexslider/jquery.flexslider.js',
          '<%=globalConfig.themeDir %>/bower_components/blazy/blazy.js',
           '<%=globalConfig.themeDir %>/bower_components/flickity/dist/flickity.pkgd.js',
