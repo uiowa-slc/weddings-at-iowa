@@ -1,7 +1,7 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
-
+$("nav").navigation();
 
 var bLazy = new Blazy({
   selector: 'img,.lazy',
@@ -135,3 +135,5 @@ var cbpAnimatedHeader = (function() {
 	init();
 
 })();
+
+

@@ -89,7 +89,7 @@
 		<h1>Features and Specifications</h1>
 	</div>
 	<div class="large-12 columns">
-		<ul class="small-block-grid-2 medium-block-grid-3">
+		<ul class="small-block-grid-2 medium-block-grid-3 features">
 
 			<% include CostFeatureCard %>
 			<% include CapFeatureCard %>
