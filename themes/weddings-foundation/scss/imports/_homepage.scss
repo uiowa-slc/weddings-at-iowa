@@ -102,35 +102,46 @@
 .pic-wrapper {
   //position: absolute;
   width: 100%;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
   position: relative;
 
   @media #{$medium-up}{
-    height: 500px;
+    height: 600px;
 
   }
 
   @media #{$large-up}{
-    height: 800px;
+    height: 900px;
   }
   .pic-wrapper-content-container{
     position: absolute;
-    top: 50%;
+    top: 25%;
     //left: 50%;
     z-index: 99;
     color: white;
     padding: 10px;
-    background-color: rgba(#333, 0.7);
+    background-color: rgba(#333, 0.5);
     width: 100%;
     font-family: $header-font-family;
 
+    @media #{$medium-up}{
+      top: 35%;
+    }
+    @media #{$large-up}{
+      top: 50%;
+    }
+
     a{
-      color: lighten($anchor-font-color, 20);
+    color: #fffdcf;
+    font-weight: bold
     }
 
     h2{
-      font-size: rem-calc(64);
+      font-size: rem-calc(32);
+      @media #{$large-up}{
+        font-size: rem-calc(64);
+      }
     }
     h1,h2,h3{
       color: white;
@@ -156,8 +167,17 @@ figure {
 
   background-position: 50% 0;
   background-attachment: fixed;
-  background-size: 300%;
+  //background-size: 100%;
   background-repeat: no-repeat;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  @media #{$medium-up}{
+
+    //background-size: 150%;
+  }
 
   @media #{$large-up}{
     background-position: 50% 50%;

@@ -1,4 +1,4 @@
-<div class="gallery homepage-hero-slider">
+<!--<div class="gallery homepage-hero-slider">
 
     <div data-pin-hover="true" class="cell lazy" data-src="{$ThemeDir}/images/home-slider-1.jpg">
     	<div class="homepage-hero-slider-content" >
@@ -13,9 +13,9 @@
 	    	<a href="#">Learn More</a>
     	</div>
     </div>
-</div>
+</div>-->
 
-<%--<div class="pic-wrapper">
+<div class="pic-wrapper">
 	<div class="pic-wrapper-content-container">
 		<div class="row">
 			<div class="large-12 columns">
@@ -29,7 +29,7 @@
    <a href="#"><figure class="pic-3"></figure></a>
    <a href="#"><figure class="pic-4"></figure></a>
 </div>
---%>
+
 <div class="row">
 	<div class="large-12 columns">
 		<ul class="resource-card-list">

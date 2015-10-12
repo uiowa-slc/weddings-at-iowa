@@ -1,20 +1,49 @@
 .testimonial-container{
 		background-size: cover;
 		background-position: 50% 50%;
+		font-family: $body-font-family;
 	.testimonial{
-		padding: $column-gutter 0;
+		padding: 0;
 		background: rgba(#333, 0.7);
 		@media #{$large-up}{
 			padding: 100px 0;
 		}
 
-	}
-	.testimonial .quote{
-		padding: rem-calc(48) rem-calc(22);
-		color: white;
-		font-size: rem-calc(48);
-		
-		
+		blockquote{
+				border: 0;
+				&:before{
+					content: '\201C';
+					font-size: rem-calc(64);
+					left: -1%;
+					position: absolute;
+					color: #eee;
+					@media #{$large-up}{
+						left: -2%;
+						font-size: rem-calc(160);
+					}
+
+				}			
+		}
+		.quote{
+				
+				color: white;
+				
+				@media #{$medium-up}{
+					padding: rem-calc(48) rem-calc(22);
+					font-size: rem-calc(36);
+				}
+				&::first-letter {
+					-webkit-initial-letter: 2; 
+					color: $secondary-color;
+					@media #{$large-up}{
+						-webkit-initial-letter: 3; 
+					}
+				}
+				
+				
+			}
+
+
 	}
 
 
