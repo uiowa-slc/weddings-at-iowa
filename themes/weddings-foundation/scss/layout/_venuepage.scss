@@ -100,6 +100,18 @@
 		text-justify: inter-word;
 	}
 
+	.social-list {
+		list-style-type: none; 
+		margin-left: 0px;
+	}
 
+	.social-list-item {
+		margin-bottom: 10px;
+	}
+
+	.social-list-item-link {
+		text-decoration: none; 
+		color: #333;
+	}
 
 }
