@@ -124,7 +124,8 @@
     background-color: rgba(#333, 0.5);
     width: 100%;
     font-family: $header-font-family;
-
+    border-top: 5px solid white;
+    border-bottom: 2px solid white;
     @media #{$medium-up}{
       top: 35%;
     }
