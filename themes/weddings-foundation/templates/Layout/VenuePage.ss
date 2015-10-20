@@ -1,8 +1,9 @@
 <!--Begin banner image and title-->
 <div class="top-banner-image" style="background-image: url('{$ThemeDir}/images/Kinnick-banner.png')">
 	<div class="row top-banner-title">
-		<div class="large-12 columns top-banner-title-text">
-			<h1> $Title </h1>
+		<div class="large-12 columns text-center">
+
+<!-- Please call pinit.js only once per page -->
 		</div>
 	</div>
 </div>
@@ -12,44 +13,49 @@
 
 <!--Begin description and services-->
 <div class="row">
-	<% if $Content %>
-	<div class="large-5 columns initial-description">
-		$Content
-	</div>
-	<% end_if %>
-	<% if $Services %>
-	<div class="large-3 columns services">
-		<h3>Available services:</h3>
-		<% loop $Services %>
-			<div>
-				$Image.SetWidth(30) <a href="$Link" class="description-links"> $Title </a>
+
+		<div class="large-6 large-centered columns end">
+			<article>
+			<h1> $Title </h1>
+			<div class="text-center"><a data-pin-color="white" data-pin-do="buttonBookmark" data-pin-height="28" href="//www.pinterest.com/pin/create/button/"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_28.png" /></a></div>
+			<div class="initial-description">
+				<% if $Content %>$Content<% end_if %>
 			</div>
-		<% end_loop %>
-	</div>
-	<% end_if %>
-	<div class="large-4 columns contact-info">
-		<div class="row">
-			<div class="large-12 columns block-header-container">
-				<h3 class="text-center">Connect with us:</h3>
-			</div>
-		</div>
+
+
+			<% if $Services %>
+				<h3>Available services:</h3>
+				<ul class="services">
+				<% loop $Services %>
+					<li>
+						$Image.SetWidth(30) <a href="$Link" class="description-links"> $Title </a>
+					</li>
+				<% end_loop %>
+				</ul>
+			<% end_if %>
+
 
 		<div class="row">
-		
-			<% if $Address || $PhoneNumber || $Email %>
-			<div class="large-7 columns large-centered">
-				<h4><b>Contact Info:</b></h4>
-				<p>
-					<% if $ContactName %>$ContactName</br><% end_if %>
-					<% if $$Address %>$Address</br><% end_if %>
-					<% if $CityState || $ZipCode %>$CityState $ZipCode</br></br><% end_if %>
-					<% if $PhoneNumber %>$PhoneNumber</br><% end_if %>
-					<% if $Email %>$Email</br><% end_if %>
-					<% if $$Website %><a href="{$Website}" target="_blank">Visit website &rarr;</a><% end_if %>
-				</p>
+			<div class="large-12 columns block-header-container">
+				<h3 class="text-center">Connect with {$Title}</h3>
 			</div>
+		</div>
+		<div class="row">
+			<% if $Address || $PhoneNumber || $Email %>
+				<div class="large-7 columns contact-info">
+					<h3>Contact info:</h3>
+					<p>
+						<% if $ContactName %>$ContactName</br><% end_if %>
+						<% if $$Address %>$Address</br><% end_if %>
+						<% if $CityState || $ZipCode %>$CityState $ZipCode</br></br><% end_if %>
+						<% if $PhoneNumber %>$PhoneNumber</br><% end_if %>
+						<% if $Email %>$Email</br><% end_if %>
+						<% if $$Website %><a href="{$Website}" target="_blank">Visit website &rarr;</a><% end_if %>
+					</p>
+				</div><
 			<% end_if %>
-			<div class="large-5 columns large-centered">
+
+			<div class="large-5 columns">
 				<ul class="social-list">
 					<% if $Facebook %>
 					<li class="social-list-item">
@@ -75,7 +81,10 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+		</div>
+		</article>
+
+	
 </div>
 
 <!--Begin Flickity Slider-->
@@ -95,15 +104,16 @@
 <!--Begin features and specifications-->
 <div class="row">
 	<div class="large-12 columns center-header">
-		<h1>Features and Specifications</h1>
+		<h1>Features and specifications</h1>
 	</div>
 </div>
 <div class="row">
 	<div class="large-12 columns">
 		<ul class="small-block-grid-2 medium-block-grid-3 features">
 
-			<% include CostFeatureCard %>
-			<% include CapFeatureCard %>
+
+			<% if $Cost %><% include CostFeatureCard %><% end_if %>
+			<% if $Capacity %><% include CapFeatureCard %><% end_if %>
 			<% include IndoorFeatureCard %>
 
 
@@ -124,7 +134,7 @@
 <!--Begin Related Venues-->
 <div class="row">
 	<div class="large-12 columns center-header">
-		<h1>Related Venues</h1>
+		<h1>Related venues</h1>
 	</div>
 </div>
 <div class="row">

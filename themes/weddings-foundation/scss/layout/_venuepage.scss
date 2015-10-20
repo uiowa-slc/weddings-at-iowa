@@ -4,43 +4,34 @@
 	.top-banner-image {
 		height: 500px;
 		@media #{$large-up}{
-			height: 700px;
+			height: 600px;
 		}
 		@media #{$xlarge-up}{
-			height: 900px;
+			height: 800px;
 		}
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 50% 50%;
 	}
 
-	.top-banner-title {
-	 	position: relative;
-	 	top: 90%;
-	 	transform: translateY(-50%);
+
+	article h1{
+		border-top: 5px solid #888;
+		border-bottom: 2px solid #888;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: $column-gutter/2;
 	}
-
-	.top-banner-title-text {
-		h1 {
-			color: white;
-			background-color: rgba(51,51,51,0.6);
-			display: inline-block;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			font-style: bold;
-			font-size: 60px;
-		}
-
-	}
-
 	.initial-description {
+
 		margin-bottom: 1.25rem;
-		margin-top: 1.75rem;
+
 		text-align: justify;
 	    text-justify: inter-word;
 	    padding-right: 30px;
+	    p {font-size: rem-calc(22);}
 
-		p:first-letter {
+		p:nth-child(1):first-letter {
 			font-size: 83px;
 			float: left;
 			height: 64px;
@@ -51,9 +42,8 @@
 		}
 	}
 
-	.services {
-		margin-bottom: 1.25rem;
-		margin-top: 1.25rem;
+	ul.services li{
+		font-size: rem-calc(22);
 	}
 
 	.contact-info {
@@ -69,16 +59,6 @@
 
 	.features{
 		margin: $column-gutter 0;
-	}
-
-	.description-links {
-		font-family: inherit;
-		font-size: 1rem;
-		font-weight: normal;
-		margin-bottom: 1.25rem;
-		margin-top: 1.25rem;
-		padding-left: 1em;
-
 	}
 
 	.center-header {

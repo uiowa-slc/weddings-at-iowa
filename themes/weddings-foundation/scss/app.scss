@@ -2,13 +2,15 @@
 @import "settings";
 @import "foundation";
 @import "../bower_components/formstone/dist/css/navigation.css";
-@import "imports/header";
-@import "imports/homepage";
-@import "imports/cards";
-@import "imports/testimonials";
-@import "imports/serviceholder";
-@import "imports/venueholder";
-@import "imports/flickity";
+@import "lib/flickity";
+
+@import "layout/header";
+@import "layout/homepage";
+@import "layout/cards";
+@import "layout/testimonials";
+@import "layout/serviceholder";
+@import "layout/venueholder";
+
 @import "layout/footer/config";
 @import "layout/footer/footer";
 @import "layout/venuepage";
@@ -18,7 +20,10 @@
 
 .main {
 	
-	padding-top: 75px;
+	//padding-top: 75px;
+	@media #{$small-up}{
+		padding-top: 20px;
+	}
 	@media #{$medium-up}{
 		padding-top: 150px;
 	}

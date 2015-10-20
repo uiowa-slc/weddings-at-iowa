@@ -42,9 +42,8 @@
 				<div class="small-12 xlarge-8 columns">
 					<h1><a href="{$BaseHref}">Weddings <small><em>at</em></small> Iowa</a></h1>
 					<nav data-navigation-handle="#handle" data-navigation-content="#content">
-				    <a href="#">Venues</a>
-				    <a href="#">Services</a>
-				    <a href="#">About</a>
+				    <a href="venues/">Venues</a>
+				    <a href="about/">About</a>
 				</nav>
 				</div>
 				<div class="show-for-xlarge-up xlarge-2 medium-2 columns dept-logo uiowa">

@@ -120,7 +120,9 @@ $header-height-lg-shrink: 65px;
 		margin: 0 auto;
 		text-align: center;
 		float: none;
-		@medium #{$medium-up}{
+		line-height: $header-height-md;
+
+		@media #{$medium-up}{
 			margin: 0 auto;
 		}
 		@media #{$large-up}{
@@ -157,7 +159,7 @@ $header-height-lg-shrink: 65px;
 		
 		max-width: $row-width;
 		margin: 0 auto;
-		padding: 0 $column-gutter/2;
+		//padding: 0 $column-gutter/2;
 		width: 100%;
 
 	}
