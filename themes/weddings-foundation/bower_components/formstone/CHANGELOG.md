@@ -1,5 +1,16 @@
 # Changelog
 
+### 0.8.23
+
+* Fixed issue with Carousel removing previous and next classes
+* Fixed issue with Analytics and content blockers
+
+### 0.8.22
+
+* Fixed issue with Carousel `matchHeight` option
+* Fixed issue with Tabs mobile classing
+* Fixed XSS issue in Dropdown
+
 ### 0.8.21
 
 * Added `mute` and `unmute` public methods to Background
@@ -18,7 +29,7 @@
 * Added ability to set active Tab item
 * Added ability to deep-link Tab item based on page hash
 * Added ability to set custom Carousel controls container
-* Added ability previous and next states for Carousel items
+* Added `previous` and `next` states for Carousel items
 
 ### 0.8.18
 

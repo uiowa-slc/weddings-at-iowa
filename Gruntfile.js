@@ -34,9 +34,11 @@ module.exports = function(grunt) {
           '<%=globalConfig.themeDir %>/bower_components/formstone/src/js/mediaquery.js',
           '<%=globalConfig.themeDir %>/bower_components/formstone/src/js/swap.js',
           '<%=globalConfig.themeDir %>/bower_components/formstone/src/js/navigation.js',
+          '<%=globalConfig.themeDir %>/bower_components/formstone/dist/js/touch.js',
+          '<%=globalConfig.themeDir %>/bower_components/formstone/dist/js/carousel.js',
          // '<%=globalConfig.themeDir %>/bower_components/flexslider/jquery.flexslider.js',
          '<%=globalConfig.themeDir %>/bower_components/blazy/blazy.js',
-          '<%=globalConfig.themeDir %>/bower_components/flickity/dist/flickity.pkgd.js',
+          //'<%=globalConfig.themeDir %>/bower_components/flickity/dist/flickity.pkgd.js',
           '<%=globalConfig.themeDir %>/javascript/*.js'
         ],
         dest: '<%=globalConfig.themeDir %>/build/build.src.js'
