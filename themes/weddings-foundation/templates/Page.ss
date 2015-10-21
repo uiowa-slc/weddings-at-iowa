@@ -33,32 +33,7 @@
 			<a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a>
 		</div>	
 	</header>-->
-
-	<div class="cbp-af-header">
-		<div class="cbp-af-inner">
-
-			<div class="row">
-
-				<div class="small-12 xlarge-8 columns">
-					<h1><a href="{$BaseHref}">Weddings <small><em>at</em></small> Iowa</a></h1>
-					<nav data-navigation-handle="#handle" data-navigation-content="#content">
-				    <a href="venues/">Venues</a>
-				    <a href="about/">About</a>
-				</nav>
-				</div>
-				<div class="show-for-xlarge-up xlarge-2 medium-2 columns dept-logo uiowa">
-					<p><img src="{$ThemeDir}/images/uiowa.png" alt="The University of Iowa" />
-					</p>
-				</div>
-				<div class="show-for-xlarge-up xlarge-2 medium-2 columns dept-logo dsl">
-				<p><img src="{$ThemeDir}/images/dsl.png" alt="Division of Student Life" /></p>
-				</div>					
-			</div>
-		</div>
-	</div>
-
-
-
+	<% include TopBar %>
 
 	<div class="main typography" role="main">
 		$Layout
