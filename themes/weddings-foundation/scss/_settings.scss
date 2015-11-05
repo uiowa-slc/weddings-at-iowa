@@ -1366,8 +1366,8 @@ $lightGold : #F5DFA2;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
- $topbar-bg-color: white;
-// $topbar-bg: $topbar-bg-color;
+ $topbar-bg-color: #fff;
+ $topbar-bg: $topbar-bg-color;
 
 // Height and margin
  $topbar-height: rem-calc(100);
@@ -1378,10 +1378,10 @@ $lightGold : #F5DFA2;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
- $topbar-dropdown-bg: $body-bg;
+ $topbar-dropdown-bg: $silver;
  $topbar-dropdown-link-color: #666;
  $topbar-dropdown-link-bg: $body-bg;
-// $topbar-dropdown-link-bg-hover: $oil;
+ $topbar-dropdown-link-bg-hover: #ddd;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
@@ -1396,12 +1396,12 @@ $lightGold : #F5DFA2;
  $topbar-link-font-size: rem-calc(18);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
- $topbar-link-bg-color-hover: scale-color($secondary-color, $lightness: -14%);
- $topbar-link-bg-hover: scale-color($secondary-color, $lightness: -14%);;
- $topbar-link-bg-active: $secondary-color;
- $topbar-link-bg-active-hover: scale-color($secondary-color, $lightness: -14%);
+ $topbar-link-bg-color-hover: $topbar-bg-color;
+ $topbar-link-bg-hover: $topbar-bg-color;
+ $topbar-link-bg-active: $topbar-bg-color;
+ $topbar-link-bg-active-hover: $topbar-bg-color;
  $topbar-link-font-family: $header-font-family;
-// $topbar-link-text-transform: none;
+ $topbar-link-text-transform: uppercase;
 // $topbar-link-padding: ($topbar-height / 3);
 // $topbar-back-link-size: $h5-font-size;
  $topbar-link-dropdown-padding: rem-calc(10);

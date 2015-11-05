@@ -2055,6 +2055,7 @@ var bLazy = new Blazy({
 
 $(".gallery").carousel({
     show: {
+    	//"980px" : 2
     }
 });
 

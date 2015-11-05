@@ -15,8 +15,6 @@
 		@include block-grid(
 			$per-row: 4
 		);
-		padding: 0 $column-gutter/2;
-
 	}
 
 	&.small{
@@ -29,6 +27,10 @@
 
 	.resource-card{
 		margin-bottom: 0;
+
+		.resource-card-content{
+			padding: 15px;
+		}
 	}
 
 	li{

@@ -33,4 +33,13 @@
 
 
 	}
+	li.has-form {
+	  @media #{$large-up}{
+	  	min-width: 300px;
+	  }
+
+	  input{
+	  	border-radius: 20px;
+	  }
+	}
 }

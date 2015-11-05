@@ -58,6 +58,21 @@
     }
    
    .homepage-hero-slider{
+
+        .row{
+
+          @media #{$large-up}{
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+
+            align-items: center;
+          }
+        }
         .cell{
             width: 100%;
             background-size: cover;
@@ -65,11 +80,20 @@
             img{
                 width: 100%;
             }
+            .cell-content{
+              //margin: 0 $column-gutter/2;
+              p{
+                font-size: rem-calc(22);
+              }
+            }
+
+            .feature-text{
+              padding: 20px;
+            }
         }
 
         .homepage-hero-slider-content {
-            padding: 300px 0;
-            padding-top: 100px;
+            padding: 100px 0;
             width: 100%;
             font-family: $header-font-family;
 
