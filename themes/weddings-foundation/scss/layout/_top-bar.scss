@@ -33,6 +33,10 @@
 
 
 	}
+
+	.menu-icon span{
+		font-family: $header-font-family;
+	}
 	li.has-form {
 	  @media #{$large-up}{
 	  	min-width: 300px;
