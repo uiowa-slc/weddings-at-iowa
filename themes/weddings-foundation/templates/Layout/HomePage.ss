@@ -1,26 +1,17 @@
 <div class="gallery homepage-hero-slider">
 
 <% loop $Features %>
-    <div data-pin-hover="true" class="cell lazy">
-
-    	<div class="cell-content">
-    		<div class="row collapse">
-    			<div class="large-9 columns">
-    				<img src="$Image.CroppedImage(1280,720).URL" />
-    			</div>
-    			
-    				<div class="large-3 columns">
-
-    					<div class="feature-text">
-				    	<h2>$Title</h2>
-				    	$Content
-				    	<%--<a href="#" class="button">Learn more about Danforth Chapel</a><br />
-				    	<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fweddingsatiowa.com%2F&media=http%3A%2F%2Fweddingsatiowa.com%2Fassets%2FUploads%2F9622071955-25c89f8b78-k.jpg&description=Next%20stop%3A%20Pinterest" class="button" >Pin Danforth Chapel</a>--%>
-				    	</div>
-				   	</div>
-				</div>
+    <div data-pin-hover="true" class="cell">
+    	<div class="feature-bg" style="background-image: url('$Image.CroppedImage(1280,720).URL');">
+			<div class="feature-text">
+		    	<h2>$Title</h2>
+		    	$Content
+			   	<a data-pin-do="buttonPin"
+			    href="//www.pinterest.com/pin/create/button/?url={$BaseUrl}&media={$Image.AbsoluteURL}&description=yourDescription">
+		    	<img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
 			</div>
 		</div>
+	</div>
 <% end_loop %>
 </div>
 

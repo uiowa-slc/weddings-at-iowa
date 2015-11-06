@@ -4,7 +4,7 @@ $(document).foundation();
 $("nav").navigation();
 
 var bLazy = new Blazy({
-  selector: 'img,.lazy',
+  selector: '.lazy',
     breakpoints: [{
         width: 420 // max-width
         ,

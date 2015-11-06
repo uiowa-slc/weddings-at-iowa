@@ -1,4 +1,4 @@
-<div class="contain-to-grid">
+
 	<nav class="top-bar" role="navigation" data-topbar>
 		<ul class="title-area">
 			<li class="name">
@@ -15,8 +15,6 @@
 				</li>
 				<% if not $Last %><li class="divider"></li><% end_if %>
 				<% end_loop %>
-			</ul>
-			<ul class="right">
 				<li class="has-form">
 				  <div class="row collapse">
 				    <div class="small-12 columns">
@@ -30,4 +28,3 @@
 			</ul>
 		</section>
 	</nav>
-</div>
