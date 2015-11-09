@@ -48,6 +48,7 @@
 <% if $GalleryImages %>
 	<div class="row">
 		<div class="large-12 columns">
+			<h1 class="text-center">Photos</h1>
 			<div class="gallery">
 				<% loop $GalleryImages %>
 					<div class="gallery-cell">
