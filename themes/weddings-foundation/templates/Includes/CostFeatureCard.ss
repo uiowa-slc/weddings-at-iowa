@@ -1,9 +1,6 @@
 <li class="">
-	<div class="row text-left">
-		<div class="large-2 columns icon show-for-large-up">
-			<img src="{$ThemeDir}/images/info_icon.png" width="40px"/>
-		</div>
-		<div class="large-10 columns">
+
+			<img src="{$ThemeDir}/images/info_icon.png" width="40px"/> <br />
 			<h3>Venue cost</h3>
 			<p>
 				<% if $Cost%>
@@ -11,6 +8,4 @@
 				<% end_if %>
 				<i>Contact us for additional details.</i>
 			</p>
-		</div>
-	</div>
 </li>
