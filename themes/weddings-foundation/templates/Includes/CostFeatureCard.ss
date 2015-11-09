@@ -1,5 +1,5 @@
-<li>
-	<div class="row">
+<li class="">
+	<div class="row text-left">
 		<div class="large-2 columns icon show-for-large-up">
 			<img src="{$ThemeDir}/images/info_icon.png" width="40px"/>
 		</div>

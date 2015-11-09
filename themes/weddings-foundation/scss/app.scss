@@ -2,6 +2,8 @@
 @import "settings";
 @import "foundation";
 @import "../bower_components/formstone/dist/css/carousel.css";
+
+@import "lib/social/scss/rrssb";
 @import "lib/flickity";
 
 @import "layout/top-bar";
@@ -11,13 +13,25 @@
 @import "layout/testimonials";
 @import "layout/serviceholder";
 @import "layout/venueholder";
-
+@import "layout/share-icons";
 @import "layout/footer/config";
 @import "layout/footer/footer";
 @import "layout/venuepage";
 
 //@import "../../../division-bar/scss/division-bar-foundation";
 @import "../../../division-bar/scss/md-bar";
+
+[class*="block-grid-"], .resource-card-list {
+  &.text-center {
+    font-size: 0;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+}
+
+
 
 .main {
 	

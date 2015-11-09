@@ -1,5 +1,5 @@
 <li>
-	<div class="row">
+	<div class="row text-left">
 		<% if $Website %>
 			<a href="{$Website}" class="feature-card-link">
 			<div class="large-2 columns icon">
