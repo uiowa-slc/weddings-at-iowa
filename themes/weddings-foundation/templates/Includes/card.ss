@@ -1,5 +1,5 @@
 <li class="resource-card">
-	<a href='{$URLSegment}'>
+	<a href="$Link">
 	<img data-src="http://lorempixel.com/500/300/" src="<% include PlaceholderLargeSrc %>" data-pin-hover="true">
 	<div class="resource-card-content">
 		<h3>$Title</h3>
