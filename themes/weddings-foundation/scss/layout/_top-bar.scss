@@ -11,7 +11,7 @@
 		margin: 0 auto;
 		display: block;
 		font-family: classico-urw;
-		font-size: rem-calc(24);
+		font-size: rem-calc(13);
 		@media #{$medium-up}{
 			//line-height: $header-height-md;
 			font-size: rem-calc(32);
@@ -34,12 +34,16 @@
 
 	}
 
+	.uiowa-logo img, .dsl-logo img{
+		width: 150px;
+	}
+
 	.menu-icon span{
 		font-family: $header-font-family;
 	}
 	li.has-form {
 	  @media #{$large-up}{
-	  	min-width: 300px;
+	  	//min-width: 300px;
 	  }
 
 	  input{

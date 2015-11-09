@@ -6,9 +6,13 @@
 			<div class="feature-text">
 		    	<h2>$Title</h2>
 		    	$Content
-			   	<a data-pin-do="buttonPin"
-			    href="//www.pinterest.com/pin/create/button/?url={$BaseUrl}&media={$Image.AbsoluteURL}&description=yourDescription">
-		    	<img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+
+		    	<div class="pin-container">
+				   	<a data-pin-do="buttonPin"
+				    href="//www.pinterest.com/pin/create/button/?url={$BaseUrl}&media={$Image.AbsoluteURL}&description=yourDescription">
+			    		<img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
+			    	</a>
+		    	</div>
 			</div>
 		</div>
 	</div>

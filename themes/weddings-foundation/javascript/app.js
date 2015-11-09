@@ -1,7 +1,9 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
-$("nav").navigation();
+$( document ).ready(function() {
+	$(document).foundation();
+});
+
 
 var bLazy = new Blazy({
   selector: '.lazy',

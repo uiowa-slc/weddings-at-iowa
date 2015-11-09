@@ -10,7 +10,7 @@
 			<%-- Left Nav Section --%>
 			<ul class="left">
 				<% loop Menu(1) %>
-				<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
+				<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>">
 					<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
 				</li>
 				<% if not $Last %><li class="divider"></li><% end_if %>
@@ -25,6 +25,12 @@
 				    </div>
 				  </div>
 				</li>
+			</ul>
+			<ul class="right">
+				<li><a href="http://studentlife.uiowa.edu/" target="_blank" class="dsl-logo"><img src="{$ThemeDir}/images/dosl-light.png" /></a></li>
+				<li><a href="http://uiowa.edu/" target="_blank" class="uiowa-logo"><img src="{$ThemeDir}/images/uiowa-light.png" /></a></li>
+
+
 			</ul>
 		</section>
 	</nav>
