@@ -52,7 +52,7 @@
 				<% loop $GalleryImages %>
 					<div class="gallery-cell">
 						<!-- heres the image-->
-						<img class="gallery-cell-image" src="$URL" alt="$Title" />
+						<img class="gallery-cell-image" src="$Fill(1920,1080).URL" alt="$Title" />
 					</div>
 				<% end_loop %>
 			</div>
