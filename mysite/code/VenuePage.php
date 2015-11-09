@@ -17,7 +17,8 @@ class VenuePage extends Page {
 	);
 
 	private static $has_one = array(
-		'Building' => 'Building',
+		'CoverImage' => 'Image',
+		'Building'   => 'Building',
 
 	);
 
@@ -48,32 +49,33 @@ class VenuePage extends Page {
 		//Requirements::javascript('weddings-at-iowa/themes/weddings-foundation/javascript/events.js');
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldToTab('Root.Main', new HeaderField('Venue Contact Information'));
-		$fields->addFieldToTab('Root.Main', new TextField('ContactName'));
-		$fields->addFieldToTab('Root.Main', new TextField('Address'));
-		$fields->addFieldToTab('Root.Main', new TextField('CityState', 'City, State'));
-		$fields->addFieldToTab('Root.Main', new TextField('ZipCode'));
-		$fields->addFieldToTab('Root.Main', new TextField('Email'));
-		$fields->addFieldToTab('Root.Main', new TextField('PhoneNumber'));
-		$fields->addFieldToTab('Root.Main', new TextField('Website'));
+		$fields->addFieldToTab('Root.Main', new UploadField('CoverImage', 'Cover Image (1920 x 1080)'), 'Content');
 
-		$fields->addFieldToTab('Root.Main', new HeaderField('Social Media Information'));
-		$fields->addFieldToTab('Root.Main', new TextField('Facebook'));
-		$fields->addFieldToTab('Root.Main', new TextField('Twitter'));
-		$fields->addFieldToTab('Root.Main', new TextField('Instagram'));
+		$fields->addFieldToTab('Root.Contact', new HeaderField('Venue Contact Information'));
+		$fields->addFieldToTab('Root.Contact', new TextField('ContactName'));
+		$fields->addFieldToTab('Root.Contact', new TextField('Address'));
+		$fields->addFieldToTab('Root.Contact', new TextField('CityState', 'City, State'));
+		$fields->addFieldToTab('Root.Contact', new TextField('ZipCode'));
+		$fields->addFieldToTab('Root.Contact', new TextField('Email'));
+		$fields->addFieldToTab('Root.Contact', new TextField('PhoneNumber'));
+		$fields->addFieldToTab('Root.Contact', new TextField('Website'));
 
-		$serviceSource  = ServicePage::get()->map()->toArray();
-		$buildingSource = Building::get()->map()->toArray();
+		$fields->addFieldToTab('Root.Social', new HeaderField('Social Media Information'));
+		$fields->addFieldToTab('Root.Social', new TextField('Facebook'));
+		$fields->addFieldToTab('Root.Social', new TextField('Twitter'));
+		$fields->addFieldToTab('Root.Social', new TextField('Instagram'));
+
+		$serviceSource = ServicePage::get()->map()->toArray();
 
 		$serviceField = ListboxField::create('Services', 'Services', $serviceSource);
 		$serviceField->setMultiple(true);
 		$fields->addFieldToTab("Root.Main", $serviceField, 'Content');
 
-		$buildingField = ListboxField::create('Buildings', 'Building', $buildingSource);
-		// $buildingField->setMultiple(true);
+		$buildingSource = Building::get()->map()->toArray();
+		$buildingField  = DropdownField::create('Buildings', 'Building', $buildingSource)->setEmptyString('(None)');
 		$fields->addFieldToTab("Root.Main", $buildingField, 'Content');
 
-		$fields->addFieldToTab('Root.Attachments', UploadField::create(
+		$fields->addFieldToTab('Root.Media', UploadField::create(
 				'GalleryImages',
 				'Gallery images for this page',
 				$this->GalleryImages()
@@ -81,16 +83,6 @@ class VenuePage extends Page {
 			));
 
 		$fields->addFieldToTab('Root.Features', new HeaderField('Required Information'));
-		$fields->addFieldToTab('Root.Features', new TextField('Cost'));
-		$fields->addFieldToTab('Root.Features', new DropdownField(
-				'PerUnit',
-				'Per:',
-				array(
-					'event' => 'Event',
-					'day'   => 'Day',
-					'hour'  => 'Hour',
-				)
-			));
 		$fields->addFieldToTab('Root.Features', new TextField('Capacity'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('Indoors'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('AirConditioned'));

@@ -181,7 +181,7 @@ $social-list: (
       &:first-child:nth-last-child(1) {
         a {
           font-size: 20px; //fallback
-          font-size: 4vw;
+        //  font-size: 4vw;
         }
       }
 
@@ -189,7 +189,7 @@ $social-list: (
       &:first-child:nth-last-child(2) ~ li {
         a {
           font-size: 16px; //fallback
-          font-size: 2vw;
+        //  font-size: 2vw;
         }
       }
 
@@ -197,7 +197,7 @@ $social-list: (
       &:first-child:nth-last-child(3) ~ li {
         a {
           font-size: 14px; //fallback
-          font-size: 1.7vw;
+        //  font-size: 1.7vw;
         }
       }
 
@@ -205,7 +205,7 @@ $social-list: (
       &:first-child:nth-last-child(4) ~ li {
         a {
           font-size: 13px; //fallback
-          font-size: 1.4vw;
+        //  font-size: 1.4vw;
         }
       }
 
@@ -213,7 +213,7 @@ $social-list: (
       &:first-child:nth-last-child(5) ~ li {
         a {
           font-size: 13px; //fallback
-          font-size: 1.2vw;
+        //  font-size: 1.2vw;
         }
       }
 
@@ -221,7 +221,7 @@ $social-list: (
       &:first-child:nth-last-child(6) ~ li {
         a {
           font-size: 12px; //fallback
-          font-size: 1.05vw;
+        //  font-size: 1.05vw;
         }
       }
 
@@ -229,7 +229,7 @@ $social-list: (
       &:first-child:nth-last-child(7) ~ li {
         a {
           font-size: 11px; //fallback
-          font-size: .9vw;
+        //  font-size: .9vw;
         }
       }
 
@@ -237,7 +237,7 @@ $social-list: (
       &:first-child:nth-last-child(8) ~ li {
         a {
           font-size: 11px; //fallback
-          font-size: .8vw;
+        //  font-size: .8vw;
         }
       }
 
@@ -245,7 +245,7 @@ $social-list: (
       &:first-child:nth-last-child(9) ~ li {
         a {
           font-size: 11px; //fallback
-          font-size: .7vw;
+        //  font-size: .7vw;
         }
       }
 
@@ -253,7 +253,7 @@ $social-list: (
       &:first-child:nth-last-child(10) ~ li {
         a {
           font-size: 11px; //fallback
-          font-size: .6vw;
+         // font-size: .6vw;
         }
       }
 
@@ -261,7 +261,7 @@ $social-list: (
       &:first-child:nth-last-child(11) ~ li {
         a {
           font-size: 11px; //fallback
-          font-size: .5vw;
+          //font-size: .5vw;
         }
       }
 

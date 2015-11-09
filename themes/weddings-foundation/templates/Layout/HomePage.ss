@@ -2,7 +2,7 @@
 
 <% loop $Features %>
     <div data-pin-hover="true" class="cell">
-    	<div class="feature-bg" style="background-image: url('$Image.CroppedImage(1280,720).URL');">
+    	<div class="feature-bg" style="background-image: url('$Image.Fill(1280,720).URL');">
 			<div class="feature-text">
 		    	<h2>$Title</h2>
 		    	$Content
