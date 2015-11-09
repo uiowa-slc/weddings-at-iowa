@@ -35,15 +35,17 @@
 			<% loop $Venues.Limit(4) %>
 		  		<% include Card %>
 		  	<% end_loop %>
-		  	<p class="text-center"><a href="venues/">See all venues &rarr;</a></p>
+		  	
 		</ul>
+		<p class="text-center"><a href="venues/">See all venues &rarr;</a></p>
 		<ul class="resource-card-list">
 			<h2 class="text-center section-title">Services</h2>
 			 <% loop $Services.Limit(4) %>
 		  		<% include Card %>
 		  	<% end_loop %>
-		  	<p class="text-center"><a href="services/">See all services &rarr;</a></p>
+		  	
 		</ul>
+		<p class="text-center"><a href="services/">See all services &rarr;</a></p>
 	</div>
 </div>
 <div class="testimonial-container" style="background-image: url('{$ThemeDir}/images/home-slider-2.jpg')">
