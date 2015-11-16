@@ -19,18 +19,18 @@
 //       $social-list based on your specific needs.
 
 // config settings
-$rrssb-txt: #fff !default;
+$rrssb-txt: $primary-color;
 $rrssb-email: #0a88ff !default;
-$rrssb-facebook: #306199 !default;
+$rrssb-facebook: #eee !default;
 $rrssb-tumblr: #32506d !default;
 $rrssb-linkedin: #007bb6 !default;
-$rrssb-twitter: #26c4f1 !default;
+$rrssb-twitter: #eee !default;
 $rrssb-googleplus: #e93f2e !default;
 $rrssb-reddit: #8bbbe3 !default;
 $rrssb-youtube: #df1c31 !default;
 
 //$rrssb-pinterest:   #b81621 !default;
-$rrssb-pinterest: darken($secondary-color, 20) !default;
+$rrssb-pinterest: #eee !default;
 $rrssb-pocket: #ed4054 !default;
 $rrssb-github: #444 !default;
 $rrssb-instagram: #517fa4 !default;

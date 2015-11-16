@@ -123,7 +123,9 @@ $black: #000000;
 $lightGold: #F5DFA2;
 
 // We use these as default colors throughout
-$primary-color: #08c;
+//$primary-color: #5968f0;
+//$primary-color: #e5c42a;
+$primary-color: #888;
 $secondary-color: #F5DFA2;
 
 // $alert-color: #f04124;
@@ -1391,7 +1393,7 @@ $topbar-height: rem-calc(90);
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: $silver;
-$topbar-dropdown-link-color: #666;
+$topbar-dropdown-link-color: $primary-color;
 $topbar-dropdown-link-bg: $body-bg;
 $topbar-dropdown-link-bg-hover: #ddd;
 
@@ -1401,10 +1403,10 @@ $topbar-dropdown-link-bg-hover: #ddd;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #666;
-$topbar-link-color-hover: #333;
-$topbar-link-color-active: #444;
-$topbar-link-color-active-hover: #444;
+$topbar-link-color: $primary-color;
+$topbar-link-color-hover: lighten($primary-color, 10);
+$topbar-link-color-active: lighten($primary-color, 10);
+$topbar-link-color-active-hover: lighten($primary-color, 10);
 
 // $topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(16);

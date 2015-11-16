@@ -17,7 +17,7 @@
 
     article h1 {
         //border-top: 5px solid #888;
-        border-bottom: 2px solid #888;
+        border-bottom: 4px solid $secondary-color;
         text-transform: uppercase;
         text-align: center;
         margin-top: $column-gutter / 2;
@@ -38,6 +38,7 @@
             float: left;
             height: 64px;
             margin-right: 10px;
+            color: darken($secondary-color, 10);
 
             //border-radius: 5px;
             line-height: 78px;

@@ -1,4 +1,4 @@
-
+<div class="top-bar-container">
 	<nav class="top-bar" role="navigation" data-topbar>
 		<ul class="title-area">
 			<li class="name">
@@ -34,3 +34,4 @@
 			</ul>
 		</section>
 	</nav>
+</div>
