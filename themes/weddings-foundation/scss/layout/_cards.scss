@@ -1,57 +1,89 @@
-.resource-card-list{
-	list-style-type: none; 
-	margin: 0;
-	
-	@include block-grid(
-		$per-row: 1
-	);
+.resource-card-list {
+    list-style-type: none;
+    margin: 0;
 
-	@media #{$medium-up}{
-		@include block-grid(
-			$per-row: 2
-		);
-	}
-	@media #{$large-up}{
-		@include block-grid(
-			$per-row: 4
-		);
-	}
+    @include block-grid($per-row: 1);
 
-	&.small{
-		@include block-grid(
-			$per-row: 2
-		);
+    @media #{$medium-up} {
+        @include block-grid($per-row: 2);
+    }
 
+    @media #{$large-up} {
+        @include block-grid($per-row: 4);
+    }
 
-	}
+    &.small {
+        @include block-grid($per-row: 2);
+    }
 
-	.resource-card{
-		margin-bottom: 0;
+    .resource-card {
+        margin-bottom: 0;
 
-		.resource-card-content{
-			padding: 15px;
-		}
-	}
+        .resource-card-bg {
+            height: 200px;
+            background-position: 50% 50%;
+            background-size: cover;
+            position: relative;
 
-	li{
-		list-style-type: none; 
-		
+            &:hover {
+                .card-pin {
+                    display: block;
 
-		a{
-			color: $body-font-color;
+                    img {
+                        border: 5px solid $secondary-color;
+                        border-radius: 100px;
+                    }
+                }
 
-		}
-		span{
-			color: $anchor-font-color;
-		}
-	}
+                .pin-screen {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
 
-	li img{
-		display: block;
-	}
+            .pin-screen {
+                background: rgba(#fff, 0.5);
+                display: none;
+                width: 100%;
+                height: 100%;
+                border: 3px solid $secondary-color;
+                transition: all .25s ease-in-out;
+                -moz-transition: all .25s ease-in-out;
+                -webkit-transition: all .25s ease-in-out;
+            }
 
-	.feature-card-link {
-		text-decoration: inherit;
-	}
+            .card-pin {
+                display: none;
+            }
+        }
 
+        .resource-card-content {
+            padding: 15px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    li {
+        list-style-type: none;
+
+        a {
+            color: $body-font-color;
+        }
+
+        span {
+            color: $anchor-font-color;
+        }
+    }
+
+    li img {
+        display: block;
+    }
+
+    .feature-card-link {
+        text-decoration: inherit;
+    }
 }

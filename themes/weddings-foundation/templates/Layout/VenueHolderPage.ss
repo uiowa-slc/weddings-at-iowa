@@ -5,7 +5,7 @@
 	<ul class="resource-card-list">
 		
 		<% loop $getVenues %>
-	  		<% include card %>
+	  		<% include Card %>
 	  	<% end_loop %>
 	</ul>
 </div>

@@ -1,53 +1,54 @@
-.top-bar{
+.top-bar {
+    .name h1 {
+        //display: inline-block;
+        position: relative;
 
-	.name h1 {
-		//display: inline-block;
-		position: relative;
-		
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-		transition: all 0.3s;
-		text-transform: uppercase;
-		letter-spacing: 4px;
-		margin: 0 auto;
-		display: block;
-		font-family: classico-urw;
-		font-size: rem-calc(13);
-		@media #{$medium-up}{
-			//line-height: $header-height-md;
-			font-size: rem-calc(32);
-		}
-		@media #{$large-up}{
-			margin: 0;
-			font-size: rem-calc(48);
-			//line-height: $header-height-lg;
-		}
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin: 0 auto;
+        display: block;
+        font-family: classico-urw;
+        font-size: rem-calc(13);
 
+        @media #{$medium-up} {
+            //line-height: $header-height-md;
+            font-size: rem-calc(32);
+        }
 
-		a{
-			color: #666;
-		}
-		small {
-			text-transform: lowercase;
-			font-size: 80%;
-		}
+        @media #{$large-up} {
+            margin: 0;
+            font-size: rem-calc(48);
 
+            //line-height: $header-height-lg;
+        }
 
-	}
+        a {
+            color: #666;
+        }
 
-	.uiowa-logo img, .dsl-logo img{
-		width: 150px;
-	}
+        small {
+            text-transform: lowercase;
+            font-size: 80%;
+        }
+    }
 
-	.menu-icon span{
-		font-family: $header-font-family;
-	}
-	li.has-form {
-	  @media #{$large-up}{
-	  	//min-width: 300px;
-	  }
+    .uiowa-logo img, .dsl-logo img {
+        width: 150px;
+    }
 
-	  input{
-	  	border-radius: 20px;
-	  }
-	}
+    .menu-icon span {
+        font-family: $header-font-family;
+    }
+
+    li.has-form {
+        @media #{$large-up} {
+            //min-width: 300px;
+        }
+
+        input {
+            border-radius: 20px;
+        }
+    }
 }

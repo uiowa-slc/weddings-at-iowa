@@ -2,26 +2,26 @@
     Px to Em conversion
 -------------------------------------------*/
 $browser-context: 16;
+
 @function em($pixels, $context: $browser-context) {
-    @return #{$pixels/$context}em
+    @return #{$pixels / $context}em;
 }
+
 /* usage: font-size: em(18) */
 
 /*-------------------------------------------
     Px to Rem conversion
 -------------------------------------------*/
-@mixin rem($size){
-  font-size: $size + px;
-  font-size: ($size / $base-font) + rem;
+@mixin rem($size) {
+    font-size: $size + px;
+    font-size: $size / $base-font + rem;
 }
+
 /* usage
     p {
         @include font-size(13);
     }
 */
-
-
-
 
 /* =============================================================================
     Vertical Gradient with solid colour back-up
@@ -30,12 +30,24 @@ $browser-context: 16;
 @mixin gradient($color: #F5F5F5, $start-color: #EEE, $end-color: #FFF) {
     background-color: $color;
     background-repeat: repeat-x;
-    background-image: -moz-linear-gradient($start-color, $end-color); /* FF 3.6+ */
-    background-image: -ms-linear-gradient($start-color, $end-color); /* IE10 */
-    background-image: -webkit-linear-gradient($start-color, $end-color); /* Safari 5.1+, Chrome 10+ */
-    background-image: -o-linear-gradient($start-color, $end-color); /* Opera 11.10 */
-    background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%); /* IE10+ */
-    background-image: linear-gradient($start-color, $end-color); /* the standard */
+    background-image: -moz-linear-gradient($start-color, $end-color);
+
+    /* FF 3.6+ */
+    background-image: -ms-linear-gradient($start-color, $end-color);
+
+    /* IE10 */
+    background-image: -webkit-linear-gradient($start-color, $end-color);
+
+    /* Safari 5.1+, Chrome 10+ */
+    background-image: -o-linear-gradient($start-color, $end-color);
+
+    /* Opera 11.10 */
+    background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%);
+
+    /* IE10+ */
+    background-image: linear-gradient($start-color, $end-color);
+
+    /* the standard */
 }
 
 /* Example
@@ -50,13 +62,13 @@ body {
     Transition mixin with speed and timing function
     ========================================================================= */
 
-@mixin transition($duration:0.2s, $ease:linear) {
+@mixin transition($duration: 0.2s, $ease: linear) {
     -webkit-transition: all $duration $ease;
     -moz-transition: all $duration $ease;
     transition: all $duration $ease;
 }
 
-@mixin transition-delay($delay:0.2s) {
+@mixin transition-delay($delay: 0.2s) {
     -webkit-transition-delay: $delay;
     -moz-transition-delay: $delay;
     transition-delay: $delay;
@@ -93,18 +105,21 @@ div {
     Box-shadow complete with vendor prefixes, up to 5 shadow parameters
     ========================================================================= */
 
-@mixin box-shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false) {
+@mixin box-shadow($shadow1, $shadow2: false, $shadow3: false, $shadow4: false, $shadow5: false) {
     $params: $shadow1;
 
     @if $shadow2 {
         $params: $shadow1, $shadow2;
     }
+
     @if $shadow3 != false {
         $params: $shadow1, $shadow2, $shadow3;
     }
+
     @if $shadow4 != false {
         $params: $shadow1, $shadow2, $shadow3, $shadow4;
     }
+
     @if $shadow5 != false {
         $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5;
     }
@@ -140,10 +155,11 @@ div {
 
     height: $height;
     padding-top: $slope * 100%;
-
     -moz-background-size: cover;
     background-size: cover;
-    background-position: center;  /* Internet Explorer 7/8 */
+    background-position: center;
+
+    /* Internet Explorer 7/8 */
 }
 
 /* Example - The following will have fluid ratio from 4:1 at 800px to 2:1 at 300px.

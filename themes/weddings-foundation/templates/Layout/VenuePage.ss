@@ -46,20 +46,16 @@
 
 <!--Begin Flickity Slider-->
 <% if $GalleryImages %>
-	<div class="row">
-		<div class="large-12 columns">
+
 			<h1 class="text-center">Photos</h1>
-			<div class="gallery">
+			<div class="venue-gallery">
 				<% loop $GalleryImages %>
 					<div class="gallery-cell">
 						<!-- heres the image-->
-						<img class="gallery-cell-image" src="$Fill(1920,1080).URL" alt="$Title" />
+						<img class="gallery-cell-image" src="$URL" alt="$Title" />
 					</div>
 				<% end_loop %>
 			</div>
-		</div>
-	</div>
-
 <% end_if %>
 <!--Begin features and specifications-->
 <div class="row">

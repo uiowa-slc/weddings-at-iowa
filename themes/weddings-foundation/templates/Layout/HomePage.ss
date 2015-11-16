@@ -2,7 +2,7 @@
 
 <% loop $Features %>
     <div data-pin-hover="true" class="cell">
-    	<div class="feature-bg" style="background-image: url('$Image.Fill(1280,720).URL');">
+    	<div class="feature-bg" style="background-image: url('$Image.URL');">
 			<div class="feature-text">
 		    	<h2>$Title</h2>
 		    	$Content
@@ -31,7 +31,7 @@
 <div class="row collapse">
 	<div class="large-12 columns">
 		<ul class="resource-card-list">
-			<h2 class="text-center section-title">Venues</h2>
+			<h2 class="text-center section-title">More Venues</h2>
 			<% loop $Venues.Limit(4) %>
 		  		<% include Card %>
 		  	<% end_loop %>
@@ -45,12 +45,12 @@
 		  	<% end_loop %>
 		  	
 		</ul>
-		<p class="text-center"><a href="services/">See all services &rarr;</a></p>
+		<!--<p class="text-center"><a href="services/">See all services &rarr;</a></p>-->
 	</div>
 </div>
-<div class="testimonial-container" style="background-image: url('{$ThemeDir}/images/home-slider-2.jpg')">
+<%--<div class="testimonial-container" style="background-image: url('{$ThemeDir}/images/home-slider-2.jpg')">
 	<% loop $Testimonials.Limit(1) %>
 		<% include TestimonialCard %>
   	<% end_loop %>
 </div>
-<p class="text-center"><a href="testimonials/">See what people are saying &rarr;</a></p>
+<p class="text-center"><a href="testimonials/">See what people are saying &rarr;</a></p>--%>
