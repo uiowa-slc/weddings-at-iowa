@@ -1,107 +1,176 @@
 .VenuePage {
-    .top-banner-image {
-        height: 300px;
+	.top-banner-image {
+		height: 300px;
 
-        @media #{$large-up} {
-            height: 400px;
-        }
+		@media #{$large-up} {
+			height: 400px;
+		}
 
-        @media #{$xlarge-up} {
-            height: 500px;
-        }
+		@media #{$xlarge-up} {
+			height: 500px;
+		}
 
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
-    }
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
 
-    article h1 {
-        //border-top: 5px solid #888;
-        border-bottom: 4px solid $secondary-color;
-        text-transform: uppercase;
-        text-align: center;
-        margin-top: $column-gutter / 2;
-    }
+	article h1 {
+		//border-top: 5px solid #888;
+		border-bottom: 4px solid $secondary-color;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: $column-gutter / 2;
+	}
 
-    .initial-description {
-        margin-bottom: 1.25rem;
-        text-align: justify;
-        text-justify: inter-word;
-        padding-right: 30px;
+	.initial-description {
+		margin-bottom: 1.25rem;
+		text-align: justify;
+		text-justify: inter-word;
+		padding-right: 30px;
 
-        p {
-            font-size: rem-calc(22);
-        }
+		p {
+			font-size: rem-calc(22);
+		}
 
-        p:nth-child(1):first-letter {
-            font-size: 83px;
-            float: left;
-            height: 64px;
-            margin-right: 10px;
-            color: darken($secondary-color, 10);
+		p:nth-child(1):first-letter {
+			font-size: 83px;
+			float: left;
+			height: 64px;
+			margin-right: 10px;
+			color: darken($secondary-color, 10);
 
-            //border-radius: 5px;
-            line-height: 78px;
-            font-style: italic;
-        }
-    }
+			//border-radius: 5px;
+			line-height: 78px;
+			font-style: italic;
+		}
+	}
 
-    ul.services li {
-        font-size: rem-calc(22);
-    }
+	ul.services li {
+		font-size: rem-calc(22);
+	}
 
-    .contact-info {
-        margin-bottom: 1.25rem;
-        margin-top: 1.25rem;
-        background-color: #fafafa;
+	.contact-info {
+		margin-bottom: 1.25rem;
+		margin-top: 1.25rem;
+		background-color: #fafafa;
 
-        h3 {
-            text-transform: uppercase;
-        }
-    }
+		h3 {
+			text-transform: uppercase;
+		}
+	}
 
-    .features {
-        margin: $column-gutter 0;
-    }
+	.features {
+		margin: $column-gutter 0;
+	}
 
-    .center-header {
-        text-align: center;
-    }
+	.center-header {
+		text-align: center;
+	}
 
-    .icon {
-        padding-left: 0px;
-        padding-right: 0px;
-        text-align: right;
-        margin-top: 5px;
-    }
+	.icon {
+		padding-left: 0px;
+		padding-right: 0px;
+		text-align: right;
+		margin-top: 5px;
+	}
 
-    .feature-text {
-        text-align: justify;
-        text-justify: inter-word;
-    }
+	.feature-text {
+		text-align: justify;
+		text-justify: inter-word;
+	}
 
-    .social-list {
-        list-style-type: none;
-        margin-left: 0px;
-    }
+	.social-list {
+		list-style-type: none;
+		margin-left: 0px;
+	}
 
-    .social-list-item {
-        margin-bottom: 10px;
-    }
+	.social-list-item {
+		margin-bottom: 10px;
+	}
 
-    .social-list-item-link {
-        text-decoration: none;
-        color: #333;
-    }
+	.social-list-item-link {
+		text-decoration: none;
+		color: #333;
+	}
+
+	// Slider styles
+	#venue-slider {
+		&.flexslider {
+			margin-bottom: 0;
+		}
+
+		.flex-direction-nav {
+			display: none;
+		}
+
+		.slides li .slide-content-container {
+			width: 100%;
+			height: 600px;
+			background-position: 50% 50%;
+			background-size: cover;
+			position: relative;
+			transition: all 1s ease-in-out;
+			-moz-transition: all 1s ease-in-out;
+			-webkit-transition: all 1s ease-in-out;
+
+			img {
+				width: auto;
+			}
+
+			&:hover {
+				.card-pin {
+					display: block;
+
+					img {
+						border: 3px solid $secondary-color;
+						border-radius: 100px;
+					}
+				}
+
+				.pin-screen {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+
+			.pin-screen {
+				background: rgba(36, 36, 36, 0.65);
+				display: none;
+				width: 100%;
+				height: 100%;
+			}
+
+			.card-pin {
+				display: none;
+			}
+		}
+	}
+
+	//Carousel (filmstrip thumbnails at the bottom)
+	#venue-carousel {
+		ul li {
+			margin-right: 10px;
+		}
+
+		li.flex-active-slide img {
+			opacity: 0.5;
+		}
+
+		ul li:hover {
+			cursor: pointer;
+		}
+	}
 }
 
 .share-container {
-    //border-top: 2px solid #eee;
-    //border-bottom: 2px solid #eee;
-    margin: 20px 0;
+	//border-top: 2px solid #eee;
+	//border-bottom: 2px solid #eee;
+	margin: 20px 0;
 
-    h2 {
-        font-size: 18px;
-        text-transform: uppercase;
-    }
+	h2 {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
 }

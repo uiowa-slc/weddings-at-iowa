@@ -4,7 +4,7 @@
 
 @import "lib/social/scss/rrssb";
 
-//@import "lib/flexslider";
+@import "lib/flexslider";
 
 @import "layout/top-bar";
 @import "layout/header";
@@ -22,30 +22,30 @@
 @import "../../../division-bar/scss/md-bar";
 
 [class*="block-grid-"], .resource-card-list {
-    &.text-center {
-        font-size: 0;
+	&.text-center {
+		font-size: 0;
 
-        > li {
-            float: none;
-            display: inline-block;
-        }
-    }
+		> li {
+			float: none;
+			display: inline-block;
+		}
+	}
 }
 
 .main {
-    min-height: 320px;
+	min-height: 320px;
 }
 
 .block-header-container {
-    background: #eee;
-    margin-bottom: 10px;
+	background: #eee;
+	margin-bottom: 10px;
 }
 
 h2 {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 button, .button {
-    font-family: $header-font-family;
-    text-transform: uppercase;
+	font-family: $header-font-family;
+	text-transform: uppercase;
 }

@@ -2,13 +2,19 @@
 
 <% loop $Features %>
     <div data-pin-hover="true" class="cell">
+    	
     	<div class="feature-bg" style="background-image: url('$Image.URL');">
+    	
 			<div class="feature-text">
-		    	<h2>$Title</h2>
+		    	<a href="$Link"><h2>$Title</h2>
 		    	$Content
+		    	<p>Continue reading...</p>
+		    	</a>
 		    	<% include ShareIcons %>
 			</div>
+
 		</div>
+		
 	</div>
 <% end_loop %>
 </div>

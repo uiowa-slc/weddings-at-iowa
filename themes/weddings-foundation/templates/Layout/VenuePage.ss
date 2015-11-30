@@ -46,16 +46,31 @@
 
 <!--Begin Flickity Slider-->
 <% if $GalleryImages %>
-
 			<h1 class="text-center">Photos</h1>
-			<div class="venue-gallery">
+			<div id="venue-slider" class="flexslider">
+				<ul class="slides">
 				<% loop $GalleryImages %>
-					<div class="gallery-cell">
-						<!-- heres the image-->
-						<img class="gallery-cell-image" src="$URL" alt="$Title" />
-					</div>
+					<li>
+						<div class="slide-content-container" style="background-image: url('$Fill(1920,1080).AbsoluteURL');">
+						<a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=$AbsoluteLink&media=$Fill(600,338).AbsoluteURL&description=$Title" data-pin-custom="true" class="card-pin pin-screen">
+							<img src="{$ThemeDir}/images/pin.png" width="100" height="100" data-pin-nopin="true">
+						</a>
+						</div>
+					</li>
 				<% end_loop %>
+				</ul>
 			</div>
+			<div id="venue-carousel" class="flexslider">
+				<ul class="slides">
+				<% loop $GalleryImages %>
+					<li>
+						<!-- heres the image-->
+						<img src="$Fill(640,360).URL" alt="$Title" />
+					</li>
+				<% end_loop %>
+				</ul>
+			</div>
+
 <% end_if %>
 <!--Begin features and specifications-->
 <div class="row">

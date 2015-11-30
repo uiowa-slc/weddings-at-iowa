@@ -38,6 +38,15 @@ class HomePageFeature extends DataObject {
 		return $fields;
 	}
 
+	public function Link() {
+		if ($this->AssociatedPage()) {
+			return $this->AssociatedPage()->Link();
+		} else {
+			return $this->ExternalLink;
+		}
+
+	}
+
 	public function FeedItems() {
 
 		if ($this->FeedLink) {
