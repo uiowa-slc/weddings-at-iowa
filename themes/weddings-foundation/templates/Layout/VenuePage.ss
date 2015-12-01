@@ -11,7 +11,11 @@
 <!--Begin description and services-->
 <div class="row">
 
-	<div class="large-6 large-centered columns end">
+	<div class="large-3 columns">
+
+
+	</div>
+	<div class="large-5 large-offset-3 columns">
 		<article>
 			<h1> $Title </h1>
 			<div class="initial-description">
@@ -28,25 +32,18 @@
 			</ul>
 			<% end_if %>
 			<% if $Address || $PhoneNumber || $Email || $Facebook || $Twitter || $Instagram %>
-			<div class="row">
-				<div class="large-12 columns block-header-container">
-					<h3 class="text-center">Connect with {$Title}</h3>
-				</div>
-			</div>
 			<% end_if %>
-			<div class="row">
-				<% include VenueContactInfo %>
-				<% include VenueSocialMedia %>				
-			</div>
-			<% include ShareIcons %>
+				<% include ShareIcons %>
 			</article>
+		</div>
+		<div class="large-3 large-offset-1 columns">
+				<% include VenueContactInfo %>
 		</div>
 	</div>
 
 
 <!--Begin Flickity Slider-->
 <% if $GalleryImages %>
-			<h1 class="text-center">Photos</h1>
 			<div id="venue-slider" class="flexslider">
 				<ul class="slides">
 				<% loop $GalleryImages %>

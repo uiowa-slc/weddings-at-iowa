@@ -15,7 +15,8 @@
 				</li>
 				<% if not $Last %><li class="divider"></li><% end_if %>
 				<% end_loop %>
-				<li class="has-form">
+
+				<%--<li class="has-form">
 				  <div class="row collapse">
 				    <div class="small-12 columns">
 				      <input type="text" placeholder="Find wedding services, vendors, venues">
@@ -24,9 +25,17 @@
 				      <a href="#" class="alert button expand">Search</a>
 				    </div>
 				  </div>
-				</li>
+				</li>--%>
 			</ul>
 			<ul class="right">
+				<li class="social-icon"><a href="https://www.instagram.com/weddingsatiowa/" target="_blank">
+						<img src="{$ThemeDir}/images/instagram-link.png" alt="Instagram" />
+					</a>
+				</li>
+				<li class="social-icon"><a href="https://www.pinterest.com/weddingsatiowa/" target="_blank">
+						<img src="{$ThemeDir}/images/pinterest-link.png" alt="Instagram" />
+					</a>
+				</li>
 				<li><a href="http://studentlife.uiowa.edu/" target="_blank" class="dsl-logo"><img src="{$ThemeDir}/images/dosl-light.png" /></a></li>
 				<li><a href="http://uiowa.edu/" target="_blank" class="uiowa-logo"><img src="{$ThemeDir}/images/uiowa-light.png" /></a></li>
 

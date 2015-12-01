@@ -53,6 +53,14 @@
 		font-family: $header-font-family;
 	}
 
+	li.social-icon a:not(.button) {
+		padding: 0 5px;
+	}
+
+	li a img {
+		width: 65px;
+	}
+
 	li.has-form {
 		@media #{$large-up} {
 			//min-width: 300px;

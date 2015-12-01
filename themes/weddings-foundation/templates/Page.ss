@@ -33,6 +33,7 @@
 			<a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a>
 		</div>	
 	</header>-->
+	
 	<% include TopBar %>
 
 	<div class="main typography" role="main">

@@ -51,9 +51,8 @@
 	}
 
 	.contact-info {
-		margin-bottom: 1.25rem;
-		margin-top: 1.25rem;
-		background-color: #fafafa;
+		margin-bottom: $column-gutter / 2;
+		margin-top: $column-gutter / 2;
 
 		h3 {
 			text-transform: uppercase;
