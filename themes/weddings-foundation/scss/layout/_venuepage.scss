@@ -1,29 +1,37 @@
 .VenuePage {
-	.top-bar-container {
-		border: none;
-	}
-
-	.top-bar {
-		background: none;
-
-		.name {
-			background: none;
-
-			h1 a {
-				color: white;
-				text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36);
-
-				small {
-					color: #eee;
-				}
-			}
+	@media #{$large-up} {
+		.top-banner-image {
+			-webkit-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+			-moz-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+			box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
 		}
 
-		.top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li > a, .no-js .top-bar-section ul li:active > a,
-		.no-js .top-bar-section ul li:hover > a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li {
+		.top-bar-container {
+			border: none;
+		}
+
+		.top-bar {
 			background: none;
-			color: white;
-			text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36);
+
+			.name {
+				background: none;
+
+				h1 a {
+					color: white;
+					text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36);
+
+					small {
+						color: #eee;
+					}
+				}
+			}
+
+			.top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li > a, .no-js .top-bar-section ul li:active > a,
+			.no-js .top-bar-section ul li:hover > a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li {
+				background: none;
+				color: white;
+				text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36);
+			}
 		}
 	}
 
@@ -57,6 +65,11 @@
 		text-justify: inter-word;
 		padding-right: 30px;
 
+		@media #{$large-up} {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
 		p {
 			font-size: rem-calc(22);
 		}
@@ -79,11 +92,13 @@
 	}
 
 	.contact-info {
-		margin-bottom: $column-gutter / 2;
-		margin-top: $column-gutter / 2;
+		@media #{$large-up} {
+			margin-bottom: 70px;
+			margin-top: 70px;
 
-		h3 {
-			text-transform: uppercase;
+			h3 {
+				text-transform: uppercase;
+			}
 		}
 	}
 
@@ -163,7 +178,7 @@
 			}
 
 			.pin-screen {
-				background: rgba(36, 36, 36, 0.65);
+				background: rgba(255, 255, 255, 0.11);
 				display: none;
 				width: 100%;
 				height: 100%;

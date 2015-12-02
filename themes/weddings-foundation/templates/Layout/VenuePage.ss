@@ -12,33 +12,46 @@
 <!--Begin description and services-->
 <div class="row">
 
-	<div class="large-3 columns">
+	<div class="large-2 columns">
+		<div class="contact-info">
 
+				<h3 class="text-center">Share this venue</h3>
+				<% include ShareIcons %>
+
+				<% if $Services %>
+				<hr />
+				<h3>Recommended services:</h3>
+				<ul class="services">
+					<% loop $Services %>
+					<li>
+						$Image.SetWidth(30) <a href="$Link" class="description-links"> $Title </a>
+					</li>
+					<% end_loop %>
+				</ul>
+				<% end_if %>
+		</div>
 
 	</div>
-	<div class="large-6 large-offset-3 columns">
+	<div class="large-6 large-offset-1 columns">
 		<article>
 			<h1> $Title </h1>
 			<div class="initial-description">
 				<% if $Content %>$Content<% end_if %>
 			</div>
 			<% if $Services %>
-			<h3>Available services:</h3>
-			<ul class="services">
-				<% loop $Services %>
-				<li>
-					$Image.SetWidth(30) <a href="$Link" class="description-links"> $Title </a>
-				</li>
-				<% end_loop %>
-			</ul>
+			<div class="services">
+
+			</div>
 			<% end_if %>
 			<% if $Address || $PhoneNumber || $Email || $Facebook || $Twitter || $Instagram %>
 			<% end_if %>
-				<% include ShareIcons %>
+
 			</article>
 		</div>
 		<div class="large-2 large-offset-1 columns">
+
 				<% include VenueContactInfo %>
+
 		</div>
 	</div>
 
@@ -73,19 +86,7 @@
 <!--Begin features and specifications-->
 <div class="row">
 	<div class="large-12 columns center-header">
-		<h1>Features and specifications</h1>
-	</div>
-</div>
-<div class="row">
-	<div class="large-12 columns">
-		<ul class="small-block-grid-2 medium-block-grid-3 features text-center">
-			<% if $Cost %><% include CostFeatureCard %><% end_if %>
-			<% if $Capacity %><% include CapFeatureCard %><% end_if %>
-			<% include IndoorFeatureCard %>
-			<% loop $Features %>
-			<% include FeatureCard %>
-			<% end_loop %>
-		</ul>
+		
 	</div>
 </div>
 <!--Begin Testimonials-->
@@ -99,7 +100,7 @@
 <!--Begin Related Venues-->
 <div class="row">
 	<div class="large-12 columns center-header">
-		<h1>Related venues</h1>
+		<h1>You might also like:</h1>
 	</div>
 </div>
 <div class="row">

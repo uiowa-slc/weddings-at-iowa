@@ -3,13 +3,14 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.3.2",
-		"silverstripe/cms": "3.2.0",
-		"silverstripe/framework": "3.2.0",
+		"silverstripe/cms": "3.2.1",
+		"silverstripe/framework": "3.2.1",
 		"silverstripe-themes/simple": "*",
 		"silverstripe/userforms": "*",
 		"silverstripe/tagfield": "*",
 		"md/division-bar" : "*",
-		"undefinedoffset/sortablegridfield": "dev-master"
+		"undefinedoffset/sortablegridfield": "dev-master",
+		"jonom/focuspoint" : "*"
 	},
 	"config": {
 		"process-timeout": 600	
