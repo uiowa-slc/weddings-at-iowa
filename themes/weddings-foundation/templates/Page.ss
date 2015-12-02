@@ -33,8 +33,11 @@
 			<a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a>
 		</div>	
 	</header>-->
+
+	<% if $ClassName != "VenuePage" %>
+		<% include TopBar %>
+	<% end_if %>
 	
-	<% include TopBar %>
 
 	<div class="main typography" role="main">
 		$Layout

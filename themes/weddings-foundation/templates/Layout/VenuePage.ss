@@ -1,6 +1,7 @@
 <% if $CoverImage %>
 <!--Begin banner image and title-->
 <div class="top-banner-image" style="background-image: url('$CoverImage.URL')">
+	<% include TopBar %>
 	<div class="row top-banner-title">
 		<div class="large-12 columns text-center">
 			<!-- Please call pinit.js only once per page -->
@@ -15,7 +16,7 @@
 
 
 	</div>
-	<div class="large-5 large-offset-3 columns">
+	<div class="large-6 large-offset-3 columns">
 		<article>
 			<h1> $Title </h1>
 			<div class="initial-description">
@@ -36,7 +37,7 @@
 				<% include ShareIcons %>
 			</article>
 		</div>
-		<div class="large-3 large-offset-1 columns">
+		<div class="large-2 large-offset-1 columns">
 				<% include VenueContactInfo %>
 		</div>
 	</div>

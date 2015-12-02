@@ -1,4 +1,32 @@
 .VenuePage {
+	.top-bar-container {
+		border: none;
+	}
+
+	.top-bar {
+		background: none;
+
+		.name {
+			background: none;
+
+			h1 a {
+				color: white;
+				text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36);
+
+				small {
+					color: #eee;
+				}
+			}
+		}
+
+		.top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li > a, .no-js .top-bar-section ul li:active > a,
+		.no-js .top-bar-section ul li:hover > a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li {
+			background: none;
+			color: white;
+			text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36);
+		}
+	}
+
 	.top-banner-image {
 		height: 300px;
 
@@ -7,7 +35,7 @@
 		}
 
 		@media #{$xlarge-up} {
-			height: 500px;
+			height: 700px;
 		}
 
 		background-repeat: no-repeat;
