@@ -1,49 +1,20 @@
-.testimonial-container {
-    background-size: cover;
-    background-position: 50% 50%;
-    font-family: $body-font-family;
+.testimonial {
+	.row {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		-webkit-box-align: center;
+		align-items: center;
+	}
 
-    .testimonial {
-        padding: 0;
-        background: rgba(#333, 0.7);
+	blockquote {
+		font-size: rem-calc(26);
+	}
 
-        @media #{$large-up} {
-            padding: 100px 0;
-        }
-
-        blockquote {
-            border: 0;
-
-            &:before {
-                content: '\201C';
-                font-size: rem-calc(64);
-                left: -1%;
-                position: absolute;
-                color: #eee;
-
-                @media #{$large-up} {
-                    left: -2%;
-                    font-size: rem-calc(160);
-                }
-            }
-        }
-
-        .quote {
-            color: white;
-
-            @media #{$medium-up} {
-                padding: rem-calc(48) rem-calc(22);
-                font-size: rem-calc(36);
-            }
-
-            &::first-letter {
-                -webkit-initial-letter: 2;
-                color: $secondary-color;
-
-                @media #{$large-up} {
-                    -webkit-initial-letter: 3;
-                }
-            }
-        }
-    }
+	.author {
+		font-family: $header-font-family;
+		text-transform: uppercase;
+	}
 }

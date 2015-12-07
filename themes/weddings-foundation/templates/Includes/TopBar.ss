@@ -27,7 +27,7 @@
 				  </div>
 				</li>--%>
 			</ul>
-			<% if $ClassName == "VenuePage" %>
+			<% if $ClassName == "VenuePage" || $ClassName == "ServicePage" %>
 				<% include TopBarSecondaryLinksWhite %>
 			<% else %>
 				<% include TopBarSecondaryLinks %>

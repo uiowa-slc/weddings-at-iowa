@@ -1,16 +1,12 @@
-<a href="testimonials/"><div class="testimonial">
+<div class="testimonial">
 	<div class="row">
-		<div class="large-12 columns">
-		
-		<blockquote>
-			<p class="quote">Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. 
-
-			<br />- $Title</p>
-		</blockquote>
-
-		<div class="text-center"><span class="button">Keep reading...</span></div>
-
+		<div class="large-7 columns">
+			<img src="{$ThemeDir}/images/testimonial-example.jpg">
+		</div>
+		<div class="large-5 columns text-center">
+			<blockquote>“The Iowa House Hotel was the perfect place to stay for my Iowa City wedding. The rooms were bright and comfortable and had lots of space (and mirrors!) for my bridesmaids and I as we got ready on the big day. My wedding guests were especially happy about the free access to the sauna and steamrooms over at the University’s wellness center!"</blockquote>
+			<%--<p class="text-center"><img src="{$ThemeDir}/images/separator.png" /> --%>
+			<p class="author">Lauren Katalinich</p>
 		</div>
 	</div>
 </div>
-</a>

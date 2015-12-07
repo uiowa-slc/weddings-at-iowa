@@ -37,6 +37,7 @@
 			<h1> $Title </h1>
 			<div class="initial-description">
 				<% if $Content %>$Content<% end_if %>
+				<p class="text-center"><img class="description-sep" src="{$ThemeDir}/images/separator-mono.png" /></p>
 			</div>
 			<% if $Services %>
 			<div class="services">
@@ -107,13 +108,7 @@
 
 --%>
 <!--Begin Testimonials-->
-<% if $Testimonials %>
-<div class="row">
-	<div class="large-12 columns center-header">
-		<h1>Testimonials</h1>
-	</div>
-</div>
-<% end_if %>
+<% include TestimonialCard %>
 <!--Begin Related Venues-->
 <div class="row">
 	<div class="large-12 columns center-header">
