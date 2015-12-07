@@ -37,6 +37,7 @@
 			<h1> $Title </h1>
 			<div class="initial-description">
 				<% if $Content %>$Content<% end_if %>
+				<button type="button" class="myButton">Get More Info!</button>
 			</div>
 			<% if $Services %>
 			<div class="services">
