@@ -37,8 +37,25 @@
 			<h1> $Title </h1>
 			<div class="initial-description">
 				<% if $Content %>$Content<% end_if %>
-				<button type="button" class="myButton">Get More Info!</button>
-			</div>
+				<% if $PreferedContactInformation %>
+					<% if $PreferedContactInformation == "Phone" %>
+
+						<a href="tel:+1-319-335-3114 " class="myButton"><button type="button" class="myButton">Get More Info!</button></a></div>
+
+					<% end_if %>
+					<% if $PreferedContactInformation == "Facebook" %>
+
+						<a href="https://www.facebook.com/imuevents/" class="myButton"><button type="button" class="myButton">Get More Info!</button></a></div>
+
+					<% end_if %>
+					<% if $PreferedContactInformation == "Email" %>
+
+						<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="myButton"><button type="button" class="myButton">Get More Info!</button></a></div>
+
+					<% end_if %>
+
+				<% end_if %>
+				
 			<% if $Services %>
 			<div class="services">
 

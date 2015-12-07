@@ -13,6 +13,8 @@ class VenuePage extends Page {
 		'Cost'        => 'Text',
 		'PerUnit'     => 'Varchar(100)',
 		'PreferedContactInformation' => 'Text',
+
+
 		//Turn the following into dropdown or boolean fields. or Checkboxes
 		'Indoors'        => 'Boolean',
 		'Catering'       => 'Boolean',
@@ -28,11 +30,13 @@ class VenuePage extends Page {
 	private static $has_one = array(
 		'CoverImage' => 'Image',
 		'Building'   => 'Building',
+
 	);
 
 	private static $has_many = array(
 		'VenueMedia' => 'VenueMedia',
 		'Video'      => 'VideoEmbed',
+
 	);
 
 	private static $many_many = array(
@@ -66,7 +70,10 @@ class VenuePage extends Page {
 		$fields->addFieldToTab('Root.Contact', new TextField('Email'));
 		$fields->addFieldToTab('Root.Contact', new TextField('PhoneNumber'));
 		$fields->addFieldToTab('Root.Contact', new TextField('Website'));
-		$fields->addFieldToTab('Root.Contact', new TextField('Prefered Contact Information'));
+		$fields->addFieldToTab('Root.Contact', new TextField('PreferedContactInformation'));
+
+		
+
 
 		$fields->addFieldToTab('Root.Social', new HeaderField('Social Media Information'));
 		$fields->addFieldToTab('Root.Social', new TextField('Facebook'));
