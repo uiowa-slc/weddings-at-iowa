@@ -42,7 +42,7 @@
 	<div class="main typography" role="main">
 		$Layout
 	</div>
-
+	$BetterNavigator
 	<% include Footer %>
 	<% include MdBar %>
 

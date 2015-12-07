@@ -1,10 +1,33 @@
-.VenuePage {
+.VenuePage, .ServicePage {
+	h1 {
+		text-transform: uppercase;
+	}
+
+	.top-bar {
+		&.expanded {
+			background: transparent;
+			height: auto;
+		}
+
+		.title-area {
+			background: none;
+		}
+	}
+
 	@media #{$large-up} {
 		.top-banner-image {
 			background-color: #333;
 			-webkit-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
 			-moz-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
 			box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+		}
+
+		.top-bar .toggle-topbar.menu-icon a {
+			color: #fff;
+		}
+
+		.top-bar .toggle-topbar.menu-icon a span::after {
+			box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
 		}
 
 		.top-bar-container {
@@ -37,7 +60,7 @@
 	}
 
 	.top-banner-image {
-		height: 300px;
+		height: 500px;
 
 		@media #{$large-up} {
 			height: 400px;
@@ -67,8 +90,8 @@
 		padding-right: 30px;
 
 		@media #{$large-up} {
-			padding-top: 40px;
-			padding-bottom: 40px;
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
 
 		p {
@@ -147,6 +170,11 @@
 			display: none;
 		}
 
+		iframe {
+			width: 100% !important;
+			height: 100% !important;
+		}
+
 		.slides li .slide-content-container {
 			width: 100%;
 			height: 600px;
@@ -166,8 +194,10 @@
 					display: block;
 
 					img {
-						border: 3px solid $secondary-color;
-						border-radius: 100px;
+						//border: 3px solid $secondary-color;
+						//border-radius: 100px;
+						opacity: 0.75;
+						max-width: 200px;
 					}
 				}
 

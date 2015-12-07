@@ -15,7 +15,7 @@
 	<div class="large-2 columns">
 		<div class="contact-info">
 
-				<h3 class="text-center">Share this venue</h3>
+				<h3 class="text-center">Share this $singular_name</h3>
 				<% include ShareIcons %>
 
 				<% if $Services %>
@@ -60,12 +60,22 @@
 <% if $GalleryImages %>
 			<div id="venue-slider" class="flexslider">
 				<ul class="slides">
-				<% loop $GalleryImages %>
+				<% loop $VenueMedia %>
 					<li>
-						<div class="slide-content-container" style="background-image: url('$Fill(1920,1080).AbsoluteURL');">
-						<a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=$AbsoluteLink&media=$Fill(600,338).AbsoluteURL&description=$Title" data-pin-custom="true" class="card-pin pin-screen">
-							<img src="{$ThemeDir}/images/pin.png" width="100" height="100" data-pin-nopin="true">
+
+
+						<div class="slide-content-container" style="background-image: url('$Image.Fill(1920,1080).AbsoluteURL');">
+
+						<% if $MediaEmbed %>
+
+							$MediaEmbed
+						<% else %>
+						<a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=$AbsoluteLink&media=$Image.Fill(600,338).AbsoluteURL&description=$Title" data-pin-custom="true" class="card-pin pin-screen">
+								<img src="{$ThemeDir}/images/pin.png" width="100" height="100" data-pin-nopin="true">
 						</a>
+
+						<% end_if %>
+
 						</div>
 					</li>
 				<% end_loop %>
@@ -73,22 +83,29 @@
 			</div>
 			<div id="venue-carousel" class="flexslider">
 				<ul class="slides">
-				<% loop $GalleryImages %>
+				<% loop $VenueMedia %>
 					<li>
 						<!-- heres the image-->
-						<img src="$Fill(640,360).URL" alt="$Title" />
+						<img src="$Image.Fill(640,360).URL" alt="$Title" />
 					</li>
 				<% end_loop %>
 				</ul>
 			</div>
 
 <% end_if %>
+<%--
 <!--Begin features and specifications-->
 <div class="row">
 	<div class="large-12 columns center-header">
-		
+		<% loop $VenueMedia %>
+			$Image <br />
+			$MediaEmbed
+
+		<% end_loop %>
 	</div>
 </div>
+
+--%>
 <!--Begin Testimonials-->
 <% if $Testimonials %>
 <div class="row">

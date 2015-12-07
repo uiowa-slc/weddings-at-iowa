@@ -9,8 +9,11 @@
 		"silverstripe/userforms": "*",
 		"silverstripe/tagfield": "*",
 		"md/division-bar" : "*",
-		"undefinedoffset/sortablegridfield": "dev-master",
-		"jonom/focuspoint" : "*"
+		"undefinedoffset/sortablegridfield": "*",
+		"jonom/focuspoint" : "*",
+		"colymba/gridfield-bulk-editing-tools": "*",
+		"silverstripe-australia/gridfieldextensions": "*",
+		"jonom/silverstripe-betternavigator" : "*"
 	},
 	"config": {
 		"process-timeout": 600	

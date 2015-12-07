@@ -2,26 +2,6 @@
 
 class VenuePage extends Page {
 
-	private static $many_many = array(
-		'Services'      => 'ServicePage',
-		'Testimonial'   => 'Testimonial',
-		'GalleryImages' => 'Image',
-		'Features'      => 'Feature',
-
-	);
-
-	public static $many_many_extraFields = array(
-		'Features'   => array(
-			'SortOrder' => 'Int',
-		)
-	);
-
-	private static $has_one = array(
-		'CoverImage' => 'Image',
-		'Building'   => 'Building',
-
-	);
-
 	private static $db = array(
 
 		'Address'     => 'Text',
@@ -43,6 +23,32 @@ class VenuePage extends Page {
 		'Twitter'        => 'Text',
 
 	);
+
+	private static $has_one = array(
+		'CoverImage' => 'Image',
+		'Building'   => 'Building',
+	);
+
+	private static $has_many = array(
+		'VenueMedia' => 'VenueMedia',
+		'Video'      => 'VideoEmbed',
+	);
+
+	private static $many_many = array(
+		'Services'      => 'ServicePage',
+		'Testimonial'   => 'Testimonial',
+		'GalleryImages' => 'Image',
+		'Features'      => 'Feature',
+
+	);
+
+	public static $many_many_extraFields = array(
+		'Features'   => array(
+			'SortOrder' => 'Int',
+		)
+	);
+
+	private static $singular_name = 'Venue';
 
 	public function getCMSFields() {
 
@@ -75,12 +81,21 @@ class VenuePage extends Page {
 		$buildingField  = DropdownField::create('Buildings', 'Building', $buildingSource)->setEmptyString('(None)');
 		$fields->addFieldToTab("Root.Main", $buildingField, 'Content');
 
-		$fields->addFieldToTab('Root.Media', UploadField::create(
-				'GalleryImages',
-				'Gallery images for this page',
-				$this->GalleryImages()
+		/*$fields->addFieldToTab('Root.Media', UploadField::create(
+		'GalleryImages',
+		'Gallery images for this page',
+		$this->GalleryImages()
 
-			));
+		));*/
+
+		$mediaFieldConf = GridFieldConfig_RelationEditor::create(10);
+		$mediaFieldConf->addComponent(new GridFieldSortableRows('SortOrder'));
+		$mediaFieldConf->addComponent(new GridFieldBulkUpload('Image'));
+
+		//$mediaFieldConf->removeComponentsByType('GridFieldAddNewButton')->addComponent(new GridFieldAddNewMultiClass());
+		//$mediaFieldConf->setClasses(array('Image', 'VideoEmbed'));
+
+		$fields->addFieldToTab('Root.Media', new GridField('VenueMediaObjects', 'Photos and Videos', $this->VenueMedia(), $mediaFieldConf));
 
 		$fields->addFieldToTab('Root.Features', new HeaderField('Required Information'));
 		$fields->addFieldToTab('Root.Features', new TextField('Capacity'));
