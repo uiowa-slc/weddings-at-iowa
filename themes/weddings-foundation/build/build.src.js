@@ -3695,7 +3695,7 @@ $( document ).ready(function() {
     controlNav: false,
     animationLoop: false,
     slideshow: false,
-    itemWidth: 210,
+    itemWidth: 300,
     itemMargin: 5,
     asNavFor: '#venue-slider'
   });

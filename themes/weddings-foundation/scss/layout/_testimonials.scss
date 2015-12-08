@@ -1,4 +1,12 @@
 .testimonial {
+	@media #{$medium-up} {
+		padding: 30px;
+	}
+
+	@media #{$large-up} {
+		padding: 60px 0;
+	}
+
 	.row {
 		display: -ms-flexbox;
 		display: -webkit-flex;

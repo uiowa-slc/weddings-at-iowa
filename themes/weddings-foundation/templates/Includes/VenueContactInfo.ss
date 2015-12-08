@@ -1,5 +1,6 @@
 <% if $Address || $PhoneNumber || $Email %>
-				<div class="contact-info">
+				<div class="contact-info text-center">
+
 				<h3>Features: </h3>
 
 				<% if $Cost %><strong>Cost:</strong> $Cost<% end_if %>
@@ -21,7 +22,7 @@
 				<% loop $Features %>
 					<strong>{$Title}:</strong>$Content
 				<% end_loop %>
-				<hr />
+				<img src="{$ThemeDir}/images/separator-small.png" class="separator" />
 					<h3>Contact:</h3>
 					<p>
 						<% if $ContactName %>$ContactName</br><% end_if %>
@@ -35,21 +36,21 @@
 						<% if $Facebook %>
 						<li class="social-list-item">
 							<a href="$Facebook" target="_blank" class="social-list-item-link">
-								<img src="{$ThemeDir}/images/socicon-custom/facebook.png" />  &nbsp; &nbsp; Facebook
+								<img src="{$ThemeDir}/images/socicon-custom/facebook.png" />  &nbsp; Facebook
 							</a>
 						</li>
 						<% end_if %>
 						<% if $Twitter %>
 						<li class="social-list-item">
 							<a href="$Twitter" class="social-list-item-link">
-								<img src="{$ThemeDir}/images/socicon-custom/twitter.png" />  &nbsp; &nbsp; Twitter
+								<img src="{$ThemeDir}/images/socicon-custom/twitter.png" />  &nbsp; Twitter
 							</a>
 						</li>
 						<% end_if %>
 						<% if $Instagram %>
 						<li class="social-list-item">
 							<a href="$Instagram" target="_blank" class="social-list-item-link">
-								<img src="{$ThemeDir}/images/socicon-custom/instagram.png" />  &nbsp; &nbsp; Instagram
+								<img src="{$ThemeDir}/images/socicon-custom/instagram.png" />  &nbsp; Instagram
 							</a>
 						</li>
 						<% end_if %>
