@@ -12,7 +12,8 @@ class VenuePage extends Page {
 		'Capacity'    => 'Text',
 		'Cost'        => 'Text',
 		'PerUnit'     => 'Varchar(100)',
-		'PreferedContactInformation' => 'Text',
+		'PreferredContactInformation' => 'Text', 
+
 
 
 		//Turn the following into dropdown or boolean fields. or Checkboxes
@@ -25,12 +26,11 @@ class VenuePage extends Page {
 		'Instagram'      => 'Text',
 		'Twitter'        => 'Text',
 
-	);
+	); 
 
 	private static $has_one = array(
 		'CoverImage' => 'Image',
 		'Building'   => 'Building',
-
 	);
 
 	private static $has_many = array(
@@ -70,9 +70,11 @@ class VenuePage extends Page {
 		$fields->addFieldToTab('Root.Contact', new TextField('Email'));
 		$fields->addFieldToTab('Root.Contact', new TextField('PhoneNumber'));
 		$fields->addFieldToTab('Root.Contact', new TextField('Website'));
-		$fields->addFieldToTab('Root.Contact', new TextField('PreferedContactInformation'));
 
-		
+		$objects = array('(Select one)', 'Phone', 'Facebook', 'Email');
+		$fields->addFieldToTab('Root.Contact', new DropdownField('PreferredContactInformation', 'Preferred Contact Information', $objects));
+
+
 
 
 		$fields->addFieldToTab('Root.Social', new HeaderField('Social Media Information'));

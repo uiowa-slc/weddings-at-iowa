@@ -50,7 +50,7 @@
 					<% end_if %>
 					<% if $PreferedContactInformation == "Email" %>
 
-						<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="myButton"><button type="button" class="myButton">Get More Info!</button></a></div>
+						<a href="mailto:eventservices@uiowa.edu?Subject=Hello%20again" target="_top" class="myButton"><button type="button" class="myButton">Get More Info!</button></a></div>
 
 					<% end_if %>
 
