@@ -13,7 +13,8 @@
 		"jonom/focuspoint" : "*",
 		"colymba/gridfield-bulk-editing-tools": "*",
 		"silverstripe-australia/gridfieldextensions": "*",
-		"jonom/silverstripe-betternavigator" : "*"
+		"jonom/silverstripe-betternavigator" : "*",
+		"silverstripe/staticpublisher" : "*"
 	},
 	"config": {
 		"process-timeout": 600	

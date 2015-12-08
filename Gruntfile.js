@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         },                  // Target
         options: {              // Target options
           style: 'compressed',
-          loadPath: [
+          includePaths: [
           '<%=globalConfig.themeDir %>/bower_components/foundation/scss'
           ],
           sourcemap: true
@@ -24,7 +24,21 @@ module.exports = function(grunt) {
       }
     },
     //concat all the files into the build folder includePaths: 
+    uncss: {
 
+      dist: {
+        options:{
+          ignore: [/meta\..+/]
+        },
+        files: {
+          '<%=globalConfig.themeDir %>/css/tidy.css': 
+              ['dist/weddings-at-iowa/index.html', 
+              'dist/weddings-at-iowa/venues/imu-main-lounge/index.html'
+              ]
+        },
+
+      }
+    },
     concat: {
       js:{
         src: [
@@ -82,12 +96,13 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-uncss');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'uncss', 'concat', 'uglify', 'watch']);
 
 };

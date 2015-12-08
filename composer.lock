@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "08d67d2ac998aef56fabc75c866a93ef",
-    "content-hash": "67a4c74772becd9b2f1350cd76609eba",
+    "hash": "0b91d9c1611b2daf96c4f90ee08e337e",
+    "content-hash": "3c01b9df033aa39c81175973d2168341",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -571,6 +571,44 @@
                 "siteconfig"
             ],
             "time": "2015-11-20 10:02:33"
+        },
+        {
+            "name": "silverstripe/staticpublisher",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-labs/silverstripe-staticpublisher.git",
+                "reference": "680bd6b36ffdfa66ec01f65437b3487e147efa5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-staticpublisher/zipball/680bd6b36ffdfa66ec01f65437b3487e147efa5a",
+                "reference": "680bd6b36ffdfa66ec01f65437b3487e147efa5a",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Sam Minnee",
+                    "email": "sam@silverstripe.com"
+                },
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "StaticPublisher provides an extensions for exporting a SilverStripe application to either a local or remote file systems.",
+            "keywords": [
+                "export",
+                "publisher",
+                "silverstripe-labs",
+                "static"
+            ],
+            "time": "2015-10-14 03:40:20"
         },
         {
             "name": "silverstripe/tagfield",

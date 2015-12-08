@@ -1,6 +1,7 @@
 <% if $Address || $PhoneNumber || $Email %>
 				<div class="contact-info text-center">
 
+					
 				<h3>Features: </h3>
 
 				<% if $Cost %><strong>Cost:</strong> $Cost<% end_if %>

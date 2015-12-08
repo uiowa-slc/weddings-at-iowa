@@ -7,24 +7,6 @@ $( document ).ready(function() {
 	  }
 	});
 
- $('#venue-carousel').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    itemWidth: 300,
-    itemMargin: 5,
-    asNavFor: '#venue-slider'
-  });
-  $('#venue-slider').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    sync: "#venue-carousel"
-  });
-
-});
 
 
 var bLazy = new Blazy({
@@ -35,6 +17,37 @@ var bLazy = new Blazy({
         src: 'data-src-small'
     }
    ]
+});
+
+ $('#venue-carousel').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 300,
+    itemMargin: 5,
+    asNavFor: '#venue-slider',
+    start: function(){
+      bLazy.revalidate();
+    },
+    after: function(){
+      bLazy.revalidate();
+    }  
+  });
+  $('#venue-slider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: "#venue-carousel",
+    start: function(){
+      bLazy.revalidate();
+    },
+    after: function(){
+      bLazy.revalidate();
+    }
+  });
+
 });
 
 $(".gallery").carousel({

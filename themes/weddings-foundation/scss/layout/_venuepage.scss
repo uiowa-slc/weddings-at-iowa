@@ -5,78 +5,6 @@
 		text-transform: uppercase;
 	}
 
-	.top-bar {
-		&.expanded {
-			background: transparent;
-			height: auto;
-		}
-
-		.title-area {
-			background: none;
-		}
-	}
-
-	@media #{$large-up} {
-		.top-banner-image {
-			background-color: #333;
-			-webkit-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
-			-moz-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
-			box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
-		}
-
-		.top-bar .toggle-topbar.menu-icon a {
-			color: #fff;
-		}
-
-		.top-bar .toggle-topbar.menu-icon a span::after {
-			box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
-		}
-
-		.top-bar-container {
-			border: none;
-		}
-
-		.top-bar {
-			background: none;
-
-			.name {
-				background: none;
-
-				h1 a {
-					color: white;
-					text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36);
-
-					small {
-						color: #eee;
-					}
-				}
-			}
-
-			.top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li > a, .no-js .top-bar-section ul li:active > a,
-			.no-js .top-bar-section ul li:hover > a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li {
-				background: none;
-				color: white;
-				text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36);
-			}
-		}
-	}
-
-	.top-banner-image {
-		height: 500px;
-
-		@media #{$large-up} {
-			height: 400px;
-		}
-
-		@media #{$xlarge-up} {
-			height: 700px;
-		}
-
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 50% 50%;
-	}
-
 	article h1 {
 		//border-top: 5px solid #888;
 		border-bottom: 4px solid $secondary-color;
@@ -123,6 +51,16 @@
 
 	.contact-info {
 		color: #777;
+		text-align: center;
+
+		ul {
+			margin-left: 0;
+		}
+
+		ul li {
+			list-style-type: none;
+			margin-left: 0;
+		}
 
 		.separator {
 			margin-bottom: $paragraph-margin-bottom;
@@ -180,7 +118,8 @@
 		}
 
 		.flex-direction-nav {
-			display: none;
+			//display: none;
+	
 		}
 
 		iframe {
@@ -194,9 +133,14 @@
 			background-position: 50% 50%;
 			background-size: cover;
 			position: relative;
-			transition: all 1s ease-in-out;
+
+			/*transition: all 1s ease-in-out;
 			-moz-transition: all 1s ease-in-out;
-			-webkit-transition: all 1s ease-in-out;
+			-webkit-transition: all 1s ease-in-out;*/
+
+			@media #{$large-up} {
+				height: 800px;
+			}
 
 			img {
 				width: auto;

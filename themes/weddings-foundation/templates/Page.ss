@@ -21,7 +21,7 @@
 	<% end_if %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
-	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
+	<% require themedCSS("app") %>
 	<script src="//use.typekit.net/vds3rxz.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 	<!--<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>-->

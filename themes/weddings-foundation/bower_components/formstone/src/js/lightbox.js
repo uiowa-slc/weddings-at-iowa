@@ -83,9 +83,8 @@
 				source         = ($el && $el[0].href) ? $el[0].href || "" : "",
 				hash           = ($el && $el[0].hash) ? $el[0].hash || "" : "",
 				sourceParts    = source.toLowerCase().split(".").pop().split(/\#|\?/),
-				extension      = sourceParts[0],
 				type           = ($el) ? $el.data(Namespace + "-type") : "",
-				isImage	       = ( (type === "image") || ($.inArray(extension, data.extensions) > -1 || source.substr(0, 10) === "data:image") ),
+				isImage	       = ( (type === "image") || (source.match(data.fileTypes) || source.substr(0, 10) === "data:image") ),
 				isVideo	       = checkVideo(source),
 				isUrl	       = ( (type === "url") || (!isImage && !isVideo && source.substr(0, 4) === "http" && !hash) ),
 				isElement      = ( (type === "element") || (!isImage && !isVideo && !isUrl && (hash.substr(0, 1) === "#")) ),
@@ -952,11 +951,11 @@
 				Instance.targetVideoWidth  = Instance.targetVideoHeight / Instance.videoRatio;
 			}
 
-			Instance.videoMarginTop = (Instance.viewportHeight - Instance.targetVideoHeight) / 2;
-			Instance.videoMarginLeft = (Instance.viewportWidth - Instance.targetVideoWidth) / 2;
+			Instance.videoMarginTop  = (Instance.viewportHeight - Instance.targetVideoHeight) / 2;
+			Instance.videoMarginLeft = (Instance.viewportWidth  - Instance.targetVideoWidth)  / 2;
 		} else {
 			Instance.viewportHeight = Instance.windowHeight - Instance.margin;
-			Instance.viewportWidth  = Instance.windowWidth - Instance.margin;
+			Instance.viewportWidth  = Instance.windowWidth  - Instance.margin;
 
 			Instance.targetVideoWidth  = (Instance.videoWidth > Instance.viewportWidth) ? Instance.viewportWidth : Instance.videoWidth;
 			if (Instance.targetVideoWidth < Instance.minWidth) {
@@ -976,9 +975,9 @@
 		}
 
 		Instance.$videoWrapper.css({
-			height: Instance.targetVideoHeight,
-			width: Instance.targetVideoWidth,
-			marginTop: Instance.videoMarginTop,
+			height:     Instance.targetVideoHeight,
+			width:      Instance.targetVideoWidth,
+			marginTop:  Instance.videoMarginTop,
 			marginLeft: Instance.videoMarginLeft
 		});
 
@@ -1044,8 +1043,8 @@
 				property: "opacity"
 			},
 			function() {
-				if (typeof Instance.$image !== 'undefined') {
-					Instance.$image.remove();
+				if (typeof Instance.$imageContainer !== 'undefined') {
+					Instance.$imageContainer.remove();
 				}
 				if (typeof Instance.$videoWrapper !== 'undefined') {
 					Instance.$videoWrapper.remove();
@@ -1059,8 +1058,12 @@
 					isVideo = checkVideo(source);
 
 				if (isVideo) {
+					Instance.type = "video";
+
 					loadVideo(source);
 				} else {
+					Instance.type = "image";
+
 					loadImage(source);
 				}
 
@@ -1276,7 +1279,7 @@
 			/**
 			 * @options
 			 * @param customClass [string] <''> "Class applied to instance"
-			 * @param extensions [array] <"jpg", "sjpg", "jpeg", "png", "gif"> "Image type extensions"
+			 * @param fileTypes [regex] <> "Image file types"
 			 * @param fixed [boolean] <false> "Flag for fixed positioning"
 			 * @param formatter [function] <$.noop> "Caption format function"
 			 * @param infinite [boolean] <false> "Flag for infinite galleries"
@@ -1300,7 +1303,7 @@
 
 			defaults: {
 				customClass    : "",
-				extensions     : [ "jpg", "sjpg", "jpeg", "png", "gif" ],
+				fileTypes      : /\.(jpg|sjpg|jpeg|png|gif)$/i,
 				fixed          : false,
 				formatter      : formatCaption,
 				infinite       : false,

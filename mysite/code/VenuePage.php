@@ -30,13 +30,13 @@ class VenuePage extends Page {
 	);
 
 	private static $has_many = array(
-		'VenueMedia' => 'VenueMedia',
-		'Video'      => 'VideoEmbed',
+		'Testimonials' => 'Testimonial',
+		'VenueMedia'   => 'VenueMedia',
+		'Video'        => 'VideoEmbed',
 	);
 
 	private static $many_many = array(
 		'Services'      => 'ServicePage',
-		'Testimonial'   => 'Testimonial',
 		'GalleryImages' => 'Image',
 		'Features'      => 'Feature',
 
@@ -97,6 +97,10 @@ class VenuePage extends Page {
 
 		$fields->addFieldToTab('Root.Media', new GridField('VenueMediaObjects', 'Photos and Videos', $this->VenueMedia(), $mediaFieldConf));
 
+		$testimonialFieldConf = GridFieldConfig_RelationEditor::create(5);
+		$testimonialFieldConf->addComponent(new GridFieldSortableRows('SortOrder'));
+		$fields->addFieldToTab('Root.Testimonials', new GridField('Testimonials', 'Testimonials', $this->Testimonials(), $testimonialFieldConf));
+
 		$fields->addFieldToTab('Root.Features', new HeaderField('Required Information'));
 		$fields->addFieldToTab('Root.Features', new TextField('Capacity'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('Indoors'));
@@ -117,7 +121,7 @@ class VenuePage extends Page {
 	}
 
 	public function getRelatedVenues() {
-		$venues    = VenuePage::get();
+		$venues    = VenuePage::get()->filter(array('CoverImageID:not' => 0));
 		$buildings = Building::get();
 
 		$relatedVenues = new ArrayList();

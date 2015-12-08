@@ -1,6 +1,6 @@
 <% if $CoverImage %>
 <!--Begin banner image and title-->
-<div class="top-banner-image" style="background-image: url('$CoverImage.URL')">
+<div class="top-banner-image lazy" data-src="$CoverImage.CroppedFocusedImage(1280,720).URL" style="background-image: url('$CoverImage.CroppedFocusedImage(640,360).URL')">
 	<% include TopBar %>
 	<div class="row top-banner-title">
 		<div class="large-12 columns text-center">
@@ -19,7 +19,7 @@
 				<% include ShareIcons %>
 
 				<% if $Services %>
-				<hr />
+				<p class="text-center"><img src="{$ThemeDir}/images/separator-small.png" /></p>
 				<h3>Recommended services:</h3>
 				<ul class="services">
 					<% loop $Services %>
@@ -37,7 +37,7 @@
 			<h1> $Title </h1>
 			<div class="initial-description">
 				<% if $Content %>$Content<% end_if %>
-				<p class="text-center"><img class="description-sep" src="{$ThemeDir}/images/separator-mono.png" /></p>
+				<p class="text-center"><img class="description-sep" src="{$ThemeDir}/images/separator-mono2.png" nopin="nopin" /></p>
 			</div>
 			<% if $Services %>
 			<div class="services">
@@ -65,10 +65,9 @@
 					<li>
 
 
-						<div class="slide-content-container" style="background-image: url('$Image.Fill(1920,1080).AbsoluteURL');">
+						<div class="slide-content-container lazy" data-src="$Image.CroppedFocusedImage(1920,1080).AbsoluteURL" style="background-image: url($Image.CroppedFocusedImage(640,360).AbsoluteURL); background-position: $Image.PercentageX% $Image.PercentageY%;">
 
 						<% if $MediaEmbed %>
-
 							$MediaEmbed
 						<% else %>
 						<a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=$AbsoluteLink&media=$Image.Fill(600,338).AbsoluteURL&description=$Title" data-pin-custom="true" class="card-pin pin-screen">
@@ -87,7 +86,7 @@
 				<% loop $VenueMedia %>
 					<li>
 						<!-- heres the image-->
-						<img src="$Image.Fill(640,360).URL" alt="$Title" />
+						<img src="{$ThemeDir}/images/placeholder.png" data-src="$Image.CroppedFocusedImage(640,360).URL" nopin="nopin" class="lazy" alt="$Title" />
 					</li>
 				<% end_loop %>
 				</ul>
@@ -108,7 +107,11 @@
 
 --%>
 <!--Begin Testimonials-->
-<% include TestimonialCard %>
+<% if $Testimonials %>
+	<% loop $Testimonials %>
+		<% include TestimonialCard %>
+	<% end_loop %>
+<% end_if %>
 <!--Begin Related Venues-->
 <div class="row">
 	<div class="large-12 columns center-header">
@@ -116,11 +119,14 @@
 	</div>
 </div>
 <div class="row">
-	<div class="large-12 columns">
-		<ul class="resource-card-list text-center">
-			<% loop $RelatedVenues.Limit(4) %>
-			<% include Card %>
-			<% end_loop %>
-		</ul>
-	</div>
+	<% loop $RelatedVenues.Limit(4) %>
+		<% if $CoverImage %>
+		<div class="large-2 <% if not $First %>large-offset-1<% end_if %> columns <% if $Last %>end<% end_if%>">
+			<a href="$Link">
+				<img src="$CoverImage.CroppedFocusedImage(640,360).URL" />
+				<h3>$Title</h3>
+			</a>
+		</div>
+		<% end_if %>
+	<% end_loop %>
 </div>

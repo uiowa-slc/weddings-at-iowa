@@ -13,9 +13,11 @@
 		if (Formstone.support.file) {
 			var html = "";
 
-			html += '<div class="' + RawClasses.target + '">';
-			html += data.label;
-			html += '</div>';
+			if (!data.label) {
+				html += '<div class="' + RawClasses.target + '">';
+				html += data.label;
+				html += '</div>';
+			}
 			html += '<input class="' + RawClasses.input + '" type="file"';
 			if (data.multiple) {
 				html += ' multiple';
@@ -36,7 +38,7 @@
 				.on(Events.dragEnter, data, onDragEnter)
 				.on(Events.dragOver, data, onDragOver)
 				.on(Events.dragLeave, data, onDragOut)
-				.on(Events.drop, Classes.target, data, onDrop);
+				.on(Events.drop, data, onDrop);
 
 			data.$input.on(Events.change, data, onChange);
 
@@ -186,7 +188,8 @@
 		var data = e.data;
 
 		// if (!data.disabled) {
-			data.$el.addClass(RawClasses.dropping);
+			data.$el.addClass(RawClasses.dropping)
+					.trigger(Events.fileDragEnter);
 		// }
 	}
 
@@ -202,7 +205,8 @@
 		var data = e.data;
 
 		// if (!data.disabled) {
-			data.$el.addClass(RawClasses.dropping);
+			data.$el.addClass(RawClasses.dropping)
+					.trigger(Events.fileDragOver);
 		// }
 	}
 
@@ -218,7 +222,8 @@
 		var data = e.data;
 
 		// if (!data.disabled) {
-			data.$el.removeClass(RawClasses.dropping);
+			data.$el.removeClass(RawClasses.dropping)
+					.trigger(Events.fileDragLeave);
 		// }
 	}
 
@@ -249,6 +254,8 @@
 	 * @param files [object] "File list"
 	 */
 	function handleUpload(data, files) {
+		data.$el.trigger(Events.queued, [ files ]);
+
 		var newFiles = [];
 
 		for (var i = 0; i < files.length; i++) {
@@ -414,7 +421,7 @@
 			 * @param beforeSend [function] "Run before request sent, must return modified formdata or `false` to cancel"
 			 * @param customClass [string] <''> "Class applied to instance"
 			 * @param dataType [string] <'html'> "Data type of AJAX request"
-			 * @param label [string] <'Drag and drop files or click to select'> "Drop target text"
+			 * @param label [string] <'Drag and drop files or click to select'> "Drop target text; `false` to disable"
 			 * @param leave [string] <'You have uploads pending, are you sure you want to leave this page?'> "Before leave message"
 			 * @param maxQueue [int] <2> "Number of files to simultaneously upload"
 			 * @param maxSize [int] <5242880> "Max file size allowed"
@@ -469,17 +476,25 @@
 		 * @events
 		 * @event complete "All uploads are complete"
 		 * @event filecomplete "Specific upload complete"
+		 * @event filedragenter "File dragged into target"
+		 * @event filedragleave "File dragged from target"
+		 * @event filedragover "File dragged over target"
 		 * @event fileerror "Specific upload error"
-		 * @event filestart "Specific upload starting"
 		 * @event fileprogress "Specific upload progress"
+		 * @event filestart "Specific upload starting"
 		 * @event start "Uploads starting"
+		 * @event queued "Files are queued for upload"
 		 */
 
 		Events.complete        = "complete";
-		Events.fileStart       = "filestart";
-		Events.fileProgress    = "fileprogress";
 		Events.fileComplete    = "filecomplete";
+		Events.fileDragEnter   = "filedragenter";
+		Events.fileDragLeave   = "filedragleave";
+		Events.fileDragOver    = "filedragover";
 		Events.fileError       = "fileerror";
+		Events.fileProgress    = "fileprogress";
+		Events.fileStart       = "filestart";
 		Events.start           = "start";
+		Events.queued          = "queued";
 
 })(jQuery, Formstone);
