@@ -37,20 +37,21 @@
 			<h1> $Title </h1>
 			<div class="initial-description">
 				<% if $Content %>$Content<% end_if %>
-				<% if $PreferedContactInformation %>
-					<% if $PreferedContactInformation == "Phone" %>
+				<!--<a href="$PhoneNumber" class="button">Get More Info!</a>-->
 
-						<a href="tel:+1-319-335-3114 " class="myButton"><button type="button" class="myButton">Get More Info!</button></a></div>
+				<% if $PreferredContactInformation %>
+					<% if $PreferredContactInformation == "Phone" %>
 
-					<% end_if %>
-					<% if $PreferedContactInformation == "Facebook" %>
+					<a href="$PhoneNumber" class="button">Get More Info!</a>
+					
+					<% else_if $PreferredContactInformation == "Facebook" %>
 
-						<a href="https://www.facebook.com/imuevents/" class="myButton"><button type="button" class="myButton">Get More Info!</button></a></div>
+					<a href="$Facebook" class="button">Get More Info!</a>
 
-					<% end_if %>
-					<% if $PreferedContactInformation == "Email" %>
+					<% else_if $PreferredContactInformation == "Email" %>
 
-						<a href="mailto:eventservices@uiowa.edu?Subject=Hello%20again" target="_top" class="myButton"><button type="button" class="myButton">Get More Info!</button></a></div>
+					<a href="$Email" class="button">Get More Info!</a>
+
 
 					<% end_if %>
 
