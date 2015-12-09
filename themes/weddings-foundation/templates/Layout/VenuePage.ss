@@ -57,7 +57,7 @@
 
 
 <!--Begin Flickity Slider-->
-<% if $GalleryImages %>
+<% if $VenueMedia %>
 		<div class="row">
 			<div class="large-12 columns">
 				<h2 class="section-title">Photos and videos</h2>
