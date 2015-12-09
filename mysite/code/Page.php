@@ -21,14 +21,20 @@ class Page_Controller extends ContentController {
 		Requirements::themedCSS("form");
 
 	}
+	public function AllVenues() {
+		$venues = VenuePage::get()->filter(array('ClassName' => 'VenuePage'))->sort('RAND()');
+		return $venues;
 
-	function randomImage() {
-		/*$imageNumber = rand(1,20);
-		$imageName = '<img src="/themes/dpa/images/background_'.$imageNumber.'.jpg" class="bg" />';
+	}
 
-		return $imageName;*/
-		return DataObject::get('BackgroundImage', null, 'RAND()', null, 1);
+	public function AllServices() {
+		$services = ServicePage::get()->filter(array('ClassName' => 'ServicePage'))->sort('RAND()');;
+		return $services;
+	}
 
+	public function AllTestimonials() {
+		$testimonials = Testimonial::get()->sort('RAND()');
+		return $testimonials;
 	}
 
 }

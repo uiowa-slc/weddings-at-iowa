@@ -31,21 +31,7 @@ class HomePage_Controller extends Page_Controller {
 		return HomePageFeature::get();
 	}
 
-	public function getVenues() {
-		$venues = VenuePage::get();
-		return $venues;
 
-	}
-
-	public function getServices() {
-		$services = ServicePage::get();
-		return $services;
-	}
-
-	public function getTestimonials() {
-		$testimonials = Testimonial::get()->limit(20);
-		return $testimonials;
-	}
 
 }
 

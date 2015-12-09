@@ -1,10 +1,12 @@
 .testimonial {
+	padding-top: $column-gutter / 2;
+
 	@media #{$medium-up} {
-		padding: 30px;
+		//padding: 30px;
 	}
 
 	@media #{$large-up} {
-		padding: 60px 0;
+		//padding: 60px 0;
 	}
 
 	img.photo {
@@ -25,10 +27,38 @@
 
 	blockquote {
 		font-size: rem-calc(26);
+		border: none;
+
+		@media #{$medium-up} {
+			border-left: 1px solid #ddd;
+		}
+	}
+
+	.section-title {
+		font-size: rem-calc(15);
+		color: #666;
+
+		a {
+			color: #b9b9b9;
+		}
 	}
 
 	.author {
 		font-family: $header-font-family;
 		text-transform: uppercase;
+	}
+}
+
+.HomePage .testimonial {
+	blockquote {
+		border: none;
+	}
+
+	@media #{$medium-up} {
+		//padding-top: 0;
+	}
+
+	@media #{$large-up} {
+		//padding-top: 0;
 	}
 }

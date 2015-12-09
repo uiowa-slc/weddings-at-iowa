@@ -2,17 +2,31 @@
 <!--Begin banner image and title-->
 <div class="top-banner-image lazy" data-src="$CoverImage.CroppedFocusedImage(1280,720).URL" style="background-image: url('$CoverImage.CroppedFocusedImage(640,360).URL')">
 	<% include TopBar %>
-	<div class="row top-banner-title">
-		<div class="large-12 columns text-center">
-			<!-- Please call pinit.js only once per page -->
-		</div>
-	</div>
 </div>
+<% else %>
+	
 <% end_if %>
 <!--Begin description and services-->
 <div class="row">
+	<div class="large-6 large-push-3 columns">
+		<article>
+			<h1> $Title </h1>
+			<div class="initial-description">
+				<% if $Content %>$Content<% end_if %>
+				<p class="text-center"><img class="description-sep" src="{$ThemeDir}/images/separator-mono2.png" nopin="nopin" /></p>
+			</div>
+			<% if $Services %>
+			<div class="services">
 
-	<div class="large-2 columns">
+			</div>
+			<% end_if %>
+			<% if $Address || $PhoneNumber || $Email || $Facebook || $Twitter || $Instagram %>
+			<% end_if %>
+
+			</article>
+	</div>
+	<div class="large-2 large-pull-6 columns">
+
 		<div class="contact-info">
 
 				<h3 class="text-center">Share this $singular_name</h3>
@@ -32,23 +46,7 @@
 		</div>
 
 	</div>
-	<div class="large-6 large-offset-1 columns">
-		<article>
-			<h1> $Title </h1>
-			<div class="initial-description">
-				<% if $Content %>$Content<% end_if %>
-				<p class="text-center"><img class="description-sep" src="{$ThemeDir}/images/separator-mono2.png" nopin="nopin" /></p>
-			</div>
-			<% if $Services %>
-			<div class="services">
 
-			</div>
-			<% end_if %>
-			<% if $Address || $PhoneNumber || $Email || $Facebook || $Twitter || $Instagram %>
-			<% end_if %>
-
-			</article>
-		</div>
 		<div class="large-2 large-offset-1 columns">
 
 				<% include VenueContactInfo %>
@@ -59,6 +57,11 @@
 
 <!--Begin Flickity Slider-->
 <% if $GalleryImages %>
+		<div class="row">
+			<div class="large-12 columns">
+				<h2 class="section-title">Photos and videos</h2>
+			</div>
+		</div>
 			<div id="venue-slider" class="flexslider">
 				<ul class="slides">
 				<% loop $VenueMedia %>
@@ -108,25 +111,42 @@
 --%>
 <!--Begin Testimonials-->
 <% if $Testimonials %>
+		<div class="row">
+			<div class="large-12 columns">
+				<h2 class="section-title">Testimonial<% if $Testimonials.TotalItems > 2 %>s<% end_if %></h2>
+			</div>
+		</div>
 	<% loop $Testimonials %>
 		<% include TestimonialCard %>
 	<% end_loop %>
 <% end_if %>
-<!--Begin Related Venues-->
-<div class="row">
-	<div class="large-12 columns center-header">
-		<h1>You might also like:</h1>
-	</div>
-</div>
-<div class="row">
-	<% loop $RelatedVenues.Limit(4) %>
-		<% if $CoverImage %>
-		<div class="large-2 <% if not $First %>large-offset-1<% end_if %> columns <% if $Last %>end<% end_if%>">
-			<a href="$Link">
-				<img src="$CoverImage.CroppedFocusedImage(640,360).URL" />
-				<h3>$Title</h3>
-			</a>
+<!--Begin Related Items-->
+<section class="related-items">
+	<div class="row collapse">
+		<div class="large-12 columns">
+			<% if $ClassName == "ServicePage" %>
+				<div class="row">
+					<div class="large-12 columns">
+						<h2 class="section-title"><a href="services/">More Services &rarr;</a></h2>
+					</div>
+				</div>
+				<ul class="resource-card-list">
+					<% loop $AllServices.Limit(4) %>
+				  		<% include Card %>
+				  	<% end_loop %>	  	
+				</ul>
+			<% else_if $ClassName == "VenuePage" %>
+				<div class="row">
+					<div class="large-12 columns">
+						<h2 class="section-title"><a href="venues/">More Venues &rarr;</a></h2>
+					</div>
+				</div>
+				<ul class="resource-card-list">
+					<% loop $AllVenues.Limit(4) %>
+				  		<% include Card %>
+				  	<% end_loop %>	  	
+				</ul>
+			<% end_if %>
 		</div>
-		<% end_if %>
-	<% end_loop %>
-</div>
+	</div>
+</section>

@@ -2,13 +2,15 @@
 	h1, h2, h3, h4, h5 {}
 
 	h1 {
-		text-transform: uppercase;
+		//text-transform: uppercase;
+
 	}
 
 	article h1 {
 		//border-top: 5px solid #888;
 		border-bottom: 4px solid $secondary-color;
-		text-transform: uppercase;
+
+		//text-transform: uppercase;
 		text-align: center;
 		margin-top: $column-gutter / 2;
 	}
@@ -17,7 +19,6 @@
 		margin-bottom: 1.25rem;
 		text-align: justify;
 		text-justify: inter-word;
-		padding-right: 30px;
 
 		@media #{$large-up} {
 			padding-top: 20px;
@@ -182,9 +183,13 @@
 				-webkit-transition: opacity 0.3s ease-in-out;
 				-moz-transition: opacity 0.3s ease-in-out;
 				transition: opacity 0.3s ease-in-out;
+				-webkit-filter: grayscale(50%);
+				filter: grayscale(50%);
 
 				&:hover {
 					opacity: 0.8;
+					-webkit-filter: none;
+					filter: none;
 				}
 			}
 		}
@@ -196,6 +201,12 @@
 
 		ul li:hover {
 			cursor: pointer;
+		}
+	}
+
+	.related-items {
+		@media #{$large-up} {
+			padding: $column-gutter 0;
 		}
 	}
 }

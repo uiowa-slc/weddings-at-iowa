@@ -49,3 +49,15 @@ button, .button {
 	font-family: $header-font-family;
 	text-transform: uppercase;
 }
+
+.section-title {
+	margin: ($column-gutter / 2) 0;
+	font-size: rem-calc(20);
+	color: #999;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h1.section-title {
+	font-size: rem-calc(36);
+}

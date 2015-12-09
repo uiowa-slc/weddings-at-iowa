@@ -26,7 +26,7 @@
 	<script>try{Typekit.load();}catch(e){}</script>
 	<!--<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>-->
 </head>
-<body class="$ClassName.ATT">
+<body class="$ClassName.ATT <%if $CoverImage %>with-cover-image<% end_if %>">
 	<%-- include DivisionBarFoundation --%>
 	<!--<header class="header" role="banner">
 		<div class="row text-center">

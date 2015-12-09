@@ -12,6 +12,10 @@
     position: relative;
     line-height: 1.6;
     font-family: $header-font-family;
+
+    .row {
+        max-width: 1024px;
+    }
 }
 
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5 {

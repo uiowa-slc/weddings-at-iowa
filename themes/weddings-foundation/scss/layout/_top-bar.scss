@@ -1,5 +1,5 @@
 .top-bar-container {
-	border-bottom: 1px solid #eee;
+	//border-bottom: 1px solid #eee;
 }
 
 .top-bar {
@@ -74,7 +74,7 @@
 
 //Individual page customizations of top bar:
 
-.VenuePage, .ServicePage, .HomePage {
+.VenuePage.with-cover-image, .ServicePage.with-cover-image, .HomePage {
 	.top-bar {
 		&.expanded {
 			background: transparent;

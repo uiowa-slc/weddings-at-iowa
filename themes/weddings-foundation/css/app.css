@@ -8005,9 +8005,6 @@ html[xmlns] .flexslider .slides {
     opacity: 1;
     right: 10px; } }
 
-.top-bar-container {
-  border-bottom: 1px solid #eee; }
-
 .top-bar .name {
   background-image: url("../images/header-bg.png");
   background-repeat: no-repeat;
@@ -8051,58 +8048,58 @@ html[xmlns] .flexslider .slides {
 .top-bar li.has-form input {
   border-radius: 20px; }
 
-.VenuePage .top-bar.expanded, .ServicePage .top-bar.expanded, .HomePage .top-bar.expanded {
+.VenuePage.with-cover-image .top-bar.expanded, .ServicePage.with-cover-image .top-bar.expanded, .HomePage .top-bar.expanded {
   background: transparent;
   height: auto; }
 
-.VenuePage .top-bar .title-area, .ServicePage .top-bar .title-area, .HomePage .top-bar .title-area {
+.VenuePage.with-cover-image .top-bar .title-area, .ServicePage.with-cover-image .top-bar .title-area, .HomePage .top-bar .title-area {
   background: none; }
 
-.VenuePage .top-banner-image, .ServicePage .top-banner-image, .HomePage .top-banner-image {
+.VenuePage.with-cover-image .top-banner-image, .ServicePage.with-cover-image .top-banner-image, .HomePage .top-banner-image {
   background-color: #333;
   -webkit-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
   -moz-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
   box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35); }
 
-.VenuePage .top-bar .toggle-topbar.menu-icon a, .ServicePage .top-bar .toggle-topbar.menu-icon a, .HomePage .top-bar .toggle-topbar.menu-icon a {
+.VenuePage.with-cover-image .top-bar .toggle-topbar.menu-icon a, .ServicePage.with-cover-image .top-bar .toggle-topbar.menu-icon a, .HomePage .top-bar .toggle-topbar.menu-icon a {
   color: #fff; }
 
-.VenuePage .top-bar .toggle-topbar.menu-icon a span::after, .ServicePage .top-bar .toggle-topbar.menu-icon a span::after, .HomePage .top-bar .toggle-topbar.menu-icon a span::after {
+.VenuePage.with-cover-image .top-bar .toggle-topbar.menu-icon a span::after, .ServicePage.with-cover-image .top-bar .toggle-topbar.menu-icon a span::after, .HomePage .top-bar .toggle-topbar.menu-icon a span::after {
   box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff; }
 
-.VenuePage .top-bar-container, .ServicePage .top-bar-container, .HomePage .top-bar-container {
+.VenuePage.with-cover-image .top-bar-container, .ServicePage.with-cover-image .top-bar-container, .HomePage .top-bar-container {
   border: none;
   position: absolute;
   width: 100%;
   z-index: 99; }
 
-.VenuePage .top-bar, .ServicePage .top-bar, .HomePage .top-bar {
+.VenuePage.with-cover-image .top-bar, .ServicePage.with-cover-image .top-bar, .HomePage .top-bar {
   background: none; }
-  .VenuePage .top-bar .name, .ServicePage .top-bar .name, .HomePage .top-bar .name {
+  .VenuePage.with-cover-image .top-bar .name, .ServicePage.with-cover-image .top-bar .name, .HomePage .top-bar .name {
     background: none; }
-    .VenuePage .top-bar .name h1 a, .ServicePage .top-bar .name h1 a, .HomePage .top-bar .name h1 a {
+    .VenuePage.with-cover-image .top-bar .name h1 a, .ServicePage.with-cover-image .top-bar .name h1 a, .HomePage .top-bar .name h1 a {
       color: white;
       text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36); }
-      .VenuePage .top-bar .name h1 a small, .ServicePage .top-bar .name h1 a small, .HomePage .top-bar .name h1 a small {
+      .VenuePage.with-cover-image .top-bar .name h1 a small, .ServicePage.with-cover-image .top-bar .name h1 a small, .HomePage .top-bar .name h1 a small {
         color: #eee; }
-  .VenuePage .top-bar .top-bar-section li:not(.has-form) a:not(.button), .VenuePage .top-bar .top-bar-section ul li > a, .VenuePage .top-bar .no-js .top-bar-section ul li:active > a,
-  .VenuePage .top-bar .no-js .top-bar-section ul li:hover > a, .VenuePage .top-bar .top-bar-section li:not(.has-form) a:not(.button), .VenuePage .top-bar .top-bar-section li, .ServicePage .top-bar .top-bar-section li:not(.has-form) a:not(.button), .ServicePage .top-bar .top-bar-section ul li > a, .ServicePage .top-bar .no-js .top-bar-section ul li:active > a,
-  .ServicePage .top-bar .no-js .top-bar-section ul li:hover > a, .ServicePage .top-bar .top-bar-section li:not(.has-form) a:not(.button), .ServicePage .top-bar .top-bar-section li, .HomePage .top-bar .top-bar-section li:not(.has-form) a:not(.button), .HomePage .top-bar .top-bar-section ul li > a, .HomePage .top-bar .no-js .top-bar-section ul li:active > a,
+  .VenuePage.with-cover-image .top-bar .top-bar-section li:not(.has-form) a:not(.button), .VenuePage.with-cover-image .top-bar .top-bar-section ul li > a, .VenuePage.with-cover-image .top-bar .no-js .top-bar-section ul li:active > a,
+  .VenuePage.with-cover-image .top-bar .no-js .top-bar-section ul li:hover > a, .VenuePage.with-cover-image .top-bar .top-bar-section li:not(.has-form) a:not(.button), .VenuePage.with-cover-image .top-bar .top-bar-section li, .ServicePage.with-cover-image .top-bar .top-bar-section li:not(.has-form) a:not(.button), .ServicePage.with-cover-image .top-bar .top-bar-section ul li > a, .ServicePage.with-cover-image .top-bar .no-js .top-bar-section ul li:active > a,
+  .ServicePage.with-cover-image .top-bar .no-js .top-bar-section ul li:hover > a, .ServicePage.with-cover-image .top-bar .top-bar-section li:not(.has-form) a:not(.button), .ServicePage.with-cover-image .top-bar .top-bar-section li, .HomePage .top-bar .top-bar-section li:not(.has-form) a:not(.button), .HomePage .top-bar .top-bar-section ul li > a, .HomePage .top-bar .no-js .top-bar-section ul li:active > a,
   .HomePage .top-bar .no-js .top-bar-section ul li:hover > a, .HomePage .top-bar .top-bar-section li:not(.has-form) a:not(.button), .HomePage .top-bar .top-bar-section li {
     background: none;
     color: white;
     text-shadow: 0 1px 5px rgba(51, 51, 51, 0.36); }
 
-.VenuePage .top-banner-image, .ServicePage .top-banner-image, .HomePage .top-banner-image {
+.VenuePage.with-cover-image .top-banner-image, .ServicePage.with-cover-image .top-banner-image, .HomePage .top-banner-image {
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
   @media only screen and (min-width: 64.063em) {
-    .VenuePage .top-banner-image, .ServicePage .top-banner-image, .HomePage .top-banner-image {
+    .VenuePage.with-cover-image .top-banner-image, .ServicePage.with-cover-image .top-banner-image, .HomePage .top-banner-image {
       height: 400px; } }
   @media only screen and (min-width: 90.063em) {
-    .VenuePage .top-banner-image, .ServicePage .top-banner-image, .HomePage .top-banner-image {
+    .VenuePage.with-cover-image .top-banner-image, .ServicePage.with-cover-image .top-banner-image, .HomePage .top-banner-image {
       height: 700px; } }
 
 .cbp-af-header {
@@ -8238,9 +8235,6 @@ html[xmlns] .flexslider .slides {
 
 .HomePage .main {
   padding-top: 0; }
-
-.HomePage .section-title {
-  margin: 0.9375rem 0; }
 
 .HomePage .homepage-hero-slider .row {
   max-width: 100%; }
@@ -8401,10 +8395,10 @@ html[xmlns] .flexslider .slides {
         display: block;
         float: left;
         height: auto;
-        padding: 0 0.9375rem 1.875rem; }
+        padding: 0 0.625rem 1.25rem; }
       .resource-card-list > li {
         list-style: none;
-        padding: 0 0.9375rem 1.875rem;
+        padding: 0 0.625rem 1.25rem;
         width: 25%; }
         .resource-card-list > li:nth-of-type(1n) {
           clear: none; }
@@ -8412,15 +8406,15 @@ html[xmlns] .flexslider .slides {
           clear: both; }
         .resource-card-list > li:nth-of-type(4n+1) {
           padding-left: 0rem;
-          padding-right: 1.40625rem; }
-        .resource-card-list > li:nth-of-type(4n+2) {
-          padding-left: 0.46875rem;
           padding-right: 0.9375rem; }
+        .resource-card-list > li:nth-of-type(4n+2) {
+          padding-left: 0.3125rem;
+          padding-right: 0.625rem; }
         .resource-card-list > li:nth-of-type(4n+3) {
-          padding-left: 0.9375rem;
-          padding-right: 0.46875rem; }
+          padding-left: 0.625rem;
+          padding-right: 0.3125rem; }
         .resource-card-list > li:nth-of-type(4n) {
-          padding-left: 1.40625rem;
+          padding-left: 0.9375rem;
           padding-right: 0rem; } }
   .resource-card-list.small {
     display: block;
@@ -8497,33 +8491,36 @@ html[xmlns] .flexslider .slides {
   .resource-card-list .feature-card-link {
     text-decoration: inherit; }
 
-@media only screen and (min-width: 40.063em) {
-  .testimonial {
-    padding: 30px; } }
+.testimonial {
+  padding-top: 0.9375rem; }
+  .testimonial img.photo {
+    width: 100%; }
+  @media only screen and (min-width: 64.063em) {
+    .testimonial .row {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      align-items: center; } }
+  .testimonial blockquote {
+    font-size: 1.625rem;
+    border: none; }
+    @media only screen and (min-width: 40.063em) {
+      .testimonial blockquote {
+        border-left: 1px solid #ddd; } }
+  .testimonial .section-title {
+    font-size: 0.9375rem;
+    color: #666; }
+    .testimonial .section-title a {
+      color: #b9b9b9; }
+  .testimonial .author {
+    font-family: "europa", Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
 
-@media only screen and (min-width: 64.063em) {
-  .testimonial {
-    padding: 60px 0; } }
-
-.testimonial img.photo {
-  width: 100%; }
-
-@media only screen and (min-width: 64.063em) {
-  .testimonial .row {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    align-items: center; } }
-
-.testimonial blockquote {
-  font-size: 1.625rem; }
-
-.testimonial .author {
-  font-family: "europa", Helvetica, Arial, sans-serif;
-  text-transform: uppercase; }
+.HomePage .testimonial blockquote {
+  border: none; }
 
 .share-container {
   margin: 20px 0; }
@@ -8566,6 +8563,8 @@ html[xmlns] .flexslider .slides {
   position: relative;
   line-height: 1.6;
   font-family: "europa", Helvetica, Arial, sans-serif; }
+  .footer .row {
+    max-width: 1024px; }
 
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5 {
   color: #eee;
@@ -8634,20 +8633,15 @@ html[xmlns] .flexslider .slides {
     color: #333;
     text-decoration: none; }
 
-.VenuePage h1, .ServicePage h1 {
-  text-transform: uppercase; }
-
 .VenuePage article h1, .ServicePage article h1 {
   border-bottom: 4px solid #F5DFA2;
-  text-transform: uppercase;
   text-align: center;
   margin-top: 0.9375rem; }
 
 .VenuePage .initial-description, .ServicePage .initial-description {
   margin-bottom: 1.25rem;
   text-align: justify;
-  text-justify: inter-word;
-  padding-right: 30px; }
+  text-justify: inter-word; }
   @media only screen and (min-width: 64.063em) {
     .VenuePage .initial-description, .ServicePage .initial-description {
       padding-top: 20px;
@@ -8758,9 +8752,13 @@ html[xmlns] .flexslider .slides {
     opacity: 0.4;
     -webkit-transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out; }
+    transition: opacity 0.3s ease-in-out;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%); }
     .VenuePage #venue-carousel ul li img:hover, .ServicePage #venue-carousel ul li img:hover {
-      opacity: 0.8; }
+      opacity: 0.8;
+      -webkit-filter: none;
+      filter: none; }
 
 .VenuePage #venue-carousel li.flex-active-slide img, .ServicePage #venue-carousel li.flex-active-slide img {
   opacity: 1;
@@ -8768,6 +8766,10 @@ html[xmlns] .flexslider .slides {
 
 .VenuePage #venue-carousel ul li:hover, .ServicePage #venue-carousel ul li:hover {
   cursor: pointer; }
+
+@media only screen and (min-width: 64.063em) {
+  .VenuePage .related-items, .ServicePage .related-items {
+    padding: 1.875rem 0; } }
 
 .share-container {
   margin: 20px 0; }
@@ -8822,3 +8824,13 @@ h2 {
 button, .button {
   font-family: "europa", Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
+
+.section-title {
+  margin: 0.9375rem 0;
+  font-size: 1.25rem;
+  color: #999;
+  text-align: center;
+  text-transform: uppercase; }
+
+h1.section-title {
+  font-size: 2.25rem; }

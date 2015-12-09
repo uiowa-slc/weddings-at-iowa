@@ -1737,9 +1737,9 @@ blockquote {
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
-  transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
+  /*transition: all 1s ease-in-out;
+			-moz-transition: all 1s ease-in-out;
+			-webkit-transition: all 1s ease-in-out;*/
 }
 
 @media only screen and (min-width: 64.063em) {
@@ -1857,7 +1857,7 @@ button {
   text-transform: uppercase;
 }
 
-/*** uncss> filename: https://use.typekit.net/c/ea82be/1w;aktiv-grotesk,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,gdD:V:i4,gdJ:V:i7,gdC:V:n4,gdH:V:n7;classico-urw,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,ghv:V:i4,ghz:V:i7,ght:V:n4,ghy:V:n7;europa,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,X9M:W:i4,X9N:W:i7,X9J:W:n4,X9K:W:n7;freight-display-pro,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,Y2S:W:i4,Y2Q:W:i7,Y2R:W:n4,Y2P:W:n7;freight-sans-pro,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,TJC:W:i4,TJK:W:i7,TJB:W:n4,TJJ:W:n7/k?3bb2a6e53c9684ffdc9a9bf2195b2a62ec19c67c2541de178ac90e25879e96765342f784e3d47ab13fb39442570feea50e29e76c6f2f67ee8fc4dffb12e40eb10dbc226806144b4513f0c81bbc86b25d169d621e40a8c0d2ea10b5ccc4eec784778afaaaf2e03d44f4fbf6dadcc5325a6795f9a062eff17e5d24d0d4b2611101d3b166c884292c92a387d59f3c0c76 ***/
+/*** uncss> filename: https://use.typekit.net/c/29c584/1w;classico-urw,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,ghv:W:i4,ghz:W:i7,ght:W:n4,ghy:W:n7;europa,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,X9M:W:i4,X9N:W:i7,X9J:W:n4,X9K:W:n7;freight-display-pro,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,Y2S:W:i4,Y2Q:W:i7,Y2R:W:n4,Y2P:W:n7;freight-sans-pro,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,TJC:W:i4,TJK:W:i7,TJB:W:n4,TJJ:W:n7/k?3bb2a6e53c9684ffdc9a9bf2195b2a62ec19c67c2541de178ac90e25879e96765342f784e3d47ab13fb39442570feea50e29e76c6f2f67ee8fc4dffb12e40eb10dbc226806144b4513f0c81bbc86b25d169d621e40a8c0d2ea10b5ccc4eec784778afaaaf2e03d44f4fbf6dadcc5325a6795f9a062eff17e5d24d0d4b2611101d3b166c884292c92a3d08dc43b5627 ***/
 
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
