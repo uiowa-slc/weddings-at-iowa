@@ -2,9 +2,10 @@
 				<div class="contact-info text-center">
 
 					
-				<h3>Features: </h3>
+				
 
 				<% if $ClassName == "VenuePage" %>
+					<h3>Features: </h3>
 					<% if $Cost %><strong>Cost:</strong> $Cost<% end_if %>
 					<% if $Capacity %><strong>Capacity:</strong> $Capacity<% end_if %>
 					<% if $Indoors %>
@@ -21,6 +22,9 @@
 							Venue is outdoors
 						</p>
 					<% end_if %>
+				<% end_if %>
+				<% if $Features && $ClassName == "ServicePage" %>
+					<h3>Features: </h3>
 				<% end_if %>
 				<% loop $Features %>
 					<strong>{$Title}:</strong>$Content
