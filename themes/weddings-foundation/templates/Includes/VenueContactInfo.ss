@@ -1,4 +1,4 @@
-<% if $Address || $PhoneNumber || $Email %>
+<% if $Address || $PhoneNumber || $Email || $Website || $Facebook || $Twitter || $Instagram %>
 				<div class="contact-info text-center">
 
 					
