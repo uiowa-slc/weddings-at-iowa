@@ -14,7 +14,7 @@ class VenueMedia extends DataObject {
 		'Venue' => 'VenuePage',
 	);
 
-	private static $summary_fields = array('Image.CMSThumbnail');
+	private static $summary_fields = array('Title', 'MediaEmbed', 'Image.CMSThumbnail');
 
 	private static $default_sort = 'SortOrder';
 
