@@ -4,21 +4,23 @@
 					
 				<h3>Features: </h3>
 
-				<% if $Cost %><strong>Cost:</strong> $Cost<% end_if %>
-				<% if $Capacity %><strong>Capacity:</strong> $Capacity<% end_if %>
-				<% if $Indoors %>
-					<p>
-						Venue is indoors </br>
-						<% if $AirConditioned%>
-							Air conditioning available
-						<% else %>
-							Air conditioning not available
-						<% end_if %>
-					</p>
-				<% else %>
-					<p>
-						Venue is outdoors
-					</p>
+				<% if $ClassName == "VenuePage" %>
+					<% if $Cost %><strong>Cost:</strong> $Cost<% end_if %>
+					<% if $Capacity %><strong>Capacity:</strong> $Capacity<% end_if %>
+					<% if $Indoors %>
+						<p>
+							Venue is indoors </br>
+							<% if $AirConditioned%>
+								Air conditioning available
+							<% else %>
+								Air conditioning not available
+							<% end_if %>
+						</p>
+					<% else %>
+						<p>
+							Venue is outdoors
+						</p>
+					<% end_if %>
 				<% end_if %>
 				<% loop $Features %>
 					<strong>{$Title}:</strong>$Content
