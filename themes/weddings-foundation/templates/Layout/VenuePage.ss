@@ -1,10 +1,10 @@
 <% if $CoverImage %>
 <!--Begin banner image and title-->
-<div class="top-banner-image lazy" data-src="$CoverImage.CroppedFocusedImage(1280,720).URL" style="background-image: url('$CoverImage.CroppedFocusedImage(640,360).URL')">
+<div class="top-banner-image lazy" data-src="$CoverImage.CroppedFocusedImage(1920,1080).URL" style="background-image: url('$CoverImage.CroppedFocusedImage(640,360).URL')">
 	<% include TopBar %>
 </div>
 <% else %>
-	
+	<% include TopBar %>
 <% end_if %>
 <!--Begin description and services-->
 <div class="row">
@@ -68,7 +68,7 @@
 					<li>
 
 
-						<div class="slide-content-container lazy" data-src="$Image.CroppedFocusedImage(1920,1080).AbsoluteURL" style="background-image: url($Image.CroppedFocusedImage(640,360).AbsoluteURL); background-position: $Image.PercentageX% $Image.PercentageY%;">
+						<div class="slide-content-container lazy" data-src="$Image.CroppedFocusedImage(1920,1080).AbsoluteURL" style="background-image: url('{$ThemeDir}/images/placeholder.png'); background-position: $Image.PercentageX% $Image.PercentageY%;">
 
 						<% if $MediaEmbed %>
 							$MediaEmbed
