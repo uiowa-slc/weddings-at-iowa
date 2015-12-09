@@ -3,7 +3,7 @@
 <% loop $Features %>
     <div data-pin-hover="true" class="cell">
     	
-    	<div class="feature-bg" style="background-image: url('$Image.URL');">
+    	<div class="feature-bg" style="background-image: url('$Image.CroppedFocusedImage(1920,1080).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
     	
 			<div class="feature-text">
 		    	<a href="$Link"><h2>$Title</h2>
@@ -73,7 +73,7 @@
 				<h2 class="section-title"><a href="services/">Services &rarr;</a></h2>
 			</div>
 		</div>
-		<ul class="resource-card-list small">
+		<ul class="resource-card-list">
 			
 			 <% loop $AllServices.Limit(4) %>
 		  		<% include Card %>
