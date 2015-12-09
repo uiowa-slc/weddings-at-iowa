@@ -88,7 +88,7 @@ class VenuePage extends Page {
 
 		));*/
 
-		$mediaFieldConf = GridFieldConfig_RelationEditor::create(10);
+		$mediaFieldConf = GridFieldConfig_RelationEditor::create(40);
 		$mediaFieldConf->addComponent(new GridFieldSortableRows('SortOrder'));
 		$mediaFieldConf->addComponent(new GridFieldBulkUpload('Image'));
 
