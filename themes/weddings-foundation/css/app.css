@@ -8013,7 +8013,6 @@ html[xmlns] .flexslider .slides {
 
 .top-bar .name h1 {
   position: relative;
-  transition: all 0.3s;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin: 0 auto;
@@ -8054,6 +8053,12 @@ html[xmlns] .flexslider .slides {
 
 .VenuePage.with-cover-image .top-bar .title-area, .ServicePage.with-cover-image .top-bar .title-area, .HomePage .top-bar .title-area {
   background: none; }
+
+.VenuePage.with-cover-image .top-bar ul, .ServicePage.with-cover-image .top-bar ul, .HomePage .top-bar ul {
+  background: rgba(51, 51, 51, 0.4); }
+  @media (min-width: 90.063em) {
+    .VenuePage.with-cover-image .top-bar ul, .ServicePage.with-cover-image .top-bar ul, .HomePage .top-bar ul {
+      background: none; } }
 
 .VenuePage.with-cover-image .top-banner-image, .ServicePage.with-cover-image .top-banner-image, .HomePage .top-banner-image {
   background-color: #333;
@@ -8680,6 +8685,8 @@ html[xmlns] .flexslider .slides {
       .VenuePage .contact-info h3, .ServicePage .contact-info h3 {
         text-transform: uppercase;
         color: #666; } }
+  .VenuePage .contact-info h4, .ServicePage .contact-info h4 {
+    font-size: 1.125rem; }
 
 .VenuePage .features, .ServicePage .features {
   margin: 1.875rem 0; }

@@ -38,7 +38,8 @@
 				<ul class="services">
 					<% loop $Services %>
 					<li>
-						$Image.SetWidth(30) <a href="$Link" class="description-links"> $Title </a>
+						<a href="$Link"><img src="$CoverImage.CroppedFocusedImage(640,360).URL" /></a>
+						<h4><a href="$Link" class="description-links"> $Title </a></h4>
 					</li>
 					<% end_loop %>
 				</ul>

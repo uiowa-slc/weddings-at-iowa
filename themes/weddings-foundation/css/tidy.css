@@ -1816,6 +1816,7 @@ button {
   margin: 0.9375rem 0;
   font-size: 1.25rem;
   color: #999;
+  text-align: center;
   text-transform: uppercase;
 }
 

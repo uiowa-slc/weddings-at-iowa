@@ -3727,26 +3727,17 @@ var Formstone = window.Formstone = (function ($, window, document, undefined) {
 
 })(window, jQuery);
 
+
+
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 $( document ).ready(function() {
+
 	$(document).foundation({
 	  balancer: {
 	      respectSiblingWidth:false
 	  }
 	});
-
-
-
-var bLazy = new Blazy({
-  selector: '.lazy',
-    breakpoints: [{
-        width: 420 // max-width
-        ,
-        src: 'data-src-small'
-    }
-   ]
-});
 
  $('#venue-carousel').flexslider({
     animation: "slide",
@@ -3776,14 +3767,16 @@ var bLazy = new Blazy({
       bLazy.revalidate();
     }
   });
-
-});
-
 $(".gallery").carousel({
     show: {
     },
     pagination: false
 });
+      var bLazy = new Blazy({ 
+        selector: '.lazy' // all images
+    });
+});
+
 
 // $(".venue-gallery").carousel({
 //     show: {
