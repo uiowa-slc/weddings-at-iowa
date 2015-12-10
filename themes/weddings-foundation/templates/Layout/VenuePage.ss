@@ -86,7 +86,7 @@
 				<% loop $VenueMedia %>
 					<li>
 						<!-- heres the image-->
-						<img src="$Image.Fill(640,360).URL" alt="$Title" />
+						<img src="$Image.CroppedFocusedImage(640,360).URL" alt="$Title" />
 					</li>
 				<% end_loop %>
 				</ul>
