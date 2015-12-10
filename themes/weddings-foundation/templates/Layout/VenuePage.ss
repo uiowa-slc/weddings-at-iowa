@@ -64,13 +64,13 @@
 					<li>
 
 
-						<div class="slide-content-container" style="background-image: url('$Image.Fill(1920,1080).AbsoluteURL');">
+						<div class="slide-content-container" style="background-image: url('$Image.CroppedFocusedImage(1920,1080).AbsoluteURL');">
 
 						<% if $MediaEmbed %>
 
 							$MediaEmbed
 						<% else %>
-						<a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=$AbsoluteLink&media=$Image.Fill(600,338).AbsoluteURL&description=$Title" data-pin-custom="true" class="card-pin pin-screen">
+						<a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=$AbsoluteLink&media=$Image.CroppedFocusedImage(600,338).AbsoluteURL&description=$Title" data-pin-custom="true" class="card-pin pin-screen">
 								<img src="{$ThemeDir}/images/pin.png" width="100" height="100" data-pin-nopin="true">
 						</a>
 
