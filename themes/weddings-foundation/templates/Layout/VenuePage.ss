@@ -70,7 +70,7 @@
 
 
 						<div class="slide-content-container lazy" data-src="$Image.CroppedFocusedImage(1920,1080).AbsoluteURL" style="background-image: url('{$ThemeDir}/images/placeholder.png'); background-position: $Image.PercentageX% $Image.PercentageY%;">
-						<h4 style="position: fixed; bottom: 0px; color: black;">$PhotoCredit</h4>
+						<h4 style="position: absolute; bottom: 0px; right: 0px; padding-right: 10px; color: black;">$PhotoCredit</h4>
 
 						<% if $MediaEmbed %>
 							$MediaEmbed
