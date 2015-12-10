@@ -6,6 +6,7 @@ class VenueMedia extends DataObject {
 		'MediaEmbed' => 'HTMLText',
 		'Content'    => 'HTMLText',
 		'SortOrder'  => 'Int',
+		'Credit Attribution' => 'Text',
 
 	);
 
@@ -23,6 +24,7 @@ class VenueMedia extends DataObject {
 		$fields->removeByName('SortOrder');
 		$fields->addFieldToTab('Root.Main', new TextField('Title'));
 		$fields->addFieldToTab('Root.Main', new TextField('MediaEmbed'));
+		$fields->addFieldToTab('Root.Main', new TextField('CreditAttribution'));
 		$fields->addFieldToTab('Root.Main', new UploadField('Image'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content'));
 
