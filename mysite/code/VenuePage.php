@@ -71,7 +71,11 @@ class VenuePage extends Page {
 		$fields->addFieldToTab('Root.Contact', new TextField('PhoneNumber'));
 		$fields->addFieldToTab('Root.Contact', new TextField('Website'));
 
-		$objects = array('(Select one)', 'Phone', 'Facebook', 'Email');
+		$objects = array(
+			'(Select one)' => 'Select one', 
+			'Phone' => 'Phone', 
+			'Facebook' => 'Facebook', 
+			'Email' => 'Email');
 		$fields->addFieldToTab('Root.Contact', 
 			new DropdownField('PreferredContactInformation', 'Preferred Contact Information', $objects));
 

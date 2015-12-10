@@ -40,9 +40,10 @@
 				<!--<a href="$PhoneNumber" class="button">Get More Info!</a>-->
 
 				<% if $PreferredContactInformation %>
+
 					<% if $PreferredContactInformation == "Phone" %>
 
-					<a href="$PhoneNumber" class="button">Get More Info!</a>
+					<a href="tel:$PhoneNumber" class="button">Get More Info!</a>
 					
 					<% else_if $PreferredContactInformation == "Facebook" %>
 
@@ -50,7 +51,7 @@
 
 					<% else_if $PreferredContactInformation == "Email" %>
 
-					<a href="$Email" class="button">Get More Info!</a>
+					<a href="mailto:$Email" class="button">Get More Info!</a>
 
 
 					<% end_if %>
