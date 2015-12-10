@@ -134,7 +134,7 @@
 
 		.slides li .slide-content-container {
 			width: 100%;
-			height: 600px;
+			height: 300px;
 			background-position: 50% 50%;
 			background-size: cover;
 			position: relative;
@@ -143,8 +143,16 @@
 			-moz-transition: all 1s ease-in-out;
 			-webkit-transition: all 1s ease-in-out;*/
 
+			@media #{$medium-up} {
+				height: 500px;
+			}
+
 			@media #{$large-up} {
-				height: 800px;
+				height: 550px;
+			}
+
+			@media #{$xlarge-up} {
+				height: 700px;
 			}
 
 			img {

@@ -59,10 +59,10 @@
 <!--Begin Flickity Slider-->
 <% if $VenueMedia %>
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="large-12 xlarge-10 xlarge-centered columns">
 				<h2 class="section-title">Photos and videos</h2>
-			</div>
-		</div>
+
+
 			<div id="venue-slider" class="flexslider">
 				<ul class="slides">
 				<% loop $VenueMedia %>
@@ -85,6 +85,7 @@
 				<% end_loop %>
 				</ul>
 			</div>
+
 			<div id="venue-carousel" class="flexslider">
 				<ul class="slides">
 				<% loop $VenueMedia %>
@@ -95,7 +96,8 @@
 				<% end_loop %>
 				</ul>
 			</div>
-
+			</div>
+		</div>
 <% end_if %>
 <%--
 <!--Begin features and specifications-->
@@ -112,11 +114,6 @@
 --%>
 <!--Begin Testimonials-->
 <% if $Testimonials %>
-		<div class="row">
-			<div class="large-12 columns">
-				<h2 class="section-title">Testimonial<% if $Testimonials.TotalItems > 2 %>s<% end_if %></h2>
-			</div>
-		</div>
 	<% loop $Testimonials %>
 		<% include TestimonialCard %>
 	<% end_loop %>

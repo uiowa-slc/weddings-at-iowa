@@ -29,12 +29,13 @@ module.exports = function(grunt) {
 
       dist: {
         options:{
-          ignore: [/meta\..+/]
+          ignore: ['/^meta.foundation/', '/f-topbar-fixed/', '/contain-to-grid/', '/sticky/', '/fixed/']
         },
         files: {
           '<%=globalConfig.themeDir %>/css/tidy.css': 
               ['dist/weddings-at-iowa/index.html', 
-              'dist/weddings-at-iowa/venues/imu-main-lounge/index.html'
+              'dist/weddings-at-iowa/venues/imu-main-lounge/index.html',
+              'dist/weddings-at-iowa/services/catering/index.html'
               ]
         },
 
