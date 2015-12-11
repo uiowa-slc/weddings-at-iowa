@@ -12,7 +12,7 @@ class VenuePage extends Page {
 		'Capacity'    => 'Text',
 		'Cost'        => 'Text',
 		'PerUnit'     => 'Varchar(100)',
-		'Photo Credit' => 'Text',
+		'PhotoCredit' => 'Text',
 		//Turn the following into dropdown or boolean fields. or Checkboxes
 		'Indoors'        => 'Boolean',
 		'Catering'       => 'Boolean',
