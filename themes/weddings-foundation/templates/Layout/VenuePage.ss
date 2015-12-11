@@ -1,11 +1,10 @@
 <% if $CoverImage %>
 <!--Begin banner image and title-->
 <div class="top-banner-image lazy" data-src="$CoverImage.CroppedFocusedImage(1920,1080).URL" style="background-image: url('$CoverImage.CroppedFocusedImage(640,360).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
-	<% if PhotoCredit %>
-		<h4 style="position: absolute; bottom: 37%; right: 0px; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
-	<% end_if %>
-
 	<% include TopBar %>
+	<% if PhotoCredit %>
+						<h4 style="position: absolute; right: 0px; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
+						<% end_if %>
 
 </div>
 <% else %>
