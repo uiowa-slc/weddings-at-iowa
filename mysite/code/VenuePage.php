@@ -12,6 +12,7 @@ class VenuePage extends Page {
 		'Capacity'    => 'Text',
 		'Cost'        => 'Text',
 		'PerUnit'     => 'Varchar(100)',
+		'Photo Credit' => 'Text',
 		//Turn the following into dropdown or boolean fields. or Checkboxes
 		'Indoors'        => 'Boolean',
 		'Catering'       => 'Boolean',
@@ -70,6 +71,8 @@ class VenuePage extends Page {
 		$fields->addFieldToTab('Root.Social', new TextField('Facebook'));
 		$fields->addFieldToTab('Root.Social', new TextField('Twitter'));
 		$fields->addFieldToTab('Root.Social', new TextField('Instagram'));
+
+		$fields->addFieldToTab('Root.Main', new TextField('PhotoCredit'));
 
 		$serviceSource = ServicePage::get()->map()->toArray();
 
