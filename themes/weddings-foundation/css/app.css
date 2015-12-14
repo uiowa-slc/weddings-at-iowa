@@ -8741,7 +8741,8 @@ input[type="submit"].btn.btn-mini {
   background-color: #333;
   -webkit-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
   -moz-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
-  box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35); }
+  box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+  position: relative; }
 
 .VenuePage.with-cover-image .top-bar .toggle-topbar.menu-icon a, .ServicePage.with-cover-image .top-bar .toggle-topbar.menu-icon a, .HomePage .top-bar .toggle-topbar.menu-icon a {
   color: #fff; }

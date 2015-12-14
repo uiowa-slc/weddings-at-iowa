@@ -2,9 +2,9 @@
 <!--Begin banner image and title-->
 <div class="top-banner-image lazy" data-src="$CoverImage.CroppedFocusedImage(1920,1080).URL" style="background-image: url('$CoverImage.CroppedFocusedImage(640,360).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
 	<% include TopBar %>
-	<% if PhotoCredit %>
-						<h4 style="position: absolute; right: 0px; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
-						<% end_if %>
+	<% if $PhotoCredit %>
+			<h4 style="position: absolute; right: 0; bottom: 0; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
+	<% end_if %>
 
 </div>
 <% else %>
@@ -75,7 +75,7 @@
 
 						<div class="slide-content-container lazy" data-src="$Image.CroppedFocusedImage(1920,1080).AbsoluteURL" style="background-image: url('{$ThemeDir}/images/placeholder.png'); background-position: $Image.PercentageX% $Image.PercentageY%;">
 						
-						<% if PhotoCredit %>
+						<% if $PhotoCredit %>
 						<h4 style="position: absolute; bottom: 0px; right: 0px; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
 						<% end_if %>
 
