@@ -14,7 +14,8 @@
 		"colymba/gridfield-bulk-editing-tools": "*",
 		"silverstripe-australia/gridfieldextensions": "*",
 		"jonom/silverstripe-betternavigator" : "*",
-		"silverstripe/staticpublisher" : "*"
+		"silverstripe/staticpublisher" : "*",
+		"unclecheese/silverstripe-blubber": "dev-master"
 	},
 	"config": {
 		"process-timeout": 600	
