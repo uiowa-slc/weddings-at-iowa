@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0b91d9c1611b2daf96c4f90ee08e337e",
-    "content-hash": "3c01b9df033aa39c81175973d2168341",
+    "hash": "2861b6603ad7b59a3c7ace1e5df2f42e",
+    "content-hash": "bbd0b9a74861e4914ffe9467fca59bcf",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -259,6 +259,47 @@
             "time": "2015-11-03 18:43:27"
         },
         {
+            "name": "sabberworm/php-css-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
+                "reference": "b7980743312425f4a74621b33350f556a904d0e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/b7980743312425f4a74621b33350f556a904d0e6",
+                "reference": "b7980743312425f4a74621b33350f556a904d0e6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sabberworm\\CSS": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Schweikert"
+                }
+            ],
+            "description": "Parser for CSS Files written in PHP",
+            "homepage": "http://www.sabberworm.com/blog/2010/6/10/php-css-parser",
+            "keywords": [
+                "css",
+                "parser",
+                "stylesheet"
+            ],
+            "time": "2015-11-09 14:16:18"
+        },
+        {
             "name": "silverstripe-australia/gridfieldextensions",
             "version": "dev-master",
             "source": {
@@ -268,7 +309,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-gridfieldextensions/zipball/ef57799a6898f4eeb1fe3ee2ab1eb2e0f58e5f9f",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-gridfieldextensions/zipball/59a90ab385f0d2131daca2944a2f10906d09c918",
                 "reference": "ef57799a6898f4eeb1fe3ee2ab1eb2e0f58e5f9f",
                 "shasum": ""
             },
@@ -711,6 +752,198 @@
             "time": "2015-11-23 17:49:24"
         },
         {
+            "name": "symfony/css-selector",
+            "version": "2.5.x-dev",
+            "target-dir": "Symfony/Component/CssSelector",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "d45b306421462295e76b94bcf76b963867450327"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/d45b306421462295e76b94bcf76b963867450327",
+                "reference": "d45b306421462295e76b94bcf76b963867450327",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-03 08:01:13"
+        },
+        {
+            "name": "symfony/dom-crawler",
+            "version": "2.5.x-dev",
+            "target-dir": "Symfony/Component/DomCrawler",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dom-crawler.git",
+                "reference": "3860edcf7ff7e173cfe2151f0d425e610e77cc35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/3860edcf7ff7e173cfe2151f0d425e610e77cc35",
+                "reference": "3860edcf7ff7e173cfe2151f0d425e610e77cc35",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/css-selector": "~2.3"
+            },
+            "suggest": {
+                "symfony/css-selector": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\DomCrawler\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony DomCrawler Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-03 08:01:13"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "2.6.x-dev",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Finder.git",
+                "reference": "203a10f928ae30176deeba33512999233181dd28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/203a10f928ae30176deeba33512999233181dd28",
+                "reference": "203a10f928ae30176deeba33512999233181dd28",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-07-09 16:02:48"
+        },
+        {
+            "name": "unclecheese/silverstripe-blubber",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unclecheese/silverstripe-blubber.git",
+                "reference": "f2549bd5eddeb0ca0303a3c09be4a8136fcc6661"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-blubber/zipball/f2549bd5eddeb0ca0303a3c09be4a8136fcc6661",
+                "reference": "f2549bd5eddeb0ca0303a3c09be4a8136fcc6661",
+                "shasum": ""
+            },
+            "require": {
+                "sabberworm/php-css-parser": "*",
+                "symfony/css-selector": "2.5.*",
+                "symfony/dom-crawler": "2.5.*",
+                "symfony/finder": "2.6.*@stable"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Uncle Cheese",
+                    "email": "unclecheese@leftandmain.com"
+                }
+            ],
+            "description": "Identifies unused CSS in your SilverStripe project",
+            "keywords": [
+                "css",
+                "silverstripe"
+            ],
+            "time": "2015-07-17 02:48:22"
+        },
+        {
             "name": "undefinedoffset/sortablegridfield",
             "version": "dev-master",
             "source": {
@@ -720,7 +953,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/afffa5b09ea264186b123685fc25bc02194a5cd3",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/e1b94a3bf3379d56ec10db5980451143a5dd0843",
                 "reference": "afffa5b09ea264186b123685fc25bc02194a5cd3",
                 "shasum": ""
             },
@@ -754,7 +987,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "unclecheese/silverstripe-blubber": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
