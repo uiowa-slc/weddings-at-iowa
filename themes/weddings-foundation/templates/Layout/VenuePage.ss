@@ -44,6 +44,8 @@
 					<% end_loop %>
 				</ul>
 				<% end_if %>
+				$AddressMap(200,200)
+
 		</div>
 
 	</div>

@@ -4,9 +4,6 @@ class VenuePage extends Page {
 
 	private static $db = array(
 
-		'Address'     => 'Text',
-		'CityState'   => 'Text',
-		'ZipCode'     => 'Text',
 		'Email'       => 'Text',
 		'PhoneNumber' => 'Text',
 		'Capacity'    => 'Text',
@@ -59,9 +56,6 @@ class VenuePage extends Page {
 
 		$fields->addFieldToTab('Root.Contact', new HeaderField('Venue Contact Information'));
 		$fields->addFieldToTab('Root.Contact', new TextField('ContactName'));
-		$fields->addFieldToTab('Root.Contact', new TextField('Address'));
-		$fields->addFieldToTab('Root.Contact', new TextField('CityState', 'City, State'));
-		$fields->addFieldToTab('Root.Contact', new TextField('ZipCode'));
 		$fields->addFieldToTab('Root.Contact', new TextField('Email'));
 		$fields->addFieldToTab('Root.Contact', new TextField('PhoneNumber'));
 		$fields->addFieldToTab('Root.Contact', new TextField('Website'));
