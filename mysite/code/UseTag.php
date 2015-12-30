@@ -11,4 +11,9 @@ class UseTag extends DataObject {
 		'Title' => 'Varchar',
 	);
 
+
+	public function Link() {
+		return 'useTag/'.$this->URLSegment;
+	}
+
 }
