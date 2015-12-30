@@ -29,6 +29,12 @@
 				<% loop $Features %>
 					<strong>{$Title}:</strong>$Content
 				<% end_loop %>
+				<% if $UseTags %>
+					<strong>Tags:</strong> 
+						<p><% loop $UseTags %>
+						<a href="$Link" title="<% _t('VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Title'" rel="tag"><span itemprop="keywords">$Title</span></a><% if not Last %>,<% end_if %>
+						<% end_loop %></p>
+				<% end_if %>
 				<img src="{$ThemeDir}/images/separator-small.png" class="separator" />
 					<h3>Contact:</h3>
 					<p>

@@ -40,7 +40,7 @@ class VenuePage extends Page {
 		'Services'      => 'ServicePage',
 		'GalleryImages' => 'Image',
 		'Features'      => 'Feature',
-
+		'UseTags' => 'UseTag',
 	);
 
 	public static $many_many_extraFields = array(
@@ -79,6 +79,10 @@ class VenuePage extends Page {
 		$serviceField = ListboxField::create('Services', 'Services', $serviceSource);
 		$serviceField->setMultiple(true);
 		$fields->addFieldToTab("Root.Main", $serviceField, 'Content');
+
+
+
+
 
 		$buildingSource = Building::get()->map()->toArray();
 		$buildingField  = DropdownField::create('Buildings', 'Building', $buildingSource)->setEmptyString('(None)');
@@ -119,9 +123,14 @@ class VenuePage extends Page {
 
 			));
 
+		$useTagField = TagField::create('UseTags', 'Use Tags', UseTag::get(),$this->UseTags())
+		    ->setShouldLazyLoad(true) // tags should be lazy loaded
+		    ->setCanCreate(true);     // new tag DataObjects can be created
+		$fields->addFieldToTab("Root.Features", $useTagField, 'Features');
+
 		return $fields;
 
-	}
+	} 
 
 	public function getRelatedVenues() {
 		$venues    = VenuePage::get()->filter(array('CoverImageID:not' => 0));
@@ -156,5 +165,6 @@ class VenuePage extends Page {
 }
 
 class VenuePage_Controller extends Page_Controller {
+
 
 }

@@ -7,7 +7,7 @@
 		"silverstripe/framework": "3.2.1",
 		"silverstripe-themes/simple": "*",
 		"silverstripe/userforms": "*",
-		"silverstripe/tagfield": "*",
+		"silverstripe/tagfield": "^1.2",
 		"md/division-bar" : "*",
 		"undefinedoffset/sortablegridfield": "*",
 		"jonom/focuspoint" : "*",
