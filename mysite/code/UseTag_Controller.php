@@ -3,23 +3,23 @@
 class UseTag_Controller extends ContentController {
 	
 	private static $allowed_actions = array(
-		'useTag'
+		'tag'
 	);
 
 	
 	private static $url_handlers = array(
-		'$UseTag!' => 'useTag'
+		'$UseTag!' => 'tag'
 	);
 
-	public function useTag() {
+	public function tag() {
 		$useTagName = $this->getRequest()->param('UseTag');
 
-		$useTag = UseTag::get()->filter(array('URLSegment' => $useTagName))->First();
+		$tag = UseTag::get()->filter(array('URLSegment' => $useTagName))->First();
 
-		if($useTag) {
-			$venues = $useTag->VenuePages();
+		if($tag) {
+			$venues = $tag->VenuePages();
 			return $this->customise(new ArrayData(array(
-				'UseTag' => $useTag,
+				'UseTag' => $tag,
 				'VenuePages' => $venues
 			)))->renderWith(array("UseTag", "Page"));
 		}
