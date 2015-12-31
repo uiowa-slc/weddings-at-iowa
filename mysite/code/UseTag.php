@@ -18,7 +18,7 @@ class UseTag extends DataObject {
 
 
 	public function Link() {
-		return 'tag/'.$this->URLSegment;
+		return 'useTag/'.$this->URLSegment;
 	}
 
 	private static $extensions = array(
