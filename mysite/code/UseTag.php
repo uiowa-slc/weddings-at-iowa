@@ -4,7 +4,12 @@ class UseTag extends DataObject {
 
 	private static $belongs_many_many = array (
 		'UseTag' => 'VenuePage',
+		'VenuePages' => 'VenuePage',
 
+	);
+
+	private static $many_many = array(
+		'VenuePages' => 'VenuePage',
 	);
 
 	private static $db = array (
