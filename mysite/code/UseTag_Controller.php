@@ -17,10 +17,10 @@ class UseTag_Controller extends ContentController {
 		$useTag = UseTag::get()->filter(array('URLSegment' => $useTagName))->First();
 
 		if($useTag) {
-			$venuePages = $useTag->VenuePages();
+			$venues = $useTag->VenuePages();
 			return $this->customise(new ArrayData(array(
 				'UseTag' => $useTag,
-				'VenuePages' => $venuePages
+				'VenuePages' => $venues
 			)))->renderWith(array("UseTag", "Page"));
 		}
 	}

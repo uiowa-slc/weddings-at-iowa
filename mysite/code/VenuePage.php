@@ -28,7 +28,6 @@ class VenuePage extends Page {
 	private static $has_one = array(
 		'CoverImage' => 'Image',
 		'Building'   => 'Building',
-		'FeaturedTag' => 'UseTag',
 
 	);
 
@@ -52,6 +51,8 @@ class VenuePage extends Page {
 	);
 
 	private static $singular_name = 'Venue';
+	private static $plural_name = 'Venues';
+
 
 	public function getCMSFields() {
 
