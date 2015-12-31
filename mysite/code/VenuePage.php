@@ -28,6 +28,8 @@ class VenuePage extends Page {
 	private static $has_one = array(
 		'CoverImage' => 'Image',
 		'Building'   => 'Building',
+		'FeaturedTag' => 'UseTag',
+
 	);
 
 	private static $has_many = array(

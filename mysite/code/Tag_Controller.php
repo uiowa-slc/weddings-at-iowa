@@ -1,7 +1,7 @@
 <?php
 
 class UseTag_Controller extends ContentController {
-
+	
 	private static $allowed_actions = array(
 		'useTag'
 	);
