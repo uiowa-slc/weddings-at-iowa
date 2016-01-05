@@ -9,21 +9,15 @@
 <!--Begin description and services-->
 <div class="row">
 	<div class="large-6 large-push-3 columns">
-		<article>
+		<article role="main">
 			<h1> $Title </h1>
 			<div class="initial-description">
 				<% if $Content %>$Content<% end_if %>
 				<p class="text-center"><img class="description-sep" src="{$ThemeDir}/images/separator-mono2.png" nopin="nopin" /></p>
 			</div>
-			<% if $Services %>
-			<div class="services">
 
-			</div>
-			<% end_if %>
-			<% if $Address || $PhoneNumber || $Email || $Facebook || $Twitter || $Instagram %>
-			<% end_if %>
 
-			</article>
+		</article>
 	</div>
 	<div class="large-2 large-pull-6 columns">
 
@@ -33,7 +27,7 @@
 				<% include ShareIcons %>
 
 				<% if $Services %>
-				<p class="text-center"><img src="{$ThemeDir}/images/separator-small.png" /></p>
+
 				<h3>Recommended services:</h3>
 				<ul class="services">
 					<% loop $Services %>
@@ -44,7 +38,12 @@
 					<% end_loop %>
 				</ul>
 				<% end_if %>
-				$AddressMap(200,200)
+				<p class="text-center"><img src="{$ThemeDir}/images/separator-small.png" /></p>
+			<div class="text-center">
+			<h3>Getting There:</h3>
+				$AddressMap(400,200)
+				<a href="//maps.google.com/?q=$FullAddress">$FullAddress</a>
+			</div>
 
 		</div>
 
