@@ -1,16 +1,12 @@
-<a href="testimonials/"><div class="testimonial">
+<div class="testimonial">
 	<div class="row">
-		<div class="large-12 columns">
-		
-		<blockquote>
-			<p class="quote">Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. 
-
-			<br />- $Title</p>
-		</blockquote>
-
-		<div class="text-center"><span class="button">Keep reading...</span></div>
-
+		<div class="$EvenOdd large-7<% if $EvenOdd == "even" %> large-push-5<% end_if %> columns">
+			<img class="photo" width="760" height="507" src="$Image.CroppedFocusedImage(760,507).URL"  nopin="nopin" >
+		</div>
+		<div class="large-5<% if $EvenOdd == "even" %> large-pull-7<% end_if %> columns text-center">
+			<blockquote>$Quote</blockquote>
+			<p class="text-center"><img src="{$ThemeDir}/images/separator2.png" />
+			<p class="author">$Name</p>
 		</div>
 	</div>
 </div>
-</a>

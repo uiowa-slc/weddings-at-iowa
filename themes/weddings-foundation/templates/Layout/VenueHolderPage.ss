@@ -1,10 +1,10 @@
 <div class="row">
 	<div class="large-12 columns">
-		<h1>Venues</h1>
+		<h1 class="section-title">$Title</h1>
 	</div>
 	<ul class="resource-card-list">
 		
-		<% loop $getVenues %>
+		<% loop $Children %>
 	  		<% include Card %>
 	  	<% end_loop %>
 	</ul>

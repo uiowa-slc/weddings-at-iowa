@@ -15,7 +15,7 @@ class ServicePage extends VenuePage {
 		$venueField = ListboxField::create('Venues', 'VenuePage', $venueSource);
 		$venueField->setMultiple(true);
 		$fields->addFieldToTab("Root.Main", $venueField, 'Content');
-
+		return $fields;
 	}
 
 }

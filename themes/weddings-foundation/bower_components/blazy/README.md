@@ -4,7 +4,7 @@ bLazy is a lightweight script for lazy loading and multi-serving images (less th
 
 **Table of Contents**<br>
 1. [Demo](https://github.com/dinbror/blazy#demo)<br>
-2. [Howto & API](https://github.com/dinbror/blazy#how-to--api)<br>
+2. [Usage & API](https://github.com/dinbror/blazy#how-to--api)<br>
 3. [Why be lazy?](https://github.com/dinbror/blazy#why-be-lazy)<br>
 4. [Changelog](https://github.com/dinbror/blazy#changelog)<br>
 5. [License](https://github.com/dinbror/blazy#license)<br>
@@ -15,8 +15,18 @@ http://dinbror.dk/blazy
 More examples will come. In the meantime you can play with a basic example at codepen:
 http://codepen.io/dinbror/pen/HzCAJ
 
-## HOW TO & API ##
+## USAGE & API ##
 http://dinbror.dk/blog/blazy
+
+### INSTALL
+You can install blazy.js with npm:
+``` npm
+npm install blazy --save
+```
+or bower:
+``` bower
+bower install blazy --save
+```
 
 ### CDN
 If you don't want to host the script yourself you can link to the latest minified file:  
@@ -29,10 +39,28 @@ Exchange `latest` with the specific version number if you want to lock it in.
 * bLazy can lazy load all types of images including background images.
 * bLazy can lazy load images depending on screensize (multi-serve images).
 * bLazy can serve retina images on retina devices.
+* bLazy can lazy load everything with a src like iframes, unity games etc. 
 * bLazy is lightweight, less than 1.2KB and less than 1.05KB if you don't need IE7- support.
 * bLazy is AMD, CommonJS and Browser globals compatible.
 
 ## CHANGELOG
+### v 1.5.2 (2015/12/01) ###
+* Fixed minor bug where the error class was added when calling `revalidate()`.
+* Minor refactoring
+
+### v 1.5.1 (2015/11/14) ###
+* Fixed toArray function so it now works in IE7 + 8 again. Bug introduced in 1.4.0. Thanks for reporting [@imcotton](https://github.com/imcotton).
+* Fixed [#41](https://github.com/dinbror/blazy/pull/41). Added options for validate and saveViewportOffset delay.
+
+### v 1.5.0 (2015/10/30) ###
+* Added new feature. Now you can lazy load everything with a src attribute like iframes, unity games etc.
+* Fixed [#45](https://github.com/dinbror/blazy/issues/45). Now you can pass an option if you always want to load invisible images/elements.
+* Fixed [#49](https://github.com/dinbror/blazy/issues/49). Expanded the `load` function so it's now possible to pass a list of elements instead of only one element. Tested with getElementById, getElementsByClassName, querySelectorAll, querySelector and jQuery selector.
+* Fixed [#63](https://github.com/dinbror/blazy/issues/63). 
+
+### v 1.4.1 (2015/10/12) ###
+* Fixed [#60](https://github.com/dinbror/blazy/issues/60). An "Uncaught TypeError" when options is null introduced in the refactoring in version 1.4.0.
+
 ### v 1.4.0 (2015/09/28) ###
 * Fixed [#56](https://github.com/dinbror/blazy/issues/56). Now it's possible to create multiple versions of blazy without overriding options.
 
@@ -41,7 +69,7 @@ Exchange `latest` with the specific version number if you want to lock it in.
 
 ### v 1.3.0 (2015/01/23) ###
 * Fixed [#34](https://github.com/dinbror/blazy/issues/34). Expanded public `load` function with force attribute, so you can force hidden images to be loaded.
-* Fixed [#24](https://github.com/dinbror/blazy/issues/24), [#32](https://github.com/dinbror/blazy/issues/32) and [#35](https://github.com/dinbror/blazy/issues/35). Updated "elementInView" function with intersection check. Thanks a lot @teohhanhui.  
+* Fixed [#24](https://github.com/dinbror/blazy/issues/24), [#32](https://github.com/dinbror/blazy/issues/32) and [#35](https://github.com/dinbror/blazy/issues/35). Updated "elementInView" function with intersection check. Thanks @teohhanhui.  
 
 ### v 1.2.2 (2014/05/04) ###
 * Fixed [#15](https://github.com/dinbror/blazy/issues/15), when you resize the browser window in another tab bLazy didn't trigger new images in view. Thanks joshribakoff.
@@ -94,4 +122,4 @@ Exchange `latest` with the specific version number if you want to lock it in.
 * Cleaning image markup when image has loaded.
 
 ##LICENSE:##
-MIT
+Copyright (c) 2013-15 Bjørn Klinggaard. Licensed under the [The MIT License (MIT)](http://opensource.org/licenses/MIT).

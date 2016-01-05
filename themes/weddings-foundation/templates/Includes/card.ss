@@ -1,11 +1,11 @@
 <li class="resource-card">
 	<a href="$Link" data-pin-custom="true" >
-	<div class="resource-card-bg" style="background-image: url('$CoverImage.Fill(600,338).AbsoluteURL');">
+	<div class="resource-card-bg lazy" data-src="$CoverImage.CroppedFocusedImage(600,338).AbsoluteURL" style="background-image: url('{$ThemeDir}/images/placeholder.png');">
 	</div>
 	
 		<div class="resource-card-content">
 			<h3>$Title</h3>
-			<p>$Content.Summary(50) <strong>Continue reading...</strong></p>
+			<p>$Content.Summary(30) <strong>Continue reading...</strong></p>
 		</div>
 	</a>
 

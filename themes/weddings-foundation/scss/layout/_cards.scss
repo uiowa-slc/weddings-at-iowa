@@ -9,7 +9,7 @@
 	}
 
 	@media #{$large-up} {
-		@include block-grid($per-row: 4);
+		@include block-grid($per-row: 4, $spacing: rem-calc(20));
 	}
 
 	&.small {

@@ -3,10 +3,6 @@
     padding-top: 0;
   }
 
-  .section-title {
-    margin: ($column-gutter / 2) 0;
-  }
-
   .homepage-hero-slider {
     .row {
       max-width: 100%;
@@ -63,10 +59,18 @@
           -webkit-align-items: center;
           -webkit-box-align: center;
           align-items: center;
+          -webkit-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+          -moz-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+          box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+        }
+
+        @media #{$xlarge-up} {
+          min-height: 900px;
         }
       }
 
       .feature-text {
+        text-align: center;
         padding: 20px;
         background: white;
         color: $body-font-color;

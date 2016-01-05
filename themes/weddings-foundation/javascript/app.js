@@ -1,6 +1,9 @@
+
+
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 $( document ).ready(function() {
+
 	$(document).foundation({
 	  balancer: {
 	      respectSiblingWidth:false
@@ -12,36 +15,39 @@ $( document ).ready(function() {
     controlNav: false,
     animationLoop: false,
     slideshow: false,
-    itemWidth: 210,
+    itemWidth: 300,
     itemMargin: 5,
-    asNavFor: '#venue-slider'
+    asNavFor: '#venue-slider',
+    start: function(){
+      bLazy.revalidate();
+    },
+    after: function(){
+      bLazy.revalidate();
+    }  
   });
   $('#venue-slider').flexslider({
     animation: "slide",
     controlNav: false,
     animationLoop: false,
     slideshow: false,
-    sync: "#venue-carousel"
-  });
-
-});
-
-
-var bLazy = new Blazy({
-  selector: '.lazy',
-    breakpoints: [{
-        width: 420 // max-width
-        ,
-        src: 'data-src-small'
+    sync: "#venue-carousel",
+    start: function(){
+      bLazy.revalidate();
+    },
+    after: function(){
+      bLazy.revalidate();
     }
-   ]
-});
-
+  });
 $(".gallery").carousel({
     show: {
     },
     pagination: false
 });
+      var bLazy = new Blazy({ 
+        selector: '.lazy' // all images
+    });
+});
+
 
 // $(".venue-gallery").carousel({
 //     show: {

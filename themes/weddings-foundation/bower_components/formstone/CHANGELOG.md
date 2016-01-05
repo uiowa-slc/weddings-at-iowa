@@ -1,5 +1,48 @@
 # Changelog
 
+### 0.8.30
+
+* Added ability to clear default label in Upload (Thanks @Valamas!)
+* Fixed issue with right clicking Number arrows
+* Fixed issue with pop state in ASAP
+
+### 0.8.29
+
+* Switched event delegation in Upload to allow extra content
+* Added `filedragenter`, `filedragover`, and `filedragleave` events to Upload (Thanks @Valamas!)
+* Added multi-select range and modifier actions to Dropdown
+* Fixed issue with `single` and `rtl` options in Carousel
+
+### 0.8.28
+
+* Fixed issue with resize mobile Lightbox
+* Fixed issue with updating Dropdown Scrollbars (Thanks @cbier!)
+* Removed `tap` event from Touch
+* Resolved issue with IE pointer events in Touch
+
+### 0.8.27
+
+* Added `readonly` support to Checkbox (Thanks @Bonscho!), Dropdown, Number and Range
+* Updated upload Demo to include `queue` event (Thanks @Bonscho!)
+
+### 0.8.26
+
+* Added matchMedia graceful degradation to Media Query, matches closest `fallbackWidth` and `fallbackHeight` values
+* Added `ignoreTypes` option to ASAP to avoid loading downloadable files via AJAX
+* Renamed `extensions` to `fileTypes` in Lightbox for consistency
+
+### 0.8.25
+
+* Fixed false positive on transitionEnd events in Transition
+* Fixed issue with inaccessible Number inputs on iOS
+* Increased initial pointer down delay in Number 
+* Added `queued` event to Upload (Thanks @Bonscho!)
+
+### 0.8.24
+
+* Added `support.nativeMatchMedia` and `fallbackWidth` values for graceful degradation
+* Added matchMedia graceful degradation to Carousel, matches closest `fallbackWidth` value
+
 ### 0.8.23
 
 * Fixed issue with Carousel removing previous and next classes

@@ -1,21 +1,21 @@
 <?php
 
 class Testimonial extends DataObject {
-
-	private static $belongs_many_many = array (
-		'Venues' => 'VenuePage',
-
+	private static $db = array(
+		'Quote'     => 'Text',
+		'Name'      => 'Text',
+		'SortOrder' => 'Int',
 	);
 
-	private static $has_one = array (
-
+	private static $has_one = array(
+		'Venue' => 'VenuePage',
 		'Image' => 'Image',
 	);
 
-	private static $db = array (
-		'Quote' => 'Text',
-		'Name' => 'Text',
-		
+	private static $summary_fields = array(
+		'Image.CMSThumbnail',
+		'Name',
+		'Quote',
 	);
 
 }

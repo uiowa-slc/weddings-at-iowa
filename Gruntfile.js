@@ -12,11 +12,12 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          '<%=globalConfig.themeDir %>/css/app.css' : '<%=globalConfig.themeDir %>/scss/app.scss'
+          '<%=globalConfig.themeDir %>/css/app.css' : '<%=globalConfig.themeDir %>/scss/app.scss',
+          '<%=globalConfig.themeDir %>/css/editor.css' : '<%=globalConfig.themeDir %>/scss/editor.scss'
         },                  // Target
         options: {              // Target options
           style: 'compressed',
-          loadPath: [
+          includePaths: [
           '<%=globalConfig.themeDir %>/bower_components/foundation/scss'
           ],
           sourcemap: true
@@ -24,7 +25,19 @@ module.exports = function(grunt) {
       }
     },
     //concat all the files into the build folder includePaths: 
+    uncss: {
 
+      dist: {
+        options:{
+          ignore: ['/^meta.foundation/', '/f-topbar-fixed/', '/contain-to-grid/', '/sticky/', '/fixed/']
+        },
+        files: {
+          '<%=globalConfig.themeDir %>/css/tidy.css': 
+              ['dist/weddings-at-iowa/*.html']
+        },
+
+      }
+    },
     concat: {
       js:{
         src: [
@@ -82,12 +95,13 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-uncss');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'uncss', 'concat', 'uglify', 'watch']);
 
 };

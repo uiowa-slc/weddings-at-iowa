@@ -1,13 +1,10 @@
 <?php
-class ServiceHolderPage extends Page {
+class ServiceHolderPage extends VenueHolderPage {
 
 
 
 }
 
-class ServiceHolderPage_Controller extends Page_Controller {
-   public function getServices(){
-      $services = ServicePage::get();
-      return $services;
-   }
+class ServiceHolderPage_Controller extends VenueHolderPage_Controller {
+
 }

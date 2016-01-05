@@ -1,49 +1,64 @@
-.testimonial-container {
-    background-size: cover;
-    background-position: 50% 50%;
-    font-family: $body-font-family;
+.testimonial {
+	padding-top: $column-gutter / 2;
 
-    .testimonial {
-        padding: 0;
-        background: rgba(#333, 0.7);
+	@media #{$medium-up} {
+		//padding: 30px;
+	}
 
-        @media #{$large-up} {
-            padding: 100px 0;
-        }
+	@media #{$large-up} {
+		//padding: 60px 0;
+	}
 
-        blockquote {
-            border: 0;
+	img.photo {
+		width: 100%;
+	}
 
-            &:before {
-                content: '\201C';
-                font-size: rem-calc(64);
-                left: -1%;
-                position: absolute;
-                color: #eee;
+	.row {
+		@media #{$large-up} {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			-webkit-box-align: center;
+			align-items: center;
+		}
+	}
 
-                @media #{$large-up} {
-                    left: -2%;
-                    font-size: rem-calc(160);
-                }
-            }
-        }
+	blockquote {
+		font-size: rem-calc(26);
+		border: none;
 
-        .quote {
-            color: white;
+		@media #{$medium-up} {
+			border-left: 1px solid #ddd;
+		}
+	}
 
-            @media #{$medium-up} {
-                padding: rem-calc(48) rem-calc(22);
-                font-size: rem-calc(36);
-            }
+	.section-title {
+		font-size: rem-calc(15);
+		color: #666;
 
-            &::first-letter {
-                -webkit-initial-letter: 2;
-                color: $secondary-color;
+		a {
+			color: #b9b9b9;
+		}
+	}
 
-                @media #{$large-up} {
-                    -webkit-initial-letter: 3;
-                }
-            }
-        }
-    }
+	.author {
+		font-family: $header-font-family;
+		text-transform: uppercase;
+	}
+}
+
+.HomePage .testimonial {
+	blockquote {
+		border: none;
+	}
+
+	@media #{$medium-up} {
+		//padding-top: 0;
+	}
+
+	@media #{$large-up} {
+		//padding-top: 0;
+	}
 }

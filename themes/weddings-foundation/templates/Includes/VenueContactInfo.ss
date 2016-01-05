@@ -1,27 +1,35 @@
-<% if $Address || $PhoneNumber || $Email %>
-				<div class="contact-info">
-				<h3>Features: </h3>
+<% if $Address || $PhoneNumber || $Email || $Website || $Facebook || $Twitter || $Instagram %>
+				<div class="contact-info text-center">
 
-				<% if $Cost %><strong>Cost:</strong> $Cost<% end_if %>
-				<% if $Capacity %><strong>Capacity:</strong> $Capacity<% end_if %>
-				<% if $Indoors %>
-					<p>
-						Venue is indoors </br>
-						<% if $AirConditioned%>
-							Air conditioning available
-						<% else %>
-							Air conditioning not available
-						<% end_if %>
-					</p>
-				<% else %>
-					<p>
-						Venue is outdoors
-					</p>
+					
+				
+
+				<% if $ClassName == "VenuePage" %>
+					<h3>Features: </h3>
+					<% if $Cost %><strong>Cost:</strong> $Cost<% end_if %>
+					<% if $Capacity %><strong>Capacity:</strong> $Capacity<% end_if %>
+					<% if $Indoors %>
+						<p>
+							Venue is indoors </br>
+							<% if $AirConditioned%>
+								Air conditioning available
+							<% else %>
+								Air conditioning not available
+							<% end_if %>
+						</p>
+					<% else %>
+						<p>
+							Venue is outdoors
+						</p>
+					<% end_if %>
+				<% end_if %>
+				<% if $Features && $ClassName == "ServicePage" %>
+					<h3>Features: </h3>
 				<% end_if %>
 				<% loop $Features %>
 					<strong>{$Title}:</strong>$Content
 				<% end_loop %>
-				<hr />
+				<img src="{$ThemeDir}/images/separator-small.png" class="separator" />
 					<h3>Contact:</h3>
 					<p>
 						<% if $ContactName %>$ContactName</br><% end_if %>
@@ -35,21 +43,21 @@
 						<% if $Facebook %>
 						<li class="social-list-item">
 							<a href="$Facebook" target="_blank" class="social-list-item-link">
-								<img src="{$ThemeDir}/images/socicon-custom/facebook.png" />  &nbsp; &nbsp; Facebook
+								<img src="{$ThemeDir}/images/socicon-custom/facebook.png" />  &nbsp; Facebook
 							</a>
 						</li>
 						<% end_if %>
 						<% if $Twitter %>
 						<li class="social-list-item">
 							<a href="$Twitter" class="social-list-item-link">
-								<img src="{$ThemeDir}/images/socicon-custom/twitter.png" />  &nbsp; &nbsp; Twitter
+								<img src="{$ThemeDir}/images/socicon-custom/twitter.png" />  &nbsp; Twitter
 							</a>
 						</li>
 						<% end_if %>
 						<% if $Instagram %>
 						<li class="social-list-item">
 							<a href="$Instagram" target="_blank" class="social-list-item-link">
-								<img src="{$ThemeDir}/images/socicon-custom/instagram.png" />  &nbsp; &nbsp; Instagram
+								<img src="{$ThemeDir}/images/socicon-custom/instagram.png" />  &nbsp; Instagram
 							</a>
 						</li>
 						<% end_if %>
