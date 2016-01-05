@@ -33,10 +33,7 @@ module.exports = function(grunt) {
         },
         files: {
           '<%=globalConfig.themeDir %>/css/tidy.css': 
-              ['dist/weddings-at-iowa/index.html', 
-              'dist/weddings-at-iowa/venues/imu-main-lounge/index.html',
-              'dist/weddings-at-iowa/services/catering/index.html'
-              ]
+              ['dist/weddings-at-iowa/*.html']
         },
 
       }
