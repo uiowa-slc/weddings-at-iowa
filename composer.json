@@ -15,7 +15,8 @@
 		"silverstripe-australia/gridfieldextensions": "*",
 		"jonom/silverstripe-betternavigator" : "*",
 		"silverstripe/staticpublisher" : "*",
-		"unclecheese/silverstripe-blubber": "dev-master"
+		"unclecheese/silverstripe-blubber" : "dev-master",
+		"silverstripe-australia/addressable" : "*"
 	},
 	"config": {
 		"process-timeout": 600	

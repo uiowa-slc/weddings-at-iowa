@@ -4,15 +4,13 @@ class VenuePage extends Page {
 
 	private static $db = array(
 
-		'Address'     => 'Text',
-		'CityState'   => 'Text',
-		'ZipCode'     => 'Text',
-		'Email'       => 'Text',
-		'PhoneNumber' => 'Text',
-		'Capacity'    => 'Text',
-		'Cost'        => 'Text',
-		'PerUnit'     => 'Varchar(100)',
-		'PhotoCredit' => 'Text',
+		'Email'                       => 'Text',
+		'PhoneNumber'                 => 'Text',
+		'Capacity'                    => 'Text',
+		'Cost'                        => 'Text',
+		'PerUnit'                     => 'Varchar(100)',
+		'PhotoCredit'                 => 'Text',
+		'PreferredContactInformation' => 'Text',
 		//Turn the following into dropdown or boolean fields. or Checkboxes
 		'Indoors'        => 'Boolean',
 		'Catering'       => 'Boolean',
@@ -32,6 +30,9 @@ class VenuePage extends Page {
 	);
 
 	private static $has_many = array(
+
+		'VenueMedia'   => 'VenueMedia',
+		'Video'        => 'VideoEmbed',
 		'Testimonials' => 'Testimonial',
 		'VenueMedia'   => 'VenueMedia',
 		'Video'        => 'VideoEmbed',
@@ -41,7 +42,7 @@ class VenuePage extends Page {
 		'Services'      => 'ServicePage',
 		'GalleryImages' => 'Image',
 		'Features'      => 'Feature',
-		'UseTags' => 'UseTag',
+		'UseTags'       => 'UseTag',
 	);
 
 	public static $many_many_extraFields = array(
@@ -51,8 +52,7 @@ class VenuePage extends Page {
 	);
 
 	private static $singular_name = 'Venue';
-	private static $plural_name = 'Venues';
-
+	private static $plural_name   = 'Venues';
 
 	public function getCMSFields() {
 
@@ -63,12 +63,17 @@ class VenuePage extends Page {
 
 		$fields->addFieldToTab('Root.Contact', new HeaderField('Venue Contact Information'));
 		$fields->addFieldToTab('Root.Contact', new TextField('ContactName'));
-		$fields->addFieldToTab('Root.Contact', new TextField('Address'));
-		$fields->addFieldToTab('Root.Contact', new TextField('CityState', 'City, State'));
-		$fields->addFieldToTab('Root.Contact', new TextField('ZipCode'));
 		$fields->addFieldToTab('Root.Contact', new TextField('Email'));
 		$fields->addFieldToTab('Root.Contact', new TextField('PhoneNumber'));
 		$fields->addFieldToTab('Root.Contact', new TextField('Website'));
+
+		$objects = array(
+			'(Select one)' => 'Select one',
+			'Phone'        => 'Phone',
+			'Facebook'     => 'Facebook',
+			'Email'        => 'Email');
+		$fields->addFieldToTab('Root.Contact',
+			new DropdownField('PreferredContactInformation', 'Preferred Contact Information', $objects));
 
 		$fields->addFieldToTab('Root.Social', new HeaderField('Social Media Information'));
 		$fields->addFieldToTab('Root.Social', new TextField('Facebook'));
@@ -82,10 +87,6 @@ class VenuePage extends Page {
 		$serviceField = ListboxField::create('Services', 'Services', $serviceSource);
 		$serviceField->setMultiple(true);
 		$fields->addFieldToTab("Root.Main", $serviceField, 'Content');
-
-
-
-
 
 		$buildingSource = Building::get()->map()->toArray();
 		$buildingField  = DropdownField::create('Buildings', 'Building', $buildingSource)->setEmptyString('(None)');
@@ -116,6 +117,10 @@ class VenuePage extends Page {
 		$fields->addFieldToTab('Root.Features', new CheckboxField('Indoors'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('AirConditioned'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('Catering'));
+		$useTagField = TagField::create('UseTags', 'This venue is used for (ex: Ceremonies, Receptions, etc):', UseTag::get(), $this->UseTags())
+		                                                                                                                            ->setShouldLazyLoad(true)// tags should be lazy loaded
+		                                                                                                                            ->setCanCreate(true);// new tag DataObjects can be created
+		$fields->addFieldToTab("Root.Features", $useTagField);
 
 		$fields->addFieldToTab('Root.Features', new HeaderField('Custom Features'));
 		$fields->addFieldToTab('Root.Features', GridField::create(
@@ -126,14 +131,9 @@ class VenuePage extends Page {
 
 			));
 
-		$useTagField = TagField::create('UseTags', 'Use Tags', UseTag::get(),$this->UseTags())
-		    ->setShouldLazyLoad(true) // tags should be lazy loaded
-		    ->setCanCreate(true);     // new tag DataObjects can be created
-		$fields->addFieldToTab("Root.Features", $useTagField, 'Features');
-
 		return $fields;
 
-	} 
+	}
 
 	public function getRelatedVenues() {
 		$venues    = VenuePage::get()->filter(array('CoverImageID:not' => 0));
@@ -168,6 +168,5 @@ class VenuePage extends Page {
 }
 
 class VenuePage_Controller extends Page_Controller {
-
 
 }

@@ -30,7 +30,7 @@
 					<strong>{$Title}:</strong>$Content
 				<% end_loop %>
 				<% if $UseTags %>
-					<strong>Tags:</strong> 
+					<strong>This venue is best for:</strong> 
 						<p><% loop $UseTags %>
 						<a href="$Link" title="<% _t('VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Title'" rel="tag"><span itemprop="keywords">$Title</span></a><% if not Last %>,<% end_if %>
 						<% end_loop %></p>
