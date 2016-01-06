@@ -118,6 +118,14 @@
 
 	// Slider styles
 	#venue-slider {
+		.flexslider:hover .flex-direction-nav .flex-prev {
+			opacity: 1;
+		}
+
+		.flexslider:hover .flex-direction-nav .flex-next {
+			opacity: 1;
+		}
+
 		&.flexslider {
 			margin-bottom: 0;
 		}
@@ -187,6 +195,10 @@
 
 	//Carousel (filmstrip thumbnails at the bottom)
 	#venue-carousel {
+		.flex-direction-nav a:before {
+			color: #222;
+		}
+
 		ul li {
 			margin-right: 10px;
 

@@ -22,15 +22,15 @@
 
 					<% if $PreferredContactInformation == "Phone" %>
 
-					<a href="tel:$PhoneNumber" class="button">Call us at $PhoneNumber</a>
+					<a href="tel:$PhoneNumber" class="btn btn-large">Call us at $PhoneNumber</a>
 					
 					<% else_if $PreferredContactInformation == "Facebook" %>
 
-					<a href="$Facebook" class="button">Visit our Facebook Page</a>
+					<a href="$Facebook" class="btn btn-large">Visit our Facebook Page</a>
 
 					<% else_if $PreferredContactInformation == "Email" %>
 
-					<a href="mailto:$Email" class="button">Email us</a>
+					<a href="mailto:$Email" class="btn btn-large">Email us</a>
 
 
 					<% end_if %>
@@ -61,11 +61,14 @@
 				</ul>
 				<% end_if %>
 				<p class="text-center"><img src="{$ThemeDir}/images/separator-small.png" /></p>
+
+			<% if $Address %>
 			<div class="text-center">
 			<h3>Getting There:</h3>
 				$AddressMap(400,200)
 				<a href="//maps.google.com/?q=$FullAddress">$FullAddress</a>
 			</div>
+			<% end_if %>
 
 		</div>
 

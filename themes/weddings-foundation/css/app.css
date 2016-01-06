@@ -9393,6 +9393,12 @@ input[type="submit"].btn.btn-mini {
   text-decoration: none;
   color: #333; }
 
+.VenuePage #venue-slider .flexslider:hover .flex-direction-nav .flex-prev, .ServicePage #venue-slider .flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 1; }
+
+.VenuePage #venue-slider .flexslider:hover .flex-direction-nav .flex-next, .ServicePage #venue-slider .flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 1; }
+
 .VenuePage #venue-slider.flexslider, .ServicePage #venue-slider.flexslider {
   margin-bottom: 0; }
 
@@ -9436,6 +9442,9 @@ input[type="submit"].btn.btn-mini {
     .VenuePage #venue-slider .slides li .slide-content-container .pin-screen img, .ServicePage #venue-slider .slides li .slide-content-container .pin-screen img {
       opacity: 0.75;
       max-width: 200px; }
+
+.VenuePage #venue-carousel .flex-direction-nav a:before, .ServicePage #venue-carousel .flex-direction-nav a:before {
+  color: #222; }
 
 .VenuePage #venue-carousel ul li, .ServicePage #venue-carousel ul li {
   margin-right: 10px; }
