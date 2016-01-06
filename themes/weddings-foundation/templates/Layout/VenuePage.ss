@@ -170,7 +170,7 @@
 					</div>
 				</div>
 				<ul class="resource-card-list">
-					<% loop $AllVenues.Limit(4) %>
+					<% loop $getMoreVenues.Limit(4) %>
 				  		<% include Card %>
 				  	<% end_loop %>	  	
 				</ul>

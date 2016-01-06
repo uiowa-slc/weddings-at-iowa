@@ -165,6 +165,24 @@ class VenuePage extends Page {
 
 	}
 
+	public function getMoreVenues(){
+
+		$filteredVenues = new ArrayList();
+
+		$venues = VenuePage::get()->filter(array('ClassName' => 'VenuePage'));
+
+		foreach ($venues as $venue) {
+			if ($venue->Title != $this->Title) {
+
+				$filteredVenues->add($venue);
+
+			}
+		}
+
+		return $filteredVenues;
+	}
+
+
 }
 
 class VenuePage_Controller extends Page_Controller {
