@@ -19,24 +19,39 @@
 				<% if $Content %>$Content<% end_if %>
 				<p class="text-center"><img class="description-sep" src="{$ThemeDir}/images/separator-mono2.png" nopin="nopin" /></p>
 				<% if $PreferredContactInformation %>
-
-					<% if $PreferredContactInformation == "Phone" %>
-
-					<a href="tel:$PhoneNumber" class="btn btn-large">Call us at $PhoneNumber</a>
-					
-					<% else_if $PreferredContactInformation == "Facebook" %>
-
-					<a href="$Facebook" class="btn btn-large">Visit our Facebook Page</a>
-
-					<% else_if $PreferredContactInformation == "Email" %>
-
-					<a href="mailto:$Email" class="btn btn-large">Email us</a>
-
-
-					<% end_if %>
-
+					<div class="preferred-contact text-center">
+						<% if $PreferredContactInformation == "Phone" %>
+							<a href="tel:$PhoneNumber" class="btn btn-large">Call us at $PhoneNumber</a>
+						<% else_if $PreferredContactInformation == "Facebook" %>
+							<a href="$Facebook" class="btn btn-large">Visit our Facebook Page</a>
+						<% else_if $PreferredContactInformation == "Email" %>
+							<a href="mailto:$Email" class="btn btn-large">Email us</a>
+						<% end_if %>
+					</div>
 				<% end_if %>
+				</div>	
+			<div class="row">		
+				<div class="large-12 columns">
+					<h2 class="section-title">Features <% if $Address %>&amp; Location<% end_if %></h2>
+				</div>
 			</div>
+
+			<div class="row venue-features-container">
+				<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
+					<div class="text-center">
+						<% include VenueFeatures %>
+					</div>
+				</div>
+				<% if $Address %>
+				<div class="large-6 columns">
+						<div class="text-center">
+								$AddressMap(400,300)
+								<a href="//maps.google.com/?q=$FullAddress">$FullAddress</a>
+							</div>
+						</div>
+				</div>
+				<% end_if %>
+			
 
 
 		</article>
@@ -62,13 +77,7 @@
 				<% end_if %>
 				<p class="text-center"><img src="{$ThemeDir}/images/separator-small.png" /></p>
 
-			<% if $Address %>
-			<div class="text-center">
-			<h3>Getting There:</h3>
-				$AddressMap(400,200)
-				<a href="//maps.google.com/?q=$FullAddress">$FullAddress</a>
-			</div>
-			<% end_if %>
+
 
 		</div>
 

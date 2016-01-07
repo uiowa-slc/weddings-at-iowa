@@ -89,7 +89,7 @@ class VenuePage extends Page {
 		$fields->addFieldToTab("Root.Main", $serviceField, 'Content');
 
 		$buildingSource = Building::get()->map()->toArray();
-		$buildingField  = DropdownField::create('Buildings', 'Building', $buildingSource)->setEmptyString('(None)');
+		$buildingField  = DropdownField::create('BuildingID', 'Building', $buildingSource)->setEmptyString('(None)');
 		$fields->addFieldToTab("Root.Main", $buildingField, 'Content');
 
 		/*$fields->addFieldToTab('Root.Media', UploadField::create(
