@@ -42,11 +42,14 @@
 						<% include VenueFeatures %>
 					</div>
 				</div>
-				<% if $Address %>
+				<% if $Address && ClassName =="VenuePage" %>
 				<div class="large-6 columns">
 						<div class="text-center">
 								$AddressMap(400,300)
-								<a href="//maps.google.com/?q=$FullAddress">$FullAddress</a>
+								$FullAddress
+								<% if $Building %>
+								<p><strong>Related venue:</strong> $Building.Title</p>
+								<% end_if %>
 							</div>
 						</div>
 				</div>
@@ -64,6 +67,7 @@
 				<% include ShareIcons %>
 
 				<% if $Services %>
+				<p class="text-center"><img src="{$ThemeDir}/images/separator-small.png" /></p>
 
 				<h3>Recommended services:</h3>
 				<ul class="services">
@@ -75,8 +79,7 @@
 					<% end_loop %>
 				</ul>
 				<% end_if %>
-				<p class="text-center"><img src="{$ThemeDir}/images/separator-small.png" /></p>
-
+	
 
 
 		</div>
