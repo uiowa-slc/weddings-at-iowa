@@ -268,6 +268,10 @@
 	}
 }
 
+.venue-features-section {
+	margin: 30px 0;
+}
+
 .venue-features-container {
 	//background-color: #f7f7f7;
 	display: -ms-flexbox;
@@ -277,7 +281,6 @@
 	-webkit-align-items: center;
 	-webkit-box-align: center;
 	align-self: flex-end;
-	margin: 20px 0;
 
 	@media #{$large-up} {
 		//padding: 30px;

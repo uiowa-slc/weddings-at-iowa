@@ -3436,7 +3436,6 @@ input[type="submit"].btn::-moz-focus-inner {
   -webkit-align-items: center;
   -webkit-box-align: center;
   align-self: flex-end;
-  margin: 20px 0;
 }
 
 @media only screen and (min-width: 64.063em) {

@@ -36,23 +36,25 @@
 					<h2 class="section-title">Features <% if $Address %>&amp; Location<% end_if %></h2>
 				</div>
 			</div>
-			<div class="row venue-features-container <% if $Address %>has-map<% end_if %>">
 
-				<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
-					<div class="text-center">
-						<% include VenueFeatures %>
+			<div class="venue-features-section">
+				<div class="row venue-features-container <% if $Address %>has-map<% end_if %>">
+					<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
+						<div class="text-center">
+							<% include VenueFeatures %>
+						</div>
 					</div>
-				</div>
-				<% if $Address %>
-				<div class="large-6 columns">
-					<div class="text-center">
-						$AddressMap(400,300)
-						<% if $Building %>
-						<p><strong>Located near:</strong> $Building.Title</p>
-						<% end_if %>
+					<% if $Address %>
+					<div class="large-6 columns">
+						<div class="text-center">
+							$AddressMap(400,300)
+							<% if $Building %>
+							<p><strong>Located near:</strong> $Building.Title</p>
+							<% end_if %>
+						</div>
 					</div>
+					<% end_if %>
 				</div>
-				<% end_if %>
 			</div>
 			
 			<% end_if %>
@@ -87,18 +89,7 @@
 		<% include TestimonialCard %>
 	<% end_loop %>
 <% end_if %>
-<% if $Venues %>
-	<div class="row">
-		<div class="large-12 columns">
-			<h2 class="section-title">Venues that use this service</h2>
-			<ul class="resource-card-list">
-				<% loop $Venues.Limit(4) %>
-					<% include Card %>
-				<% end_loop %>
-			</ul>
-		</div>
-	</div>
-<% end_if %>
+
 </div>
 <!--Begin Flickity Slider-->
 <% if $VenueMedia %>
@@ -138,6 +129,18 @@
 		</div>
 	</div>
 </div>
+<% end_if %>
+<% if $Venues %>
+	<div class="row">
+		<div class="large-12 columns">
+			<h2 class="section-title">Venues that use this service</h2>
+			<ul class="resource-card-list">
+				<% loop $Venues.Limit(4) %>
+					<% include Card %>
+				<% end_loop %>
+			</ul>
+		</div>
+	</div>
 <% end_if %>
 <!--Begin Related Items-->
 <section class="related-items">
