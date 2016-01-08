@@ -2466,6 +2466,7 @@ blockquote {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  font-variant: small-caps;
 }
 
 .btn:focus {
@@ -2860,6 +2861,10 @@ input[type="submit"].btn::-moz-focus-inner {
   width: 100%;
 }
 
+.HomePage .homepage-hero-slider .cell .feature-text a {
+  color: #7f7f7f;
+}
+
 @media only screen and (min-width: 64.063em) {
   .HomePage .homepage-hero-slider .cell .feature-text {
     align-self: center;
@@ -3027,6 +3032,11 @@ input[type="submit"].btn::-moz-focus-inner {
   text-align: center;
 }
 
+.resource-card-list .resource-card:hover * {
+  text-decoration: underline;
+  color: #2ab2f2;
+}
+
 .resource-card-list .resource-card .resource-card-bg {
   height: 200px;
   background-position: 50% 50%;
@@ -3041,25 +3051,12 @@ input[type="submit"].btn::-moz-focus-inner {
   padding: 15px;
 }
 
-.resource-card-list .resource-card .resource-card-content:hover {
-  text-decoration: underline;
-  color: #2ab2f2;
-}
-
-.resource-card-list .resource-card .resource-card-content:hover h3 {
-  color: #2ab2f2;
-}
-
 .resource-card-list li {
   list-style-type: none;
 }
 
 .resource-card-list li a {
   color: #333;
-}
-
-.resource-card-list li a:hover {
-  color: #2ab2f2;
 }
 
 .testimonial {

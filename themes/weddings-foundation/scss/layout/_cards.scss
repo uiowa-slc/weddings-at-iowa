@@ -13,7 +13,11 @@
 	}
 
 	&.small {
-		@include block-grid($per-row: 2);
+		@include block-grid($per-row: 1);
+
+		@media #{$medium-up} {
+			@include block-grid($per-row: 2);
+		}
 
 		.resource-card {
 			.resource-card-bg {
