@@ -17,7 +17,13 @@
 	<meta property="og:description" content="$MetaDescription.ATT" />
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
 	<% if $Image %>
-	<meta property="og:image" content="<% with $Image.SetSize(500,500) %>$AbsoluteURL.ATT<% end_with %>" />
+		<meta property="og:image" content="<% with $Image.Fit(1200,630) %>$AbsoluteURL.ATT<% end_with %>" />
+		<meta property="og:width" content="1200" />
+		<meta property="og:height" content="630" />
+	<% else_if $CoverImage %>
+		<meta property="og:image" content="<% with $CoverImage.Fit(1200,630) %>$AbsoluteURL.ATT<% end_with %>" />
+		<meta property="og:width" content="1200" />
+		<meta property="og:height" content="630" />
 	<% end_if %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
