@@ -56,6 +56,16 @@ button, .button {
 	text-transform: uppercase;
 }
 
+.section-link {
+	@extend h2;
+
+	@extend .section-title;
+
+	display: block;
+	color: $primary-color;
+	text-align: right;
+}
+
 h1.section-title {
 	font-size: rem-calc(36);
 }

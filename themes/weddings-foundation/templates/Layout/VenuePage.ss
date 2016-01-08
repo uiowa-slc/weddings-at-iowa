@@ -58,7 +58,7 @@
 			<% end_if %>
 		</article>
 	</div>
-	<div class="large-2 large-pull-6 columns">
+	<div class="large-3 large-pull-6 columns">
 		<div class="contact-info">
 			<h3 class="text-center">Share this $singular_name</h3>
 			<% include ShareIcons %>
@@ -77,7 +77,7 @@
 			
 		</div>
 	</div>
-	<div class="large-2 large-offset-1 columns">
+	<div class="large-3 columns">
 		<% include VenueContactInfo %>
 	</div>
 </div>
@@ -144,11 +144,13 @@
 <div class="row">
 	<div class="large-12 columns">
 		<% if $ClassName == "VenuePage" %>
-			<div class="row">
-				<div class="large-12 columns">
-					<h2 class="section-title"><a href="venues/">More Venues &rarr;</a></h2>
-				</div>
+		<div class="row">
+		
+			<div class="large-6 large-offset-3 columns">
+				<h2 class="section-title">More Venues</h2>
 			</div>
+			<div class="large-3 columns"><a href="venues/" class="section-link">See all &rarr;</a></div>
+		</div>
 			<ul class="resource-card-list">
 				<% loop $getMoreVenues.Limit(4) %>
 				<% include Card %>

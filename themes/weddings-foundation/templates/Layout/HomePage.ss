@@ -34,32 +34,21 @@
 					<blockquote>$Quote</blockquote>
 					<p class="text-center"><img src="{$ThemeDir}/images/separator2.png" /></p>
 					<p class="author">$Name</p>
+					</a>
 				</div>
 			</div>
 		</div>
 	<% end_loop %>
 <% end_if %>
-<%--<div class="pic-wrapper">
-	<div class="pic-wrapper-content-container">
-		<div class="row">
-			<div class="large-12 columns">
-				<h2 class="text-center">Your big day, the Iowa way.</h2>
-				<p class="text-center">Featured venues: <a href="#">Danforth Chapel</a>, <a href="#">Iowa Memorial Union</a></p>
-			</div>
-		</div>
-	</div>
-  <a href="#"><figure class="pic-1"></figure></a>
-   <a href="#"><figure class="pic-2"></figure></a>
-   <a href="#"><figure class="pic-3"></figure></a>
-   <a href="#"><figure class="pic-4"></figure></a>
-</div>--%>
 
 <div class="row collapse">
 	<div class="large-12 columns">
 		<div class="row">
-			<div class="large-12 columns">
-				<h2 class="section-title"><a href="venues/">Venues &rarr;</a></h2>
+		
+			<div class="large-6 large-offset-3 columns">
+				<h2 class="section-title">Venues</h2>
 			</div>
+			<div class="large-3 show-for-large-up columns"><a href="venues/" class="section-link">See all &rarr;</a></div>
 		</div>
 		<ul class="resource-card-list">
 			

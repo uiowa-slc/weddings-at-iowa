@@ -19,7 +19,7 @@
 //       $social-list based on your specific needs.
 
 // config settings
-$rrssb-txt: $primary-color;
+$rrssb-txt: $body-font-color;
 $rrssb-email: #0a88ff !default;
 $rrssb-facebook: #eee !default;
 $rrssb-tumblr: #32506d !default;
@@ -168,7 +168,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: 4vw;
-               
+            
                 }
             }
 
@@ -179,7 +179,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: 2vw;
-               
+            
                 }
             }
 
@@ -190,7 +190,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: 1.7vw;
-               
+            
                 }
             }
 
@@ -201,7 +201,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: 1.4vw;
-               
+            
                 }
             }
 
@@ -212,7 +212,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: 1.2vw;
-               
+            
                 }
             }
 
@@ -223,7 +223,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: 1.05vw;
-               
+            
                 }
             }
 
@@ -234,7 +234,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: .9vw;
-               
+            
                 }
             }
 
@@ -245,7 +245,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: .8vw;
-               
+            
                 }
             }
 
@@ -256,7 +256,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //  font-size: .7vw;
-               
+            
                 }
             }
 
@@ -267,7 +267,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     // font-size: .6vw;
-               
+            
                 }
             }
 
@@ -278,7 +278,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
 
                     //fallback
                     //font-size: .5vw;
-               
+            
                 }
             }
 
@@ -381,7 +381,7 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
             }
 
             // end @each directive
-       
+    
         }
     }
 }
