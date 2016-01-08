@@ -37,6 +37,12 @@
 				</div>
 			</div>
 			<div class="row venue-features-container <% if $Address %>has-map<% end_if %>">
+
+				<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
+					<div class="text-center">
+						<% include VenueFeatures %>
+					</div>
+				</div>
 				<% if $Address %>
 				<div class="large-6 columns">
 					<div class="text-center">
@@ -47,12 +53,6 @@
 					</div>
 				</div>
 				<% end_if %>
-				<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
-					<div class="text-center">
-						<% include VenueFeatures %>
-					</div>
-				</div>
-
 			</div>
 			
 			<% end_if %>
@@ -112,7 +112,7 @@
 						<div class="slide-content-container lazy" data-src="$Image.CroppedFocusedImage(1920,1080).AbsoluteURL" style="background-image: url('{$ThemeDir}/images/placeholder.png'); background-position: $Image.PercentageX% $Image.PercentageY%;">
 							
 							<% if $PhotoCredit %>
-							<h4 style="position: absolute; bottom: 0px; right: 0px; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
+							<h4 style="position: absolute; bottom: 30px; right: 0px; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
 							<% end_if %>
 							<% if $MediaEmbed %>
 							$MediaEmbed
