@@ -16,7 +16,7 @@ module.exports = function(grunt) {
           '<%=globalConfig.themeDir %>/css/editor.css' : '<%=globalConfig.themeDir %>/scss/editor.scss'
         },                  // Target
         options: {              // Target options
-          style: 'compressed',
+          outputStyle: 'compressed',
           includePaths: [
           '<%=globalConfig.themeDir %>/bower_components/foundation/scss'
           ],
@@ -36,7 +36,8 @@ module.exports = function(grunt) {
            /(#|\.)flex(\-[a-zA-Z]+)?/, 
           /(#|\.)rrssb(\-[a-zA-Z]+)?/, 
           /(#|\.)fs-carousel(\-[a-zA-Z]+)?/,
-          /(#|\.)top-bar(\-[a-zA-Z]+)?/ 
+          /(#|\.)top-bar(\-[a-zA-Z]+)?/,
+          /(#|\.)initial-description(\-[a-zA-Z]+)?/ 
           ]
         },
         files: {
