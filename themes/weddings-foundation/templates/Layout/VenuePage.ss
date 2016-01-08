@@ -41,9 +41,8 @@
 				<div class="large-6 columns">
 					<div class="text-center">
 						$AddressMap(400,300)
-						$FullAddress
 						<% if $Building %>
-						<p><strong>Related venue:</strong> $Building.Title</p>
+						<p><strong>Located near:</strong> $Building.Title</p>
 						<% end_if %>
 					</div>
 				</div>
