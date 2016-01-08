@@ -14,11 +14,24 @@
 
 	&.small {
 		@include block-grid($per-row: 2);
+
+		.resource-card {
+			.resource-card-bg {
+				height: 300px;
+			}
+		}
 	}
 
 	.resource-card {
 		margin-bottom: 0;
 		text-align: center;
+
+		&:hover {
+			* {
+				text-decoration: underline;
+				color: $primary-color;
+			}
+		}
 
 		.resource-card-bg {
 			height: 200px;
@@ -63,11 +76,9 @@
 
 			&:hover {
 				h3 {
-					color: $primary-color;
+					//color: $primary-color;
+			
 				}
-
-				text-decoration: underline;
-				color: $primary-color;
 			}
 		}
 	}
@@ -79,7 +90,8 @@
 			color: $body-font-color;
 
 			&:hover {
-				color: $primary-color;
+				//color: $primary-color;
+		
 			}
 		}
 

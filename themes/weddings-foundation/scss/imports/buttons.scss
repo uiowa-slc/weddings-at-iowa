@@ -30,6 +30,7 @@ button {
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	font-variant: small-caps;
 
 	&:focus {
 		outline: thin dotted #333;

@@ -8391,7 +8391,8 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
-  user-select: none; }
+  user-select: none;
+  font-variant: small-caps; }
   .btn:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
@@ -8984,6 +8985,8 @@ input[type="submit"].btn.btn-mini {
     align-self: flex-end;
     padding: 0 70px;
     width: 100%; }
+    .HomePage .homepage-hero-slider .cell .feature-text a {
+      color: #7f7f7f; }
     .HomePage .homepage-hero-slider .cell .feature-text .pin-container {
       text-align: center; }
     @media only screen and (min-width: 64.063em) {
@@ -9135,9 +9138,14 @@ input[type="submit"].btn.btn-mini {
       .resource-card-list.small > li:nth-of-type(2n) {
         padding-left: 0.9375rem;
         padding-right: 0rem; }
+    .resource-card-list.small .resource-card .resource-card-bg {
+      height: 300px; }
   .resource-card-list .resource-card {
     margin-bottom: 0;
     text-align: center; }
+    .resource-card-list .resource-card:hover * {
+      text-decoration: underline;
+      color: #2ab2f2; }
     .resource-card-list .resource-card .resource-card-bg {
       height: 200px;
       background-position: 50% 50%;
@@ -9164,17 +9172,10 @@ input[type="submit"].btn.btn-mini {
         display: none; }
     .resource-card-list .resource-card .resource-card-content {
       padding: 15px; }
-      .resource-card-list .resource-card .resource-card-content:hover {
-        text-decoration: underline;
-        color: #2ab2f2; }
-        .resource-card-list .resource-card .resource-card-content:hover h3 {
-          color: #2ab2f2; }
   .resource-card-list li {
     list-style-type: none; }
     .resource-card-list li a {
       color: #333; }
-      .resource-card-list li a:hover {
-        color: #2ab2f2; }
     .resource-card-list li span {
       color: #2ab2f2; }
   .resource-card-list li img {
@@ -9506,7 +9507,8 @@ input[type="submit"].btn.btn-mini {
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
-  align-self: flex-end; }
+  align-self: flex-end;
+  margin: 20px 0; }
   @media only screen and (min-width: 64.063em) {
     .venue-features-container {
       align-self: center; } }

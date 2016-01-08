@@ -37,11 +37,6 @@
 				</div>
 			</div>
 			<div class="row venue-features-container <% if $Address %>has-map<% end_if %>">
-				<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
-					<div class="text-center">
-						<% include VenueFeatures %>
-					</div>
-				</div>
 				<% if $Address %>
 				<div class="large-6 columns">
 					<div class="text-center">
@@ -53,6 +48,12 @@
 					</div>
 				</div>
 				<% end_if %>
+				<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
+					<div class="text-center">
+						<% include VenueFeatures %>
+					</div>
+				</div>
+
 			</div>
 			
 			<% end_if %>

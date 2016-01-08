@@ -59,10 +59,10 @@
 		</ul>
 		<div class="row">
 			<div class="large-12 columns">
-				<h2 class="section-title"><a href="services/">Services &rarr;</a></h2>
+				<h2 class="section-title">Services</h2>
 			</div>
 		</div>
-		<ul class="resource-card-list">
+		<ul class="resource-card-list small">
 			
 			 <% loop $AllServices.Limit(4) %>
 		  		<% include Card %>
