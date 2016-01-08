@@ -15,6 +15,18 @@
 		margin-top: $column-gutter / 2;
 	}
 
+	.push-up {
+		@media #{$large-up} {
+			margin-top: -100px;
+
+			article {
+				padding: 0 20px;
+			}
+		}
+
+		background: white;
+	}
+
 	.initial-description {
 		margin-bottom: 1.25rem;
 		text-align: justify;
@@ -48,11 +60,20 @@
 
 	ul.services li {
 		font-size: rem-calc(22);
+		padding: 10px 0;
+
+		h4 {
+			font-size: rem-calc(16);
+		}
 	}
 
 	.contact-info {
 		color: #777;
 		text-align: center;
+
+		p {
+			line-height: 1.8;
+		}
 
 		ul {
 			margin-left: 0;
@@ -67,6 +88,10 @@
 			margin-bottom: $paragraph-margin-bottom;
 		}
 
+		h3 {
+			font-size: rem-calc(19);
+		}
+
 		@media #{$large-up} {
 			margin-bottom: 70px;
 			margin-top: 70px;
@@ -75,10 +100,6 @@
 				text-transform: uppercase;
 				color: #666;
 			}
-		}
-
-		h4 {
-			font-size: rem-calc(18);
 		}
 	}
 
@@ -246,8 +267,10 @@
 	}
 }
 
-.venue-features-container {
+.venue-features-container.has-map {
+	background-color: #f7f7f7;
+
 	@media #{$large-up} {
-		padding: 60px 0;
+		padding: 30px;
 	}
 }

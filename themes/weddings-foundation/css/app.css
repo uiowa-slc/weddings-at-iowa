@@ -8946,7 +8946,7 @@ input[type="submit"].btn.btn-mini {
     .HomePage .homepage-hero-slider .cell .cell-content p {
       font-size: 1.375rem; }
   .HomePage .homepage-hero-slider .cell .feature-bg {
-    min-height: 600px;
+    min-height: 700px;
     background-size: cover;
     background-position: 50% 50%;
     display: -ms-flexbox;
@@ -8956,6 +8956,9 @@ input[type="submit"].btn.btn-mini {
     -webkit-align-items: center;
     -webkit-box-align: center;
     align-items: center; }
+    @media only screen and (min-width: 40.063em) {
+      .HomePage .homepage-hero-slider .cell .feature-bg {
+        min-height: 600px; } }
     @media only screen and (min-width: 64.063em) {
       .HomePage .homepage-hero-slider .cell .feature-bg {
         min-height: 700px;
@@ -8975,7 +8978,8 @@ input[type="submit"].btn.btn-mini {
     background: white;
     color: #333;
     align-self: flex-end;
-    padding: 0 70px; }
+    padding: 0 70px;
+    width: 100%; }
     .HomePage .homepage-hero-slider .cell .feature-text .pin-container {
       text-align: center; }
     @media only screen and (min-width: 64.063em) {
@@ -9321,6 +9325,14 @@ input[type="submit"].btn.btn-mini {
   text-align: center;
   margin-top: 0.9375rem; }
 
+.VenuePage .push-up, .ServicePage .push-up {
+  background: white; }
+  @media only screen and (min-width: 64.063em) {
+    .VenuePage .push-up, .ServicePage .push-up {
+      margin-top: -100px; }
+      .VenuePage .push-up article, .ServicePage .push-up article {
+        padding: 0 20px; } }
+
 .VenuePage .initial-description, .ServicePage .initial-description {
   margin-bottom: 1.25rem;
   text-align: justify;
@@ -9344,11 +9356,16 @@ input[type="submit"].btn.btn-mini {
   padding: 20px 0; }
 
 .VenuePage ul.services li, .ServicePage ul.services li {
-  font-size: 1.375rem; }
+  font-size: 1.375rem;
+  padding: 10px 0; }
+  .VenuePage ul.services li h4, .ServicePage ul.services li h4 {
+    font-size: 1rem; }
 
 .VenuePage .contact-info, .ServicePage .contact-info {
   color: #777;
   text-align: center; }
+  .VenuePage .contact-info p, .ServicePage .contact-info p {
+    line-height: 1.8; }
   .VenuePage .contact-info ul, .ServicePage .contact-info ul {
     margin-left: 0; }
   .VenuePage .contact-info ul li, .ServicePage .contact-info ul li {
@@ -9356,6 +9373,8 @@ input[type="submit"].btn.btn-mini {
     margin-left: 0; }
   .VenuePage .contact-info .separator, .ServicePage .contact-info .separator {
     margin-bottom: 1.25rem; }
+  .VenuePage .contact-info h3, .ServicePage .contact-info h3 {
+    font-size: 1.1875rem; }
   @media only screen and (min-width: 64.063em) {
     .VenuePage .contact-info, .ServicePage .contact-info {
       margin-bottom: 70px;
@@ -9363,8 +9382,6 @@ input[type="submit"].btn.btn-mini {
       .VenuePage .contact-info h3, .ServicePage .contact-info h3 {
         text-transform: uppercase;
         color: #666; } }
-  .VenuePage .contact-info h4, .ServicePage .contact-info h4 {
-    font-size: 1.125rem; }
 
 .VenuePage .features, .ServicePage .features {
   margin: 1.875rem 0; }
@@ -9477,9 +9494,11 @@ input[type="submit"].btn.btn-mini {
     font-size: 18px;
     text-transform: uppercase; }
 
-@media only screen and (min-width: 64.063em) {
-  .venue-features-container {
-    padding: 60px 0; } }
+.venue-features-container.has-map {
+  background-color: #f7f7f7; }
+  @media only screen and (min-width: 64.063em) {
+    .venue-features-container.has-map {
+      padding: 30px; } }
 
 .md-bar {
   background: #111;

@@ -50,7 +50,7 @@
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="$ThemeDir/build/build.src.js"></script>
+	<script src="$ThemeDir/build/build.js"></script>
 	<!-- Please call pinit.js only once per page -->
 	<script type="text/javascript" async defer  data-pin-height="28" data-pin-hover="true" data-pin-custom="true" src="//assets.pinterest.com/js/pinit.js"></script>
 </body>

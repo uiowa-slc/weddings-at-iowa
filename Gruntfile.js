@@ -26,18 +26,25 @@ module.exports = function(grunt) {
     },
     //concat all the files into the build folder includePaths: 
     uncss: {
-
       dist: {
         options:{
-          ignore: ['/^meta.foundation/', '/f-topbar-fixed/', '/contain-to-grid/', '/sticky/', '/fixed/']
+          ignore: ['/^meta.foundation/', '/f-topbar-fixed/', '/contain-to-grid/', '/sticky/', '/fixed/', /(#|\.)rrssb(\-[a-zA-Z]+)?/, /(#|\.)fs-carousel(\-[a-zA-Z]+)?/,/(#|\.)top-bar(\-[a-zA-Z]+)?/ ]
         },
         files: {
           '<%=globalConfig.themeDir %>/css/tidy.css': 
-              ['dist/weddings-at-iowa/*.html']
+              ['dist/weddings-at-iowa/*.html', 'dist/weddings-at-iowa/**/*.html']
         },
 
       }
     },
+    cssmin: {
+      minify: {
+        files: {
+          '<%=globalConfig.themeDir %>/css/tidy.min.css': ['<%=globalConfig.themeDir %>/css/tidy.css']
+        }
+      }
+    },
+
     concat: {
       js:{
         src: [
@@ -99,9 +106,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'uncss', 'cssmin', 'concat', 'uglify', 'watch']);
 
 };

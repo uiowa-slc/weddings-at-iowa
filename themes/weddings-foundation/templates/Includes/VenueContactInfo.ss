@@ -1,11 +1,6 @@
 
 				<div class="contact-info text-center">
 
-					
-				
-
-				
-				<img src="{$ThemeDir}/images/separator-small.png" class="separator" />
 					<h3>Contact:</h3>
 					<p>
 						<% if $ContactName %>$ContactName</br><% end_if %>
@@ -13,7 +8,7 @@
 						<% if $CityState || $ZipCode %>$CityState $ZipCode</br></br><% end_if %>
 						<% if $PhoneNumber %>$PhoneNumber</br><% end_if %>
 						<% if $Email %>$Email</br><% end_if %>
-						<% if $$Website %><a href="{$Website}" target="_blank">Visit website &rarr;</a><% end_if %>
+						<% if $$Website %><a href="{$Website}" class="btn btn-small" target="_blank">Visit website &rarr;</a><% end_if %>
 					</p>
 					<ul class="social-list">
 						<% if $Facebook %>

@@ -23,7 +23,7 @@
 <% if $AllTestimonials %>
 	<% loop $AllTestimonials.Limit(1) %>
 		<div class="testimonial">
-			<div class="row collapse">
+			<div class="row">
 				<div class="$EvenOdd large-7 columns">
 
 					<a href="$Venue.Link"><img width="760" height="507" src="$Image.CroppedFocusedImage(760,507).URL" nopin="nopin" class="photo"></a>
