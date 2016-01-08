@@ -28,7 +28,16 @@ module.exports = function(grunt) {
     uncss: {
       dist: {
         options:{
-          ignore: ['/^meta.foundation/', '/f-topbar-fixed/', '/contain-to-grid/', '/sticky/', '/fixed/', /(#|\.)rrssb(\-[a-zA-Z]+)?/, /(#|\.)fs-carousel(\-[a-zA-Z]+)?/,/(#|\.)top-bar(\-[a-zA-Z]+)?/ ]
+          ignore: ['/^meta.foundation/', 
+          '/f-topbar-fixed/',
+           '/contain-to-grid/', 
+           '/sticky/', 
+           '/fixed/', 
+           /(#|\.)flex(\-[a-zA-Z]+)?/, 
+          /(#|\.)rrssb(\-[a-zA-Z]+)?/, 
+          /(#|\.)fs-carousel(\-[a-zA-Z]+)?/,
+          /(#|\.)top-bar(\-[a-zA-Z]+)?/ 
+          ]
         },
         files: {
           '<%=globalConfig.themeDir %>/css/tidy.css': 
