@@ -3227,7 +3227,7 @@ input[type="submit"].btn::-moz-focus-inner {
 
 .VenuePage article h1,
 .ServicePage article h1 {
-  border-bottom: 4px solid #F5DFA2;
+  text-transform: uppercase;
   text-align: center;
   margin-top: 0.9375rem;
 }
