@@ -33,7 +33,7 @@
 				<div class="small-6 columns">
  					<ul class="border-list">
 						<li><a href="https://www.instagram.com/weddingsatiowa/" target="_blank">Instagram</a></li>
-						<li><a href="https://twitter.com/uistudentlife" target="_blank">Pinterest</a></li>
+						<li><a href="https://www.pinterest.com/weddingsatiowa/" target="_blank">Pinterest</a></li>
 						
 					</ul>
 				</div>
