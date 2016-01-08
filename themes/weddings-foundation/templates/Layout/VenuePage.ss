@@ -131,7 +131,7 @@
 				<% loop $VenueMedia %>
 				<li>
 					<!-- heres the image-->
-					<img src="{$ThemeDir}/images/placeholder.png" data-src="$Image.CroppedFocusedImage(640,360).URL" nopin="nopin" class="lazy" alt="$Title" />
+					<img src="{$ThemeDir}/images/placeholder.png" data-src="$Image.CroppedFocusedImage(640,360).URL" nopin="nopin" class="lazy" alt="$Top.Title" />
 				</li>
 				<% end_loop %>
 			</ul>
