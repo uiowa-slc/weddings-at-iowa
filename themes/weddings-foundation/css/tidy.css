@@ -2069,11 +2069,11 @@ blockquote {
 }
 
 .rrssb-buttons li a .rrssb-icon svg path {
-  fill: #2ab2f2;
+  fill: #333;
 }
 
 .rrssb-buttons li a .rrssb-text {
-  color: #2ab2f2;
+  color: #333;
 }
 
 .rrssb-buttons li a:active {
@@ -3259,6 +3259,7 @@ input[type="submit"].btn::-moz-focus-inner {
 
 .VenuePage ul.services li h4 {
   font-size: 1rem;
+  margin: 10px 0;
 }
 
 .VenuePage .contact-info,

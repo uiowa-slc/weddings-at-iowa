@@ -9499,12 +9499,6 @@ input[type="submit"].btn.btn-mini {
     font-size: 18px;
     text-transform: uppercase; }
 
-.venue-features-container.has-map {
-  background-color: #f7f7f7; }
-  @media only screen and (min-width: 64.063em) {
-    .venue-features-container.has-map {
-      padding: 30px; } }
-
 .md-bar {
   background: #111;
   color: white;
