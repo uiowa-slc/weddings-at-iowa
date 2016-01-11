@@ -332,7 +332,8 @@ $social-list: rrssb-email $rrssb-email, rrssb-facebook $rrssb-facebook, rrssb-tu
     }
 
     &.tiny-format {
-        height: 22px;
+        //height: 22px;
+        height: auto;
         position: relative;
 
         li {

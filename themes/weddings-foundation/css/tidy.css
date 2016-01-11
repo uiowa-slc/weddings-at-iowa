@@ -2087,7 +2087,7 @@ blockquote {
 }
 
 .rrssb-buttons.tiny-format {
-  height: 22px;
+  height: auto;
   position: relative;
 }
 

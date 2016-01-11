@@ -47,10 +47,26 @@ module.exports = function(grunt) {
 
       }
     },
+    critical: {
+        test: {
+            options: {
+                inline: false,
+                base: './',
+                css: [
+                    '<%=globalConfig.themeDir %>/css/tidy.min.css',
+                ],
+                width: 1280,
+                height: 720
+            },
+            src: ['dist/weddings-at-iowa/index.html'],
+            dest: '<%=globalConfig.themeDir %>/css/critical.css'
+        }
+    },
     cssmin: {
       minify: {
         files: {
-          '<%=globalConfig.themeDir %>/css/tidy.min.css': ['<%=globalConfig.themeDir %>/css/tidy.css']
+          '<%=globalConfig.themeDir %>/css/tidy.min.css': ['<%=globalConfig.themeDir %>/css/tidy.css'],
+          '<%=globalConfig.themeDir %>/templates/Includes/CriticalCss.ss': ['<%=globalConfig.themeDir %>/css/critical.css']
         }
       }
     },
@@ -116,10 +132,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-uncss');
+   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'uncss', 'cssmin', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'uncss', 'critical','cssmin', 'concat', 'uglify', 'watch']);
 
 };
