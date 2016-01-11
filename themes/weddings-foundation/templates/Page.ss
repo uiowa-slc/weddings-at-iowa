@@ -30,9 +30,9 @@
 <% include CriticalCss %>
 </style>
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
-	<%-- require themedCSS("app") --%>
-	<% require themedCSS("tidy.min") %>
-	<script async src="//use.typekit.net/vds3rxz.js"></script>
+	<% require themedCSS("app") %>
+	<%-- require themedCSS("tidy.min") --%>
+	<script src="//use.typekit.net/vds3rxz.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 	<!--<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>-->
 </head>
