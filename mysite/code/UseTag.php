@@ -18,7 +18,7 @@ class UseTag extends DataObject {
 	}
 
 	private static $extensions = array(
-		'UseTagURLSegmentExtension',
+		'URLSegmentExtension',
 	);
 
 }

@@ -6,7 +6,7 @@
  * @package silverstripe
  * @subpackage blog
  */
-class UseTagURLSegmentExtension extends DataExtension {
+class URLSegmentExtension extends DataExtension {
 	/**
 	 * @var array
 	 */

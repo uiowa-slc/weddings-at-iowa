@@ -18,6 +18,14 @@ class Building extends DataObject {
 		//'Venues'
 	);
 
+	public function Link() {
+		return 'building/'.$this->URLSegment;
+	}
+
+	private static $extensions = array(
+		'URLSegmentExtension',
+	);
+
 	public function getCMSFields() {
 		$relatedBuildings = function () {
 			return VenuePage::get()->map()->toArray();
