@@ -49,7 +49,7 @@
 						<div class="text-center">
 							$AddressMap(400,300)
 							<% if $Building %>
-							<p><strong>Located near:</strong> <a href="$Building.Link" title="<% _t('VIEWALLVENUESIN', 'View all venues in ') %> '$Building.Title'">$Building.Title</a></p>
+							<p><strong>Located near:</strong> <a href="$Building.Link" title="<% _t('VIEWALLVENUESIN', 'View all venues in') %> '$Building.Title'">$Building.Title</a></p>
 							<% end_if %>
 						</div>
 					</div>
