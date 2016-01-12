@@ -42,7 +42,7 @@
       }
 
       .feature-bg {
-        min-height: 600px;
+        min-height: 700px;
         background-size: cover;
         background-position: 50% 50%;
         display: -ms-flexbox;
@@ -52,6 +52,10 @@
         -webkit-align-items: center;
         -webkit-box-align: center;
         align-items: center;
+
+        @media #{$medium-up} {
+          min-height: 600px;
+        }
 
         @media #{$large-up} {
           min-height: 700px;
@@ -76,6 +80,11 @@
         color: $body-font-color;
         align-self: flex-end;
         padding: 0 70px;
+        width: 100%;
+
+        a {
+          color: #7f7f7f;
+        }
 
         h2, h3 {}
 

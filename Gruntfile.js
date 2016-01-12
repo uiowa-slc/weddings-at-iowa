@@ -16,7 +16,7 @@ module.exports = function(grunt) {
           '<%=globalConfig.themeDir %>/css/editor.css' : '<%=globalConfig.themeDir %>/scss/editor.scss'
         },                  // Target
         options: {              // Target options
-          style: 'compressed',
+          outputStyle: 'compressed',
           includePaths: [
           '<%=globalConfig.themeDir %>/bower_components/foundation/scss'
           ],
@@ -26,18 +26,51 @@ module.exports = function(grunt) {
     },
     //concat all the files into the build folder includePaths: 
     uncss: {
-
       dist: {
         options:{
-          ignore: ['/^meta.foundation/', '/f-topbar-fixed/', '/contain-to-grid/', '/sticky/', '/fixed/']
+          ignore: ['/^meta.foundation/', 
+          '/f-topbar-fixed/',
+           '/contain-to-grid/', 
+           '/sticky/', 
+           '/fixed/', 
+           /(#|\.)flex(\-[a-zA-Z]+)?/, 
+          /(#|\.)rrssb(\-[a-zA-Z]+)?/, 
+          /(#|\.)fs-carousel(\-[a-zA-Z]+)?/,
+          /(#|\.)top-bar(\-[a-zA-Z]+)?/,
+          /(#|\.)initial-description(\-[a-zA-Z]+)?/ 
+          ]
         },
         files: {
           '<%=globalConfig.themeDir %>/css/tidy.css': 
-              ['dist/weddings-at-iowa/*.html']
+              ['dist/weddings-at-iowa/*.html', 'dist/weddings-at-iowa/**/*.html']
         },
 
       }
     },
+    critical: {
+        test: {
+            options: {
+                inline: false,
+                base: './',
+                css: [
+                    '<%=globalConfig.themeDir %>/css/tidy.min.css',
+                ],
+                width: 1280,
+                height: 720
+            },
+            src: ['dist/weddings-at-iowa/index.html'],
+            dest: '<%=globalConfig.themeDir %>/css/critical.css'
+        }
+    },
+    cssmin: {
+      minify: {
+        files: {
+          '<%=globalConfig.themeDir %>/css/tidy.min.css': ['<%=globalConfig.themeDir %>/css/tidy.css'],
+          '<%=globalConfig.themeDir %>/templates/Includes/CriticalCss.ss': ['<%=globalConfig.themeDir %>/css/critical.css']
+        }
+      }
+    },
+
     concat: {
       js:{
         src: [
@@ -99,9 +132,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-uncss');
+   grunt.loadNpmTasks('grunt-critical');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'uncss', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'uncss', 'critical','cssmin', 'concat', 'uglify', 'watch']);
 
 };

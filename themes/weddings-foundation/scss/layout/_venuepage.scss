@@ -8,11 +8,23 @@
 
 	article h1 {
 		//border-top: 5px solid #888;
-		border-bottom: 4px solid $secondary-color;
+		//border-bottom: 4px solid $secondary-color;
 
-		//text-transform: uppercase;
+		text-transform: uppercase;
 		text-align: center;
 		margin-top: $column-gutter / 2;
+	}
+
+	.push-up {
+		@media #{$large-up} {
+			margin-top: -100px;
+
+			article {
+				padding: 0 20px;
+			}
+		}
+
+		background: white;
 	}
 
 	.initial-description {
@@ -48,11 +60,21 @@
 
 	ul.services li {
 		font-size: rem-calc(22);
+		padding: 10px 0;
+
+		h4 {
+			font-size: rem-calc(16);
+			margin: 10px 0;
+		}
 	}
 
 	.contact-info {
 		color: #777;
 		text-align: center;
+
+		p {
+			line-height: 1.8;
+		}
 
 		ul {
 			margin-left: 0;
@@ -67,6 +89,10 @@
 			margin-bottom: $paragraph-margin-bottom;
 		}
 
+		h3 {
+			font-size: rem-calc(19);
+		}
+
 		@media #{$large-up} {
 			margin-bottom: 70px;
 			margin-top: 70px;
@@ -75,10 +101,6 @@
 				text-transform: uppercase;
 				color: #666;
 			}
-		}
-
-		h4 {
-			font-size: rem-calc(18);
 		}
 	}
 
@@ -118,6 +140,14 @@
 
 	// Slider styles
 	#venue-slider {
+		.flexslider:hover .flex-direction-nav .flex-prev {
+			opacity: 1;
+		}
+
+		.flexslider:hover .flex-direction-nav .flex-next {
+			opacity: 1;
+		}
+
 		&.flexslider {
 			margin-bottom: 0;
 		}
@@ -187,6 +217,10 @@
 
 	//Carousel (filmstrip thumbnails at the bottom)
 	#venue-carousel {
+		.flex-direction-nav a:before {
+			color: #222;
+		}
+
 		ul li {
 			margin-right: 10px;
 
@@ -231,5 +265,25 @@
 	h2 {
 		font-size: 18px;
 		text-transform: uppercase;
+	}
+}
+
+.venue-features-section {
+	margin: 30px 0;
+}
+
+.venue-features-container {
+	//background-color: #f7f7f7;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-self: flex-end;
+
+	@media #{$large-up} {
+		//padding: 30px;
+		align-self: center;
 	}
 }

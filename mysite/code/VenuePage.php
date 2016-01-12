@@ -89,7 +89,7 @@ class VenuePage extends Page {
 		$fields->addFieldToTab("Root.Main", $serviceField, 'Content');
 
 		$buildingSource = Building::get()->map()->toArray();
-		$buildingField  = DropdownField::create('Buildings', 'Building', $buildingSource)->setEmptyString('(None)');
+		$buildingField  = DropdownField::create('BuildingID', 'Building', $buildingSource)->setEmptyString('(None)');
 		$fields->addFieldToTab("Root.Main", $buildingField, 'Content');
 
 		/*$fields->addFieldToTab('Root.Media', UploadField::create(
@@ -164,6 +164,24 @@ class VenuePage extends Page {
 		return $relatedVenues;
 
 	}
+
+	public function getMoreVenues(){
+
+		$filteredVenues = new ArrayList();
+
+		$venues = VenuePage::get()->filter(array('ClassName' => 'VenuePage'));
+
+		foreach ($venues as $venue) {
+			if ($venue->Title != $this->Title) {
+
+				$filteredVenues->add($venue);
+
+			}
+		}
+
+		return $filteredVenues;
+	}
+
 
 }
 
