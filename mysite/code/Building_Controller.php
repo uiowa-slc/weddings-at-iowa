@@ -17,10 +17,10 @@ class Building_Controller extends ContentController {
 		$building = Building::get()->filter(array('URLSegment' => $buildingName))->First();
 
 		if($building) {
-			$venues = $building->VenuePages();
+			$venues = $building->Venues();
 			return $this->customise(new ArrayData(array(
 				'Building' => $building,
-				'VenuePages' => $venues
+				'Venues' => $venues
 			)))->renderWith(array("Building", "Page"));
 		}
 	}

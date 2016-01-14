@@ -3,7 +3,7 @@
 		<h1 class="section-title">Venues Located in: $Building.Title</h1>
 	</div>
 	<ul class="resource-card-list">
-		<% loop $VenuePages %>
+		<% loop $Venues %>
 	  			<% include Card %>
 	  	<% end_loop %>
 	</ul>
