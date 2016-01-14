@@ -117,7 +117,7 @@
 				<% end_loop %>
 			</ul>
 		</div>
-		<div id="venue-carousel" class="flexslider">
+		<div id="venue-carousel" class="flexslider show-for-large-up">
 			<ul class="slides">
 				<% loop $VenueMedia %>
 				<li>

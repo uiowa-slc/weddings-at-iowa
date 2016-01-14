@@ -10,7 +10,7 @@
 		    	$Content
 		    	<p>Continue reading...</p>
 		    	</a>
-		    	<p><img src="{$ThemeDir}/images/separator-small.png" /></p>
+		    	<p class="show-for-large-up"><img src="{$ThemeDir}/images/separator-small.png" /></p>
 		    	<% include ShareIcons %>
 			</div>
 
