@@ -83,12 +83,8 @@
 		<% include VenueContactInfo %>
 	</div>
 </div>
-<!--Begin Testimonials-->
-<% if $Testimonials %>
-	<% loop $Testimonials %>
-		<% include TestimonialCard %>
-	<% end_loop %>
-<% end_if %>
+
+
 
 </div>
 <!--Begin Flickity Slider-->
@@ -130,6 +126,14 @@
 	</div>
 </div>
 <% end_if %>
+
+<!--Begin Testimonials-->
+<% if $Testimonials %>
+	<% loop $Testimonials %>
+		<% include TestimonialCard %>
+	<% end_loop %>
+<% end_if %>
+
 <% if $Venues %>
 	<div class="row">
 		<div class="large-12 columns">
@@ -142,6 +146,8 @@
 		</div>
 	</div>
 <% end_if %>
+
+
 <!--Begin Related Items-->
 <section class="related-items">
 <div class="row">

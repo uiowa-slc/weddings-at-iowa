@@ -13,7 +13,12 @@
 		width: 100%;
 	}
 
+
 	.row {
+		background-color: #F9F9F9;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
 		@media #{$large-up} {
 			display: -ms-flexbox;
 			display: -webkit-flex;
@@ -22,16 +27,19 @@
 			-webkit-align-items: center;
 			-webkit-box-align: center;
 			align-items: center;
+
 		}
 	}
 
 	blockquote {
 		font-size: rem-calc(26);
 		border: none;
+		color: #333;
 
 		@media #{$medium-up} {
 			border-left: 1px solid #ddd;
 		}
+
 	}
 
 	.section-title {
