@@ -40,10 +40,10 @@ gridfieldextensions
 siteconfig/
 silverstripe-cache
 betternavigator/
-
 silverstripe-blubber/
-
 mysite/_config/keys.yml
-
 addressable/
 staticpublisher/
+activedirectory/
+multivaluefield/
+queuedjobs/

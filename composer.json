@@ -3,8 +3,8 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.3.2",
-		"silverstripe/cms": "3.5.*@stable",
-		"silverstripe/framework": "3.5.*@stable",
+		"silverstripe/cms": "3.6.*@stable",
+		"silverstripe/framework": "3.6.*@stable",
 		"silverstripe-themes/simple": "*",
 		"silverstripe/userforms": "*",
 		"silverstripe/tagfield": "^1.2",
@@ -13,10 +13,10 @@
 		"jonom/focuspoint" : "*",
 		"colymba/gridfield-bulk-editing-tools": "*",
 		"silverstripe-australia/gridfieldextensions": "*",
-		"jonom/silverstripe-betternavigator" : "*",
+		"jonom/silverstripe-betternavigator" : "3.*",
 		"silverstripe/staticpublisher" : "*",
-		"unclecheese/silverstripe-blubber" : "dev-master",
-		"silverstripe-australia/addressable" : "*"
+		"silverstripe-australia/addressable" : "*",
+		"silverstripe/activedirectory" : "3.*"
 	},
 	"config": {
 		"process-timeout": 600	
@@ -26,6 +26,15 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"       
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
+
+        },
+        {
+             "type": "vcs",
+             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
         }
     ]
 }
