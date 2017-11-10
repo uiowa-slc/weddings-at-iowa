@@ -655,12 +655,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory.git",
-                "reference": "4e40dd495391fbc3052b554707d49748b01dadce"
+                "reference": "f167dc593b4c462f5e68f7b7ef828a69ea345dc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-activedirectory/zipball/4e40dd495391fbc3052b554707d49748b01dadce",
-                "reference": "4e40dd495391fbc3052b554707d49748b01dadce",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-activedirectory/zipball/f167dc593b4c462f5e68f7b7ef828a69ea345dc5",
+                "reference": "f167dc593b4c462f5e68f7b7ef828a69ea345dc5",
                 "shasum": ""
             },
             "require": {
@@ -707,7 +707,7 @@
             "support": {
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory/tree/3"
             },
-            "time": "2017-11-10 15:08:59"
+            "time": "2017-11-10 15:11:36"
         },
         {
             "name": "silverstripe/cms",
