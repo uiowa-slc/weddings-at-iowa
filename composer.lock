@@ -655,22 +655,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory.git",
-                "reference": "7c6a6e8b827a928f47419d0740c96854ac37dfcf"
+                "reference": "4e40dd495391fbc3052b554707d49748b01dadce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-activedirectory/zipball/7c6a6e8b827a928f47419d0740c96854ac37dfcf",
-                "reference": "7c6a6e8b827a928f47419d0740c96854ac37dfcf",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-activedirectory/zipball/4e40dd495391fbc3052b554707d49748b01dadce",
+                "reference": "4e40dd495391fbc3052b554707d49748b01dadce",
                 "shasum": ""
             },
             "require": {
                 "onelogin/php-saml": "^2.10.7",
                 "php": ">=5.4",
                 "silverstripe/framework": "~3.1",
-                "silverstripe/queuedjobs": "~2.6@stable",
-                "zendframework/zend-authentication": "2.5.3",
-                "zendframework/zend-ldap": "2.8.0",
-                "zendframework/zend-session": "2.7.4"
+                "symbiote/silverstripe-queuedjobs": "^3",
+                "zendframework/zend-authentication": "^2.5.1",
+                "zendframework/zend-ldap": "^2.5.1",
+                "zendframework/zend-session": "^2.5.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.8"
@@ -707,7 +707,7 @@
             "support": {
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory/tree/3"
             },
-            "time": "2017-10-24 16:14:20"
+            "time": "2017-11-10 15:08:59"
         },
         {
             "name": "silverstripe/cms",
@@ -817,91 +817,6 @@
                 "silverstripe"
             ],
             "time": "2017-09-28T16:05:53+00:00"
-        },
-        {
-            "name": "silverstripe/multivaluefield",
-            "version": "2.4.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symbiote/silverstripe-multivaluefield.git",
-                "reference": "81b0a152ae022cfcd323cc0a274e588376d12940"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-multivaluefield/zipball/81b0a152ae022cfcd323cc0a274e588376d12940",
-                "reference": "81b0a152ae022cfcd323cc0a274e588376d12940",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "~3.1"
-            },
-            "type": "silverstripe-module",
-            "extra": {
-                "installer-name": "multivaluefield"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Marcus Nyeholt",
-                    "email": "marcus@silverstripe.com.au"
-                }
-            ],
-            "description": "A DB field + form fields for storing multiple values in a single property (serialized).",
-            "keywords": [
-                "dbfield",
-                "formfield",
-                "silverstripe"
-            ],
-            "abandoned": "symbiote/silverstripe-multivaluefield",
-            "time": "2017-06-30 08:04:01"
-        },
-        {
-            "name": "silverstripe/queuedjobs",
-            "version": "2.10.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symbiote/silverstripe-queuedjobs.git",
-                "reference": "4262e039f55030aaf3b0c5e23723574a583ed2ed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-queuedjobs/zipball/4262e039f55030aaf3b0c5e23723574a583ed2ed",
-                "reference": "4262e039f55030aaf3b0c5e23723574a583ed2ed",
-                "shasum": ""
-            },
-            "require": {
-                "asyncphp/doorman": "~1.2",
-                "silverstripe/framework": "~3.1",
-                "silverstripe/multivaluefield": "~2.0"
-            },
-            "type": "silverstripe-module",
-            "extra": {
-                "installer-name": "queuedjobs"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Marcus Nyeholt",
-                    "email": "marcus@silverstripe.com.au"
-                },
-                {
-                    "name": "Damian Mooyman",
-                    "email": "damian@silverstripe.com"
-                }
-            ],
-            "description": "A framework for defining and running background jobs in a queued manner",
-            "keywords": [
-                "jobs",
-                "silverstripe"
-            ],
-            "abandoned": "symbiote/silverstripe-queuedjobs",
-            "time": "2017-06-30 11:06:23"
         },
         {
             "name": "silverstripe/reports",
@@ -1229,6 +1144,101 @@
             "time": "2017-09-25 11:05:58"
         },
         {
+            "name": "symbiote/silverstripe-multivaluefield",
+            "version": "3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symbiote/silverstripe-multivaluefield.git",
+                "reference": "2455ba0310c00c87cf04e5422ef6b2776d3fe55b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-multivaluefield/zipball/2455ba0310c00c87cf04e5422ef6b2776d3fe55b",
+                "reference": "2455ba0310c00c87cf04e5422ef6b2776d3fe55b",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "replace": {
+                "silverstripe/multivaluefield": "self.version"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "multivaluefield",
+                "branch-alias": {
+                    "3.x-dev": "3.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@symbiote.com.au"
+                }
+            ],
+            "description": "A DB field + form fields for storing multiple values in a single property (serialized).",
+            "keywords": [
+                "dbfield",
+                "formfield",
+                "silverstripe"
+            ],
+            "time": "2017-10-13 12:07:02"
+        },
+        {
+            "name": "symbiote/silverstripe-queuedjobs",
+            "version": "3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symbiote/silverstripe-queuedjobs.git",
+                "reference": "acadccd26b6d8ffbb0093f60cb683f8cb5ed3209"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-queuedjobs/zipball/acadccd26b6d8ffbb0093f60cb683f8cb5ed3209",
+                "reference": "acadccd26b6d8ffbb0093f60cb683f8cb5ed3209",
+                "shasum": ""
+            },
+            "require": {
+                "asyncphp/doorman": "^1.2",
+                "silverstripe/framework": "^3.1",
+                "symbiote/silverstripe-multivaluefield": "^3.0"
+            },
+            "replace": {
+                "silverstripe/queuedjobs": "self.version"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "queuedjobs",
+                "branch-alias": {
+                    "3.x-dev": "3.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian@silverstripe.com"
+                },
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@symbiote.com.au"
+                }
+            ],
+            "description": "A framework for defining and running background jobs in a queued manner",
+            "keywords": [
+                "jobs",
+                "silverstripe"
+            ],
+            "time": "2017-11-10 03:58:42"
+        },
+        {
             "name": "undefinedoffset/sortablegridfield",
             "version": "1.0.x-dev",
             "source": {
@@ -1270,16 +1280,16 @@
         },
         {
             "name": "zendframework/zend-authentication",
-            "version": "2.5.3",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-authentication.git",
-                "reference": "1422dec160eb769c719cad2229847fcbf20a1405"
+                "reference": "796013de02b70e804489ea7858411f1b20baf5b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-authentication/zipball/1422dec160eb769c719cad2229847fcbf20a1405",
-                "reference": "1422dec160eb769c719cad2229847fcbf20a1405",
+                "url": "https://api.github.com/repos/zendframework/zend-authentication/zipball/796013de02b70e804489ea7858411f1b20baf5b9",
+                "reference": "796013de02b70e804489ea7858411f1b20baf5b9",
                 "shasum": ""
             },
             "require": {
@@ -1328,7 +1338,7 @@
                 "Authentication",
                 "zf2"
             ],
-            "time": "2016-02-28T15:02:34+00:00"
+            "time": "2016-04-27 18:55:45"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -1386,16 +1396,16 @@
         },
         {
             "name": "zendframework/zend-ldap",
-            "version": "2.8.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-ldap.git",
-                "reference": "a9284a7440e17ce0ba697670bb4db1baf2340acd"
+                "reference": "0234654ce6c300d3e59f7ce752d2895a7e6e673a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-ldap/zipball/a9284a7440e17ce0ba697670bb4db1baf2340acd",
-                "reference": "a9284a7440e17ce0ba697670bb4db1baf2340acd",
+                "url": "https://api.github.com/repos/zendframework/zend-ldap/zipball/0234654ce6c300d3e59f7ce752d2895a7e6e673a",
+                "reference": "0234654ce6c300d3e59f7ce752d2895a7e6e673a",
                 "shasum": ""
             },
             "require": {
@@ -1435,7 +1445,7 @@
                 "ldap",
                 "zf2"
             ],
-            "time": "2017-03-06T20:39:12+00:00"
+            "time": "2017-09-27 07:01:58"
         },
         {
             "name": "zendframework/zend-session",
