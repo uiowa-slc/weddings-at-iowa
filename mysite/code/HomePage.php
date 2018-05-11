@@ -1,4 +1,8 @@
 <?php
+
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridField;
+use HomePageController;
 /**
  * Defines the HomePage page type
  */
@@ -23,16 +27,6 @@ class HomePage extends Page {
 		$fields->addFieldToTab("Root.Main", $homePageFeatureGridField);
 		return $fields;
 	}
-}
-
-class HomePage_Controller extends Page_Controller {
-
-	public function getFeatures() {
-		return HomePageFeature::get();
-	}
-
-
-
 }
 
 ?>

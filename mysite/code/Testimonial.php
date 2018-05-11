@@ -1,5 +1,8 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\ORM\DataObject;
+
 class Testimonial extends DataObject {
 	private static $db = array(
 		'Quote'     => 'Text',
@@ -9,7 +12,7 @@ class Testimonial extends DataObject {
 
 	private static $has_one = array(
 		'Venue' => 'VenuePage',
-		'Image' => 'Image',
+		'Image' => Image::class,
 	);
 
 	private static $summary_fields = array(

@@ -1,32 +1,27 @@
 {
-	"name": "silverstripe/installer",
-	"description": "The SilverStripe Framework Installer",
-	"require": {
-		"php": ">=5.3.2",
-		"silverstripe/cms": "3.6.*@stable",
-		"silverstripe/framework": "3.6.*@stable",
-		"silverstripe-themes/simple": "*",
+    "name": "silverstripe/installer",
+    "description": "The SilverStripe Framework Installer",
+    "require": {
+        "php": ">=5.3.2",
+        "silverstripe/recipe-cms": "^1",
+        "silverstripe/framework": "4.0.3",
+        "silverstripe-themes/simple": "*",
 		"silverstripe/userforms": "*",
-		"silverstripe/tagfield": "^1.2",
-		"md/division-bar" : "*",
-		"undefinedoffset/sortablegridfield": "*",
-		"jonom/focuspoint" : "*",
-		"colymba/gridfield-bulk-editing-tools": "*",
-		"silverstripe-australia/gridfieldextensions": "*",
-		"jonom/silverstripe-betternavigator" : "3.*",
-		"silverstripe/staticpublisher" : "*",
-		"silverstripe-australia/addressable" : "*",
-		"silverstripe/activedirectory" : "3.*",
-		"md/division-analytics" : "*"
-	},
-	"config": {
-		"process-timeout": 600	
-	},
-	"minimum-stability": "dev",
-	"repositories": [
+        "silverstripe/tagfield": "^2.0@dev",
+        "undefinedoffset/sortablegridfield": "^2.0@dev",
+        "colymba/gridfield-bulk-editing-tools": "^3.0@dev",
+        "jonom/focuspoint": "^3.0@dev",
+        "symbiote/silverstripe-gridfieldextensions": "^3",
+        "jonom/silverstripe-betternavigator" : "master"
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "minimum-stability": "dev",
+    "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"       
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
         },
         {
             "type": "vcs",
@@ -35,11 +30,24 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
-
         },
         {
-             "type": "vcs",
-             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
         }
-    ]
+    ],
+    "extra": {
+        "project-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "mysite/.htaccess",
+            "mysite/_config.php",
+            "mysite/_config/mysite.yml",
+            "mysite/code/Page.php",
+            "mysite/code/PageController.php",
+            "web.config"
+        ]
+    }
 }

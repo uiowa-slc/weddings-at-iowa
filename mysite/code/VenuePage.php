@@ -1,5 +1,20 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\HeaderField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Control\Email\Email;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\ListboxField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use Colymba\BulkUpload\BulkUploader;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\TagField\TagField;
+use SilverStripe\ORM\ArrayList;
+use PageController;
+
 class VenuePage extends Page {
 
 	private static $db = array(
@@ -24,7 +39,7 @@ class VenuePage extends Page {
 	);
 
 	private static $has_one = array(
-		'CoverImage' => 'Image',
+		'CoverImage' => Image::class,
 		'Building'   => 'Building',
 
 	);
@@ -40,12 +55,12 @@ class VenuePage extends Page {
 
 	private static $many_many = array(
 		'Services'      => 'ServicePage',
-		'GalleryImages' => 'Image',
+		'GalleryImages' => Image::class,
 		'Features'      => 'Feature',
 		'UseTags'       => 'UseTag',
 	);
 
-	public static $many_many_extraFields = array(
+	private static $many_many_extraFields = array(
 		'Features'   => array(
 			'SortOrder' => 'Int',
 		)
@@ -63,7 +78,7 @@ class VenuePage extends Page {
 
 		$fields->addFieldToTab('Root.Contact', new HeaderField('Venue Contact Information'));
 		$fields->addFieldToTab('Root.Contact', new TextField('ContactName'));
-		$fields->addFieldToTab('Root.Contact', new TextField('Email'));
+		$fields->addFieldToTab('Root.Contact', new TextField(Email::class));
 		$fields->addFieldToTab('Root.Contact', new TextField('PhoneNumber'));
 		$fields->addFieldToTab('Root.Contact', new TextField('Website'));
 
@@ -71,7 +86,7 @@ class VenuePage extends Page {
 			'(Select one)' => 'Select one',
 			'Phone'        => 'Phone',
 			'Facebook'     => 'Facebook',
-			'Email'        => 'Email');
+			'Email'        => Email::class);
 		$fields->addFieldToTab('Root.Contact',
 			new DropdownField('PreferredContactInformation', 'Preferred Contact Information', $objects));
 
@@ -101,7 +116,7 @@ class VenuePage extends Page {
 
 		$mediaFieldConf = GridFieldConfig_RelationEditor::create(40);
 		$mediaFieldConf->addComponent(new GridFieldSortableRows('SortOrder'));
-		$mediaFieldConf->addComponent(new GridFieldBulkUpload('Image'));
+		$mediaFieldConf->addComponent(new BulkUploader(Image::class));
 
 		//$mediaFieldConf->removeComponentsByType('GridFieldAddNewButton')->addComponent(new GridFieldAddNewMultiClass());
 		//$mediaFieldConf->setClasses(array('Image', 'VideoEmbed'));
@@ -182,9 +197,5 @@ class VenuePage extends Page {
 		return $filteredVenues;
 	}
 
-
-}
-
-class VenuePage_Controller extends Page_Controller {
 
 }

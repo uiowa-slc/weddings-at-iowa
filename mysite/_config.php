@@ -1,20 +1,25 @@
 <?php
 
-global $project;
-$project = 'mysite';
+use SilverStripe\i18n\i18n;
+use SilverStripe\ORM\Search\FulltextSearchable;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\View\Requirements;
+use SilverStripe\Control\Director;
+use SilverStripe\Security\MemberAuthenticator\MemberAuthenticator;
+use SilverStripe\Security\Authenticator;
+use SilverStripe\Core\EnvironmentLoader;
+use SilverStripe\ORM\Connect\MySQLDatabase;
+
 
 global $database;
 //!!! YOU HAVE TO DEFINE YOUR DATABASE FIRST, MAN. !!!
 $database = 'weddings';
 
-// Use _ss_environment.php file for configuration
-require_once "conf/ConfigureFromEnv.php";
-
 // Set the site locale
 i18n::set_locale('en_US');
 FulltextSearchable::enable();
 // Enable nested URLs for this site (e.g. page/sub-page/)
-if (class_exists('SiteTree')) {SiteTree::enable_nested_urls();
+if (class_exists(SiteTree::class)) {SiteTree::enable_nested_urls();
 }
 
 Requirements::set_force_js_to_bottom(true);
@@ -52,6 +57,6 @@ GD::set_default_quality(80);
 if (Director::isLive()) {
 	Director::forceSSL();
 }
-Authenticator::unregister('MemberAuthenticator');
+Authenticator::unregister(MemberAuthenticator::class);
 Authenticator::set_default_authenticator('SAMLAuthenticator');
 ?>

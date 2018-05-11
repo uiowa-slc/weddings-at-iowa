@@ -1,5 +1,8 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\ORM\DataObject;
+
 class Feature extends DataObject {
 
 	private static $belongs_many_many = array (
@@ -10,7 +13,7 @@ class Feature extends DataObject {
 	private static $has_one = array (
 
 		'VenuePage' => 'VenuePage',
-		'Image' => 'Image',
+		'Image' => Image::class,
 	);
 
 	private static $db = array (
@@ -21,7 +24,7 @@ class Feature extends DataObject {
 	);
 
 	private static $field_labels = array (
-		'Image.CMSThumbnail' => 'Image'
+		'Image.CMSThumbnail' => Image::class
 	);
 
 	private static $summary_fields = array (

@@ -2,6 +2,6 @@
 Name: mysiteroutes
 After: framework/routes#coreroutes
 ---
-Director:
-    rules:
-        'tag': 'useTag_Controller'
+SilverStripe\Control\Director:
+  rules:
+    tag: useTag_Controller

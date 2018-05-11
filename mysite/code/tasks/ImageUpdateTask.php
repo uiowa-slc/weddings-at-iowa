@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\BuildTask;
+
 class ImageUpdateTask extends BuildTask {
 
 	protected $title       = 'Image Update';
