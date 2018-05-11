@@ -21,7 +21,7 @@ class PageController extends ContentController
      */
     private static $allowed_actions = [];
 
-    public function init() {
+    protected function init() {
         parent::init();
 
         // Note: you should use SS template require tags inside your templates
