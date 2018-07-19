@@ -26,9 +26,6 @@
 		<meta property="og:image:height" content="630" />
 	<% end_if %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
-<style>
-<% include CriticalCss %>
-</style>
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<%-- <% require themedCSS("app") %> --%>
 	<% require themedCSS("app") %>
@@ -37,12 +34,6 @@
 	<!--<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>-->
 </head>
 <body class="$ClassName.ATT <%if $CoverImage %>with-cover-image<% end_if %>">
-	<%-- include DivisionBarFoundation --%>
-	<!--<header class="header" role="banner">
-		<div class="row text-center">
-			<a href="{$BaseHref}"><img src="{$ThemeDir}/images/logo.png" data-pin-hover="false" /></a>
-		</div>	
-	</header>-->
 
 	<% if $ClassName != "VenuePage" %>
 		<% include TopBar %>
@@ -57,7 +48,6 @@
 	<% include MdBar %>
 	$Analytics
 
-	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="$ThemeDir/build/build.js"></script>
 	<!-- Please call pinit.js only once per page -->
