@@ -30,6 +30,17 @@
 	}
 }*/
 
+@font-face {
+	font-family: leagueSpartan;
+	src: url(../fonts/leaguespartan-bold.woff);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: allegra;
+	src: url(../fonts/abcAllegra-Light.ttf);
+	font-weight: light;
+}
 .main {
 	min-height: 320px;
 }

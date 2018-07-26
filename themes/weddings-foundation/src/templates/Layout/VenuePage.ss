@@ -65,7 +65,6 @@
 			<h3 class="text-center">Share this $singular_name</h3>
 			<% include ShareIcons %>
 			<% if $Services %>
-				<p class="text-center"><img src="{$ThemeDir}/dist/images/separator-small.png" /></p>
 				<h3>Recommended services:</h3>
 				<ul class="services">
 					<% loop $Services %>

@@ -10,7 +10,7 @@
 		    	$Content
 		    	<p>Continue reading...</p>
 		    	</a>
-		    	<p class="show-for-large-up"><img src="{$ThemeDir}/dist/images/separator-small.png" /></p>
+
 		    	<% include ShareIcons %>
 			</div>
 
@@ -32,7 +32,6 @@
 					<h2 class="section-title"><a href="$Venue.Link">Testimonial: $Venue.Title &rarr;</a></h2>
 					<a href="$Venue.Link">
 					<blockquote>$Quote</blockquote>
-					<p class="text-center"><img src="{$ThemeDir}/dist/images/separator2.png" /></p>
 					<p class="author">$Name</p>
 					</a>
 				</div>
