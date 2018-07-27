@@ -2,7 +2,7 @@
 	<nav class="top-bar" role="navigation" data-topbar>
 		<ul class="title-area">
 			<li class="name">
-				<h1><a href="{$baseUrl}">Weddings <small>at</small> Iowa</a></h1>
+				<h1><a href="{$baseUrl}">Weddings at Iowa</a></h1>
 			</li>
 			<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
 		</ul>
@@ -26,12 +26,8 @@
 				    </div>
 				  </div>
 				</li>--%>
-			</ul>
-			<% if $ClassName == "VenuePage" || $ClassName == "ServicePage" || $ClassName == "HomePage" %>
+			</ul> 
 				<% include TopBarSecondaryLinksWhite %>
-			<% else %>
-				<% include TopBarSecondaryLinks %>
-			<% end_if %>
 		</section>
 	</nav>
 </div>

@@ -3,12 +3,9 @@
 }
 
 .top-bar {
-	.name {
-		background-image: url("../images/header-bg.png");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 50% 50%;
-	}
+
+		
+
 
 	.name h1 {
 		//display: inline-block;
@@ -20,12 +17,12 @@
 		letter-spacing: 4px;
 		margin: 0 auto;
 		display: block;
-		font-family: classico-urw;
-		font-size: rem-calc(13);
+		font-family: leagueSpartan;
+		font-size: rem-calc(20);
 
 		@media #{$medium-up} {
 			//line-height: $header-height-md;
-			font-size: rem-calc(32);
+			font-size: rem-calc(24);
 		}
 
 		@media #{$large-up} {
@@ -36,7 +33,7 @@
 		}
 
 		a {
-			color: #666;
+			color: #FFFFFF;
 		}
 
 		small {
