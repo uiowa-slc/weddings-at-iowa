@@ -25,7 +25,13 @@
 			}
 		}
 	}
+	.resource-card-content--with-bg{
+		background-color: rgba(#FFF, 0.6);
+		box-shadow: 1px 11px 29px 7px rgba(0,0,0,0.20);
+		height: 200px;
 
+
+	}
 	.resource-card {
 		margin-bottom: 0;
 		text-align: center;

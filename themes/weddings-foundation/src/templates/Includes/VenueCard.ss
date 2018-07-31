@@ -1,4 +1,4 @@
-<li class="resource-card">
+<li class="resource-card resource-card--with-bg">
 	<a href="$Link" data-pin-custom="true" >
 	<div class="resource-card-bg lazy" data-src="$CoverImage.CroppedFocusedImage(600,338).AbsoluteURL" style="background-image: url('{$ThemeDir}/dist/images/placeholder.png');">
 	</div>
@@ -10,5 +10,3 @@
 	</a>
 
 </li>
-
-
