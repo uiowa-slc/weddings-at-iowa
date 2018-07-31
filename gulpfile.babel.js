@@ -26,6 +26,7 @@
 
 import path from 'path';
 import gulp from 'gulp';
+import newer from 'gulp-newer';
 import del from 'del';
 import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
@@ -47,7 +48,8 @@ gulp.task('lint', () =>
 
 // Optimize images
 gulp.task('images', () =>
-  gulp.src('./themes/weddings-foundation/src/images/**/*')
+  gulp.src('./themes/weddings-foundation/src/images/**')
+    .pipe(newer('./themes/weddings-foundation/dist/images'))
     .pipe($.imagemin({
       progressive: true,
       interlaced: true
@@ -61,6 +63,7 @@ gulp.task('copy', () =>
   gulp.src([
     './themes/weddings-foundation/src/*',
     './themes/weddings-foundation/src/**/*',
+    '!./themes/weddings-foundation/src/images',
     '!./themes/weddings-foundation/src/templates',
     '!./themes/weddings-foundation/src/templates/**/*',
     //'!themes/weddings-foundation/*.html',
@@ -166,12 +169,12 @@ gulp.task('html', () => {
 gulp.task('clean', () => del(['.tmp', './themes/weddings-foundation/dist/*', '!dist/.git'], {dot: true}));
 
 // Watch files for changes & reload
-gulp.task('watch', ['styles', 'scripts', 'html'], () => {
+gulp.task('watch', ['styles', 'scripts', 'html', 'images'], () => {
   // gulp.watch(['./themes/weddings-foundation/**/*.html'], reload);
   gulp.watch(['./themes/weddings-foundation/src/templates/**/*.ss'], ['html']);
   gulp.watch(['./themes/weddings-foundation/src/styles/**/*.{scss,css}'], ['styles']);
   gulp.watch(['./themes/weddings-foundation/src/scripts/**/*.js'], ['lint', 'scripts']);
-  gulp.watch(['./themes/weddings-foundation/src/images/**/*']);
+  gulp.watch(['./themes/weddings-foundation/src/images/**'], ['images']);
 });
 
 
