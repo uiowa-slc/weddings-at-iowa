@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="large-7 large-centered columns">
-		<article>
+		<article class= "pagebody" >
 			<h2>$Title</h2>
 			$Content
 			$Form

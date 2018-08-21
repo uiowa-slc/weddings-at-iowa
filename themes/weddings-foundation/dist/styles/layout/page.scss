@@ -1,0 +1,6 @@
+.pagebody{
+	margin-top: 20px;
+	@media #{$large-up} {
+		margin-top: 100px;
+	}
+}

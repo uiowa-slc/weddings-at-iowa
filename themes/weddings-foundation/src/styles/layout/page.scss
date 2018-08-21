@@ -1,0 +1,20 @@
+.pagebody{
+	margin-top: 20px;
+	@media #{$large-up} {
+		margin-top: 100px;
+	}
+
+.action{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border-radius: 20px 20px 20px 20px;
+	font-size: 12px;
+	box-shadow: 2px 2px 2px 0px rgba(192,192,192,0.75);
+	color: #fff;
+	background: #706c6e;
+
+	border: none;
+
+ 	padding: 10px 20px;
+	}
+}
