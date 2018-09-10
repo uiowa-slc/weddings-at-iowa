@@ -16,6 +16,7 @@
 	<meta property="og:title" content="$Title.ATT" />
 	<meta property="og:description" content="$MetaDescription.ATT" />
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
+	$Metatags(False)
 	<% if $Image %>
 		<meta property="og:image" content="<% with $Image.Fit(1200,630) %>$AbsoluteURL.ATT<% end_with %>" />
 		<meta property="og:width" content="1200" />
