@@ -49,3 +49,4 @@ multivaluefield/
 queuedjobs/
 division-analytics/
 .tmp
+npm-debug.log

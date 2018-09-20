@@ -59,6 +59,13 @@ button, .button {
 	text-transform: uppercase;
 }
 
+.page-title{
+	padding-top: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	
+}
+
 .section-title {
 	margin: ($column-gutter / 2) 0;
 	font-size: rem-calc(20);

@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="large-7 large-centered columns">
 		<article>
-			<h2>$Title</h2>
+			<h1 class="page-title">$Title</h1>
 			$Content
 			$Form
 		</article>

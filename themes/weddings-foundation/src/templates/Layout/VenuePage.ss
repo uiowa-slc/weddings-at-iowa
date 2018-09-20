@@ -13,7 +13,7 @@
 <div class="row">
 	<div class="large-6 large-push-3 columns push-up">
 		<article role="main">
-			<h1> $Title </h1>
+			<h1 class="page-title">$Title</h1>
 			<div class="initial-description">
 				<% if $Content %>
 					$Content
