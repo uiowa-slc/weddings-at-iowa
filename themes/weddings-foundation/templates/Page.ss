@@ -54,7 +54,7 @@
 	</div>
 	$BetterNavigator
 	<% include Footer %>
-	<% include MdBar %>
+<%-- 	<% include MdBar %> --%>
 	$Analytics
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>

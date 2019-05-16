@@ -1,7 +1,6 @@
 <?php
 
 use SilverStripe\ORM\DataObject;
-use UseTagController;
 
 class UseTag extends DataObject {
 

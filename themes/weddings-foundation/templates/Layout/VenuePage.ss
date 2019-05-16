@@ -1,6 +1,6 @@
 <% if $CoverImage %>
 <!--Begin banner image and title-->
-<div class="top-banner-image lazy" data-src="$CoverImage.CroppedFocusedImage(1920,1080).URL" style="background-image: url('$CoverImage.CroppedFocusedImage(640,360).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
+<div class="top-banner-image lazy" data-src="$CoverImage.FocusFill(1920,1080).URL" style="background-image: url('$CoverImage.FocusFill(640,360).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
 	<% include TopBar %>
 	<% if $PhotoCredit %>
 	<h4 style="position: absolute; right: 0; bottom: 0; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
@@ -70,7 +70,7 @@
 				<ul class="services">
 					<% loop $Services %>
 					<li>
-						<a href="$Link"><img src="$CoverImage.CroppedFocusedImage(640,260).URL" /></a>
+						<a href="$Link"><img src="$CoverImage.FocusFill(640,260).URL" /></a>
 						<h4><a href="$Link" class="description-links"> $Title </a></h4>
 					</li>
 					<% end_loop %>
@@ -96,7 +96,7 @@
 			<ul class="slides">
 				<% loop $VenueMedia %>
 					<li>
-						<div class="slide-content-container lazy" data-src="$Image.CroppedFocusedImage(1920,1080).AbsoluteURL" style="background-image: url('{$ThemeDir}/images/placeholder.png'); background-position: $Image.PercentageX% $Image.PercentageY%;">
+						<div class="slide-content-container lazy" data-src="$Image.FocusFill(1920,1080).AbsoluteURL" style="background-image: url('{$ThemeDir}/images/placeholder.png'); background-position: $Image.PercentageX% $Image.PercentageY%;">
 							
 							<% if $PhotoCredit %>
 							<h4 style="position: absolute; bottom: 30px; right: 0px; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
@@ -118,7 +118,7 @@
 				<% loop $VenueMedia %>
 				<li>
 					<!-- heres the image-->
-					<img src="{$ThemeDir}/images/placeholder.png" data-src="$Image.CroppedFocusedImage(640,360).URL" nopin="nopin" class="lazy" alt="$Top.Title" />
+					<img src="{$ThemeDir}/images/placeholder.png" data-src="$Image.FocusFill(640,360).URL" nopin="nopin" class="lazy" alt="$Top.Title" />
 				</li>
 				<% end_loop %>
 			</ul>

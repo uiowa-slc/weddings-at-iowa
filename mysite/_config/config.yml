@@ -1,12 +1,9 @@
 ---
 Name: mysite
-After:
-  - 'framework/*'
-  - 'cms/*'
 ---
 VenuePage:
   extensions:
-    - Addressable
-    - Geocodable
+    - Symbiote\Addressable\Addressable
+    - Symbiote\Addressable\Geocodable
 SilverStripe\View\SSViewer:
   theme: simple

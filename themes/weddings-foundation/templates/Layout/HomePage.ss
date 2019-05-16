@@ -3,7 +3,7 @@
 <% loop $Features %>
     <div data-pin-hover="true" class="cell">
     	
-    	<div class="feature-bg" style="background-image: url('$Image.CroppedFocusedImage(1920,1080).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
+    	<div class="feature-bg" style="background-image: url('$Image.FocusFill(1920,1080).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
     	
 			<div class="feature-text">
 		    	<a href="$Link"><h2>$Title</h2>
@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="$EvenOdd large-7 columns">
 
-					<a href="$Venue.Link"><img width="760" height="507" src="$Image.CroppedFocusedImage(760,507).URL" nopin="nopin" class="photo"></a>
+					<a href="$Venue.Link"><img width="760" height="507" src="$Image.FocusFill(760,507).URL" nopin="nopin" class="photo"></a>
 				</div>
 				<div class="large-5 columns text-center">
 					<h2 class="section-title"><a href="$Venue.Link">Testimonial: $Venue.Title &rarr;</a></h2>

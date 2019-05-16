@@ -13,8 +13,7 @@ use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\TagField\TagField;
 use SilverStripe\ORM\ArrayList;
-use PageController;
-
+use SilverStripe\View\Requirements;
 class VenuePage extends Page {
 
 	private static $db = array(

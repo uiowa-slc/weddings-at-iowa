@@ -7,7 +7,6 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use PageController;
 use SilverStripe\ORM\DataObject;
 
 class HomePageFeature extends DataObject {

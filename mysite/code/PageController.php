@@ -1,7 +1,7 @@
 <?php
 
 use SilverStripe\CMS\Controllers\ContentController;
-
+use SilverStripe\View\Requirements;
 class PageController extends ContentController
 {
     /**
@@ -27,7 +27,7 @@ class PageController extends ContentController
         // Note: you should use SS template require tags inside your templates
         // instead of putting Requirements calls here.  However these are
         // included so that our older themes still work
-        Requirements::themedCSS("form");
+        // Requirements::themedCSS("form");
 
     }
     public function AllVenues() {
