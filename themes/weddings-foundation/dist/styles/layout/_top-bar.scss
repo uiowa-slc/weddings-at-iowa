@@ -1,0 +1,160 @@
+.top-bar-container {
+	//border-bottom: 1px solid #eee;
+}
+
+.top-bar {
+
+		
+
+
+	.name h1 {
+		//display: inline-block;
+		position: relative;
+
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		//transition: all 0.3s;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		margin: 0 auto;
+		display: block;
+		font-family: leagueSpartan;
+		font-size: rem-calc(20);
+
+		@media #{$medium-up} {
+			//line-height: $header-height-md;
+			font-size: rem-calc(24);
+		}
+
+		@media #{$large-up} {
+			margin: 0;
+			font-size: rem-calc(48);
+
+			//line-height: $header-height-lg;
+		}
+
+		a {
+			color: #FFFFFF;
+		}
+
+		small {
+			text-transform: lowercase;
+			font-size: 80%;
+		}
+	}
+
+	.uiowa-logo img, .dsl-logo img {
+		width: 150px;
+	}
+
+	.menu-icon span {
+		font-family: $header-font-family;
+	}
+
+	li.social-icon a:not(.button) {
+		padding: 0 5px;
+	}
+
+	li a{
+		letter-spacing: 2px;
+	}
+
+	li a img {
+		width: 65px;
+	}
+
+	li.has-form {
+		@media #{$large-up} {
+			//min-width: 300px;
+		}
+
+		input {
+			border-radius: 20px;
+		}
+	}
+}
+
+//Individual page customizations of top bar:
+
+.VenuePage.with-cover-image, .ServicePage.with-cover-image, .HomePage {
+	.top-bar {
+		&.expanded {
+			background: transparent;
+			height: auto;
+		}
+
+		.title-area {
+			background: none;
+		}
+
+		ul {
+			background: rgba(#333, 0.9);
+
+			@media (min-width: $topbar-breakpoint) {
+				background: none;
+			}
+		}
+	}
+
+	.top-banner-image {
+		background-color: #333;
+		-webkit-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+		-moz-box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+		box-shadow: inset 0px 52px 56px -4px rgba(51, 51, 51, 0.35);
+		position: relative;
+	}
+
+	.top-bar .toggle-topbar.menu-icon a {
+		color: #fff;
+	}
+
+	.top-bar .toggle-topbar.menu-icon a span::after {
+		box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+	}
+
+	.top-bar-container {
+		border: none;
+		position: absolute;
+		width: 100%;
+		z-index: 99;
+	}
+
+	.top-bar {
+		background: none;
+
+		.name {
+			background: none;
+
+			h1 a {
+				color: white;
+				
+
+				small {
+					color: #eee;
+				}
+			}
+		}
+
+		.top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li > a, .no-js .top-bar-section ul li:active > a,
+		.no-js .top-bar-section ul li:hover > a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li {
+			background: none;
+			color: white;
+			
+		}
+	}
+
+	.top-banner-image {
+		height: 500px;
+
+		@media #{$large-up} {
+			height: 400px;
+		}
+
+		@media #{$xlarge-up} {
+			height: 700px;
+		}
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+}

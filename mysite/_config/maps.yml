@@ -1,0 +1,9 @@
+---
+Name: addressable-config
+After:
+  - 'addressable'
+---
+
+SilverStripe\Core\Injector\Injector:
+  Symbiote\Addressable\GeocodeServiceInterface:
+    class: Symbiote\Addressable\GoogleGeocodeService

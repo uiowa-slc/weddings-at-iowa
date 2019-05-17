@@ -14,6 +14,8 @@ use SilverStripe\Forms\CheckboxField;
 use SilverStripe\TagField\TagField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\Requirements;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
+use SilverStripe\Core\Config\Config;
 class VenuePage extends Page {
 
 	private static $db = array(
@@ -75,7 +77,7 @@ class VenuePage extends Page {
 
 		$fields->addFieldToTab('Root.Main', new UploadField('CoverImage', 'Cover Image (1920 x 1080)'), 'Content');
 
-		$fields->addFieldToTab('Root.Contact', new HeaderField('Venue Contact Information'));
+		$fields->addFieldToTab('Root.Contact', new HeaderField('Venue Contact Information', 2));
 		$fields->addFieldToTab('Root.Contact', new TextField('ContactName'));
 		$fields->addFieldToTab('Root.Contact', new TextField(Email::class));
 		$fields->addFieldToTab('Root.Contact', new TextField('PhoneNumber'));
@@ -89,7 +91,7 @@ class VenuePage extends Page {
 		$fields->addFieldToTab('Root.Contact',
 			new DropdownField('PreferredContactInformation', 'Preferred Contact Information', $objects));
 
-		$fields->addFieldToTab('Root.Social', new HeaderField('Social Media Information'));
+		$fields->addFieldToTab('Root.Social', new HeaderField('Social Media Information', 2));
 		$fields->addFieldToTab('Root.Social', new TextField('Facebook'));
 		$fields->addFieldToTab('Root.Social', new TextField('Twitter'));
 		$fields->addFieldToTab('Root.Social', new TextField('Instagram'));
@@ -99,7 +101,7 @@ class VenuePage extends Page {
 		$serviceSource = ServicePage::get()->map()->toArray();
 
 		$serviceField = ListboxField::create('Services', 'Services', $serviceSource);
-		$serviceField->setMultiple(true);
+		//$serviceField->setMultiple(true);
 		$fields->addFieldToTab("Root.Main", $serviceField, 'Content');
 
 		$buildingSource = Building::get()->map()->toArray();
@@ -126,7 +128,7 @@ class VenuePage extends Page {
 		$testimonialFieldConf->addComponent(new GridFieldSortableRows('SortOrder'));
 		$fields->addFieldToTab('Root.Testimonials', new GridField('Testimonials', 'Testimonials', $this->Testimonials(), $testimonialFieldConf));
 
-		$fields->addFieldToTab('Root.Features', new HeaderField('Required Information'));
+		$fields->addFieldToTab('Root.Features', new HeaderField('Required Information', 3));
 		$fields->addFieldToTab('Root.Features', new TextField('Capacity'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('Indoors'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('AirConditioned'));
@@ -136,7 +138,7 @@ class VenuePage extends Page {
 		                                                                                                                            ->setCanCreate(true);// new tag DataObjects can be created
 		$fields->addFieldToTab("Root.Features", $useTagField);
 
-		$fields->addFieldToTab('Root.Features', new HeaderField('Custom Features'));
+		$fields->addFieldToTab('Root.Features', new HeaderField('Custom Features', 3));
 		$fields->addFieldToTab('Root.Features', GridField::create(
 				'Features',
 				'Features and Specifications',
@@ -183,7 +185,7 @@ class VenuePage extends Page {
 
 		$filteredVenues = new ArrayList();
 
-		$venues = VenuePage::get()->filter(array('ClassName' => 'VenuePage'));
+		$venues = VenuePage::get()->filter(array('ClassName' => 'VenuePage'))->sort('RAND()');
 
 		foreach ($venues as $venue) {
 			if ($venue->Title != $this->Title) {
@@ -196,5 +198,16 @@ class VenuePage extends Page {
 		return $filteredVenues;
 	}
 
+    public function CustomAddressMap($width = 320, $height = 240, $scale = 1)
+    {
 
+        $data = $this->owner->customise(array(
+            'Width'    => $width,
+            'Height'   => $height,
+            'Scale'    => $scale,
+            'Address'  => rawurlencode($this->getFullAddress()),
+            'Key'      => Config::inst()->get('Symbiote\Addressable\GoogleGeocodeService', 'google_api_key')
+        ));
+        return $data->renderWith('Symbiote/Addressable/AddressMap');
+    }
 }

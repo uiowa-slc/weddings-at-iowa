@@ -1,0 +1,24 @@
+.share-container {
+	//border-top: 2px solid #eee;
+	//border-bottom: 2px solid #eee;
+	margin: 20px 0;
+
+	h2, h3 {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.rrssb-buttons li a {}
+
+	.rrssb-buttons li.rrssb-pinterest a .rrssb-icon svg path {
+		fill: #cb2027;
+	}
+
+	.rrssb-buttons li.rrssb-facebook a .rrssb-icon svg path {
+		fill: #3b5998;
+	}
+
+	.rrssb-buttons li.rrssb-twitter a .rrssb-icon svg path {
+		fill: #00aced;
+	}
+}

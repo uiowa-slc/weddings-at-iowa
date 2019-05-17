@@ -31,13 +31,13 @@ class PageController extends ContentController
 
     }
     public function AllVenues() {
-        $venues = VenuePage::get()->filter(array('ClassName' => 'VenuePage'));
+        $venues = VenuePage::get()->filter(array('ClassName' => 'VenuePage'))->sort('RAND()');
         return $venues;
 
     }
 
     public function AllServices() {
-        $services = ServicePage::get()->filter(array('ClassName' => 'ServicePage'));
+        $services = ServicePage::get()->filter(array('ClassName' => 'ServicePage'))->sort('RAND()');
         return $services;
     }
 

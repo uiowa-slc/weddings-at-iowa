@@ -13,7 +13,9 @@
         "jonom/focuspoint": "*",
         "symbiote/silverstripe-gridfieldextensions": "*",
         "jonom/silverstripe-betternavigator": "*",
-        "symbiote/silverstripe-addressable": "~4.0"
+        "symbiote/silverstripe-addressable": "~4.0",
+        "md/saml": "dev-md",
+        "md/division-analytics": "1.*"
     },
     "config": {
         "process-timeout": 600
@@ -30,11 +32,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
         }
     ],
     "extra": {
@@ -64,12 +62,8 @@
         ],
 
             "expose": [
-                "themes/weddings-foundation/build",
-                "themes/weddings-foundation/css",
-                "themes/weddings-foundation/fonts",
-                "themes/weddings-foundation/icons",
-                "themes/weddings-foundation/images"
-
+                "themes/weddings-foundation/dist",
+                "themes/weddings-foundation/css"
             ]
         }
 }
