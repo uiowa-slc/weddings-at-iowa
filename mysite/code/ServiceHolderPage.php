@@ -1,4 +1,6 @@
 <?php
+
+use SilverStripe\ORM\ArrayList;
 class ServiceHolderPage extends VenueHolderPage {
 
 	public function getServiceVenues() {
@@ -17,9 +19,5 @@ class ServiceHolderPage extends VenueHolderPage {
 
 		return $venues;
 	}
-
-}
-
-class ServiceHolderPage_Controller extends VenueHolderPage_Controller {
 
 }

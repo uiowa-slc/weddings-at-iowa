@@ -8,7 +8,7 @@
 						<% if $CityState || $ZipCode %>$CityState $ZipCode</br></br><% end_if %>
 						<% if $PhoneNumber %>$PhoneNumber</br><% end_if %>
 						<% if $Email %>$Email</br><% end_if %>
-						<% if $$Website %><a href="{$Website}" class="btn btn-small" target="_blank">Visit website &rarr;</a><% end_if %>
+						<% if $$Website %><a href="{$Website}" class="btn btn-small" target="_blank">Visit website</a><% end_if %>
 					</p>
 					<ul class="social-list">
 						<% if $Facebook %>

@@ -5,7 +5,12 @@
 .top-bar {
 
 		
-
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
 
 	.name h1 {
 		//display: inline-block;
@@ -52,6 +57,10 @@
 
 	li.social-icon a:not(.button) {
 		padding: 0 5px;
+	}
+
+	li a{
+		letter-spacing: 2px;
 	}
 
 	li a img {
@@ -135,6 +144,10 @@
 			background: none;
 			color: white;
 			
+		}
+
+		.top-bar-section ul li>a {
+			font-weight: bold;
 		}
 	}
 

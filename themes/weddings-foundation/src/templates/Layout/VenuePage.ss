@@ -1,6 +1,6 @@
 <% if $CoverImage %>
 <!--Begin banner image and title-->
-<div class="top-banner-image lazy" data-src="$CoverImage.CroppedFocusedImage(1920,1080).URL" style="background-image: url('$CoverImage.CroppedFocusedImage(640,360).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
+<div class="top-banner-image lazy" data-src="$CoverImage.FocusFill(1920,1080).URL" style="background-image: url('$CoverImage.FocusFill(640,360).URL'); background-position: $CoverImage.PercentageX% $CoverImage.PercentageY%;">
 	<% include TopBar %>
 	<% if $PhotoCredit %>
 	<h4 style="position: absolute; right: 0; bottom: 0; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
@@ -31,32 +31,34 @@
 				<% end_if %>
 			</div>
 			<% if $ClassName == "VenuePage" %>
-			<div class="row">
-				<div class="large-12 columns">
-					<h2 class="section-title">Features <% if $Address %>&amp; Location<% end_if %></h2>
-				</div>
-			</div>
-
-			<div class="venue-features-section">
-				<div class="row venue-features-container <% if $Address %>has-map<% end_if %>">
-					<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
-						<div class="text-center">
-							<% include VenueFeatures %>
+				<div class="section section--gray">
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="section-sep"></div>
+							<h2 class="section-title">Features <% if $Address %>&amp; Location<% end_if %></h2>
 						</div>
 					</div>
-					<% if $Address %>
-					<div class="large-6 columns">
-						<div class="text-center">
-							$AddressMap(400,300)
-							<% if $Building %>
-							<p><strong>Located near:</strong> $Building.Title</p>
+
+					<div class="venue-features-section">
+						<div class="row venue-features-container <% if $Address %>has-map<% end_if %>">
+							<div class="large-6 columns <% if not $Address %>large-centered end<% end_if %>">
+								<div class="text-center">
+									<% include VenueFeatures %>
+								</div>
+							</div>
+							<% if $Address %>
+							<div class="large-6 columns">
+								<div class="text-center">
+									$CustomAddressMap(400,300)
+									<% if $Building %>
+									<p><strong>Located near:</strong> $Building.Title</p>
+									<% end_if %>
+								</div>
+							</div>
 							<% end_if %>
 						</div>
 					</div>
-					<% end_if %>
 				</div>
-			</div>
-			
 			<% end_if %>
 		</article>
 	</div>
@@ -69,7 +71,7 @@
 				<ul class="services">
 					<% loop $Services %>
 					<li>
-						<a href="$Link"><img src="$CoverImage.CroppedFocusedImage(640,260).URL" /></a>
+						<a href="$Link"><img src="$CoverImage.FocusFill(640,260).URL" /></a>
 						<h4><a href="$Link" class="description-links"> $Title </a></h4>
 					</li>
 					<% end_loop %>
@@ -90,12 +92,13 @@
 <% if $VenueMedia %>
 <div class="row">
 	<div class="large-12 xlarge-10 xlarge-centered columns">
-		<h2 class="section-title">Photos and videos</h2>
+		<div class="section-sep"></div>
+		<h2 class="section-title">Photos &amp; videos</h2>
 		<div id="venue-slider" class="flexslider">
 			<ul class="slides">
 				<% loop $VenueMedia %>
 					<li>
-						<div class="slide-content-container lazy" data-src="$Image.CroppedFocusedImage(1920,1080).AbsoluteURL" style="background-image: url('{$ThemeDir}/dist/images/placeholder.png'); background-position: $Image.PercentageX% $Image.PercentageY%;">
+						<div class="slide-content-container lazy" data-src="$Image.FocusFill(1920,1080).URL" style="background-image: url('{$ThemeDir}/dist/images/placeholder.png'); background-position: $Image.PercentageX% $Image.PercentageY%;">
 							
 							<% if $PhotoCredit %>
 							<h4 style="position: absolute; bottom: 30px; right: 0px; padding-right: 10px; color: white; text-shadow: 2px 2px #0f0f0a;">$PhotoCredit</h4>
@@ -117,7 +120,7 @@
 				<% loop $VenueMedia %>
 				<li>
 					<!-- heres the image-->
-					<img src="{$ThemeDir}/dist/images/placeholder.png" data-src="$Image.CroppedFocusedImage(640,360).URL" nopin="nopin" class="lazy" alt="$Top.Title" />
+					<img src="{$ThemeDir}/dist/images/placeholder.png" data-src="$Image.FocusFill(640,360).URL" nopin="nopin" class="lazy" alt="$Top.Title" />
 				</li>
 				<% end_loop %>
 			</ul>

@@ -1,7 +1,9 @@
 ---
-Name: mysiteroutes
-After: framework/routes#coreroutes
+Name: approutes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
 ---
-Director:
-    rules:
-        'tag': 'useTag_Controller'
+SilverStripe\Control\Director:
+  rules:
+    tag: UseTagController

@@ -7,6 +7,5 @@
 			<img src="{$ThemeDir}/dist/images/pinterest-link.png" alt="Instagram" />
 		</a>
 	</li>
-	<li><a href="http://studentlife.uiowa.edu/" target="_blank" class="dsl-logo"><img src="{$ThemeDir}/dist/images/dosl-light.png" /></a></li>
-	<li><a href="http://uiowa.edu/" target="_blank" class="uiowa-logo"><img src="{$ThemeDir}/dist/images/uiowa-light.png" /></a></li>
+	<li><a href="https://uiowa.edu/" target="_blank" class="uiowa-logo"><img src="{$ThemeDir}/dist/images/uiowa-light.png" /></a></li>
 </ul>

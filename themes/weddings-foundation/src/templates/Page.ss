@@ -16,7 +16,6 @@
 	<meta property="og:title" content="$Title.ATT" />
 	<meta property="og:description" content="$MetaDescription.ATT" />
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
-	$Metatags(False)
 	<% if $Image %>
 		<meta property="og:image" content="<% with $Image.Fit(1200,630) %>$AbsoluteURL.ATT<% end_with %>" />
 		<meta property="og:width" content="1200" />
@@ -27,12 +26,9 @@
 		<meta property="og:image:height" content="630" />
 	<% end_if %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
-	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
-	<%-- <% require themedCSS("app") %> --%>
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/dist/css/app.css">
 	<script src="//use.typekit.net/vds3rxz.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-	<!--<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>-->
 </head>
 <body class="$ClassName.ATT <%if $CoverImage %>with-cover-image<% end_if %>">
 
@@ -46,7 +42,6 @@
 	</div>
 	$BetterNavigator
 	<% include Footer %>
-	<% include MdBar %>
 	$Analytics
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

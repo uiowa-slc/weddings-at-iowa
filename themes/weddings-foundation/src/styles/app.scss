@@ -12,12 +12,13 @@
 @import "layout/serviceholder";
 @import "layout/venueholder";
 @import "layout/share-icons";
-@import "layout/footer/config";
-@import "layout/footer/footer";
+// @import "layout/footer/config";
+// @import "layout/footer/footer";
+@import "layout/footer";
 @import "layout/venuepage";
 
 //@import "../../../division-bar/scss/division-bar-foundation";
-@import "../../../../division-bar/scss/md-bar";
+// @import "../../../../division-bar/scss/md-bar";
 
 /*[class*="block-grid-"], .resource-card-list {
 	&.text-center {
@@ -50,8 +51,21 @@
 	margin-bottom: 10px;
 }
 
+h1{
+	letter-spacing: 2px;
+}
+h2,h3,h4,h5,h6{
+	letter-spacing: 1px;
+}
+
 h2 {
 	text-transform: uppercase;
+}
+fieldset {
+	border: none;
+}
+.header--margin-top{
+	margin-top: 40px;
 }
 
 button, .button {
@@ -86,4 +100,20 @@ button, .button {
 
 h1.section-title {
 	font-size: rem-calc(36);
+}
+
+.section-sep{
+	width: 40px;
+	height: 4px;
+	background: #ccc;
+	margin: auto;
+	margin-top: 30px;
+
+	&--margin-bottom{
+		margin-bottom: 30px;
+	}
+}
+input.action{
+	@extend .button;
+	letter-spacing: 1px;
 }

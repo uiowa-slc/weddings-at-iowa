@@ -1,4 +1,6 @@
 <?php
+
+use SilverStripe\Forms\ListboxField;
 class ServicePage extends VenuePage {
 
 	private static $belongs_many_many = array(
@@ -17,9 +19,5 @@ class ServicePage extends VenuePage {
 		$fields->addFieldToTab("Root.Main", $venueField, 'Content');
 		return $fields;
 	}
-
-}
-
-class ServicePage_Controller extends VenuePage_Controller {
 
 }

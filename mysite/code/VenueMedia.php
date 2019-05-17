@@ -1,5 +1,11 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\TextField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\ORM\DataObject;
+
 class VenueMedia extends DataObject {
 	private static $db = array(
 		'Title'      => 'Varchar(155)',
@@ -11,7 +17,7 @@ class VenueMedia extends DataObject {
 	);
 
 	private static $has_one = array(
-		'Image' => 'Image',
+		'Image' => Image::class,
 		'Venue' => 'VenuePage',
 	);
 
@@ -25,7 +31,7 @@ class VenueMedia extends DataObject {
 		$fields->addFieldToTab('Root.Main', new TextField('Title'));
 		$fields->addFieldToTab('Root.Main', new TextField('MediaEmbed'));
 		$fields->addFieldToTab('Root.Main', new TextField('PhotoCredit'));
-		$fields->addFieldToTab('Root.Main', new UploadField('Image'));
+		$fields->addFieldToTab('Root.Main', new UploadField(Image::class));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content'));
 
 		return $fields;

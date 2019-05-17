@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\ORM\DataObject;
+
 class UseTag extends DataObject {
 
 	private static $belongs_many_many = array (

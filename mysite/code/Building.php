@@ -1,4 +1,9 @@
 <?php
+
+use SilverStripe\Forms\ListboxField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DataObject;
 class Building extends DataObject {
 
 	private static $has_many = array(

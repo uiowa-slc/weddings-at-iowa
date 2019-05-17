@@ -1,6 +1,9 @@
 <?php
 
-class UseTag_Controller extends ContentController {
+use SilverStripe\View\ArrayData;
+use SilverStripe\CMS\Controllers\ContentController;
+
+class UseTagController extends ContentController {
 	
 	private static $allowed_actions = array(
 		'tag'

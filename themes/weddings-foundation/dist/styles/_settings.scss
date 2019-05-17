@@ -81,7 +81,7 @@ $namespace: false;
 // $include-html-grid-classes: $include-html-classes;
 $include-xl-html-grid-classes: true;
 
-$row-width: rem-calc(1600);
+$row-width: rem-calc(1800);
 
 // $total-columns: 12;
 $column-gutter: rem-calc(30);
@@ -1418,7 +1418,7 @@ $topbar-link-bg-color-hover: $topbar-bg-color;
 $topbar-link-bg-hover: $topbar-bg-color;
 $topbar-link-bg-active: $topbar-bg-color;
 $topbar-link-bg-active-hover: $topbar-bg-color;
-$topbar-link-font-family: $header-font-family;
+$topbar-link-font-family: $body-font-family;
 $topbar-link-text-transform: uppercase;
 $topbar-link-padding: $topbar-height / 4;
 
