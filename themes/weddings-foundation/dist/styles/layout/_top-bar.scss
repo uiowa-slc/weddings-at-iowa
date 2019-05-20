@@ -3,7 +3,12 @@
 }
 
 .top-bar {
-
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
 		
 
 
@@ -52,6 +57,10 @@
 
 	li.social-icon a:not(.button) {
 		padding: 0 5px;
+	}
+
+	li a{
+		
 	}
 
 	li a img {
@@ -134,11 +143,8 @@
 		.no-js .top-bar-section ul li:hover > a, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li {
 			background: none;
 			color: white;
-			
-		}
 
-		.top-bar-section ul li>a {
-			font-weight: bold;
+			
 		}
 	}
 

@@ -5,19 +5,20 @@
 @import "lib/flexslider";
 @import "imports/buttons";
 @import "layout/top-bar";
-@import "layout/header";
+// @import "layout/header";
 @import "layout/homepage";
 @import "layout/cards";
 @import "layout/testimonials";
 @import "layout/serviceholder";
 @import "layout/venueholder";
 @import "layout/share-icons";
-@import "layout/footer/config";
-@import "layout/footer/footer";
+// @import "layout/footer/config";
+// @import "layout/footer/footer";
+@import "layout/footer";
 @import "layout/venuepage";
 
 //@import "../../../division-bar/scss/division-bar-foundation";
-@import "../../../../division-bar/scss/md-bar";
+// @import "../../../../division-bar/scss/md-bar";
 
 /*[class*="block-grid-"], .resource-card-list {
 	&.text-center {
@@ -50,8 +51,21 @@
 	margin-bottom: 10px;
 }
 
+h1{
+	letter-spacing: 2px;
+}
+h2,h3,h4,h5,h6{
+	letter-spacing: 1px;
+}
+
 h2 {
 	text-transform: uppercase;
+}
+fieldset {
+	border: none;
+}
+.header--margin-top{
+	margin-top: 40px;
 }
 
 button, .button {
@@ -87,3 +101,37 @@ button, .button {
 h1.section-title {
 	font-size: rem-calc(36);
 }
+
+.section-sep{
+	width: 40px;
+	height: 4px;
+	background: #ccc;
+	margin: auto;
+	margin-top: 30px;
+
+	&--margin-bottom{
+		margin-bottom: 30px;
+	}
+}
+form input.action{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+	cursor: pointer;
+	font-family: allegra,Georgia,Cambria,Times New Roman,Times,serif;
+	font-weight: 400;
+	line-height: normal;
+	margin: 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	padding: 1rem 2rem 1.0625rem;
+	font-size: 1rem;
+	background-color: #f5dfa2;
+	border: 0 solid #edc659;
+	color: #333;
+	transition: background-color .3s ease-out;
+	letter-spacing: 1px;
+}
+	
