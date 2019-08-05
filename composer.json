@@ -36,6 +36,7 @@
         }
     ],
     "extra": {
+        "resources-dir" : "_resources",
         "project-files-installed": [
             ".htaccess",
             "app/.htaccess",
