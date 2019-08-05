@@ -2,7 +2,7 @@
 
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
-
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 /**
  * Defines the HomePage page type
  */
