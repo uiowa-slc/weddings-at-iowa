@@ -15,29 +15,33 @@
         "jonom/silverstripe-betternavigator": "*",
         "symbiote/silverstripe-addressable": "~4.0",
         "md/saml": "dev-md",
-	"md/deploy-helper": "*",
+        "md/deploy-helper": "*",
         "md/division-analytics": "1.*"
     },
     "config": {
         "process-timeout": 600
     },
     "minimum-stability": "dev",
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
         },
-        {
+        "1": {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
         },
-        {
+        "2": {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
+        },
+        "repo-name": {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
         }
-    ],
+    },
     "extra": {
-        "resources-dir" : "_resources",
+        "resources-dir": "_resources",
         "project-files-installed": [
             ".htaccess",
             "app/.htaccess",
