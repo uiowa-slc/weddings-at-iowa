@@ -15,6 +15,7 @@
         "jonom/silverstripe-betternavigator": "*",
         "symbiote/silverstripe-addressable": "~4.0",
         "md/saml": "dev-md",
+	"md/deploy-helper": "*",
         "md/division-analytics": "1.*"
     },
     "config": {
