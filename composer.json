@@ -3,11 +3,8 @@
     "description": "The SilverStripe Framework Installer",
     "require": {
         "php": ">=5.3.2",
-        "silverstripe/recipe-cms": "4.4.*@stable",
-        "silverstripe/framework": "4.4.*@stable",
-        "silverstripe-themes/simple": "*",
-        "silverstripe/userforms": "*",
-        "silverstripe/tagfield": "*",
+        "silverstripe/recipe-plugin": "^1.2",
+        "silverstripe/recipe-cms": "4.6.*@stable",
         "undefinedoffset/sortablegridfield": "*",
         "colymba/gridfield-bulk-editing-tools": "*",
         "jonom/focuspoint": "*",
@@ -15,7 +12,6 @@
         "jonom/silverstripe-betternavigator": "*",
         "symbiote/silverstripe-addressable": "~4.0",
         "md/saml": "dev-md",
-        "md/deploy-helper": "*",
         "md/division-analytics": "1.*"
     },
     "config": {
@@ -23,30 +19,27 @@
     },
     "prefer-stable": true,
     "minimum-stability": "dev",
-    "repositories": {
-        "0": {
+    "repositories": [
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
         },
-        "1": {
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
         },
-        "2": {
+        {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
-        },
-        "repo-name": {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
         }
-    },
+    ],
     "extra": {
         "resources-dir": "_resources",
         "project-files-installed": [
             ".htaccess",
             "app/.htaccess",
             "app/_config.php",
+            "app/_config/mimevalidator.yml",
             "app/_config/mysite.yml",
             "app/src/Page.php",
             "app/src/PageController.php",

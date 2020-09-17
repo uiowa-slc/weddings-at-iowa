@@ -7,3 +7,5 @@ VenuePage:
     - Symbiote\Addressable\Geocodable
 SilverStripe\View\SSViewer:
   theme: simple
+SilverStripe\Assets\InterventionBackend:
+  flush_enabled: false
