@@ -3,17 +3,7 @@
 <footer class="footer" role="contentinfo">
 	<div class="footer__container footer__container--with-social">
 		<div class="footer__info">
-			<% if $SiteConfig.FooterLogo %>
-				<div class="footer__logo">
-					<img class="lazy" data-src="$SiteConfig.FooterLogo.URL" alt="$SiteConfig.Title Logo">
-				</div>
-			<% else_if $SiteConfig.DisableDivisionBranding %>
-				<a href="http://uiowa.edu" class="footer__logo"><img class="lazy" data-src="{$ThemeDir}/dist/images/ui-logo-footer.png" alt="The University of Iowa"></a>
-			<% else %>
-				<a href="http://studentlife.uiowa.edu" class="footer__logo"><img class="lazy" width="300" height="81
-			" data-src="{$ThemeDir}/dist/images/dosl-uiowa.png" alt="Division Of Student Life"></a>
-			<% end_if %>
-	
+			<h2 style="color: white;">Weddings at Iowa</h2>
 				<div class="footer__summary"><p>The Division of Student Life fosters student success by creating and promoting inclusive educationally purposeful services and activities within and beyond the classroom.</p>
 
 <p>For questions about this website, write to <a href="mailto:imu-web@uiowa.edu">imu-web@uiowa.edu</a>.</p>

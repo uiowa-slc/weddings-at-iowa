@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a88fe600462cceab87f7d6ea51e27878",
+    "content-hash": "32b868b4d85da0fc626dc0863604d597",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -1140,6 +1140,33 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml/tree/md"
             },
             "time": "2020-07-15T16:11:03+00:00"
+        },
+        {
+            "name": "md/uiowa-bar",
+            "version": "2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar.git",
+                "reference": "71c7c368241d39c88114b692176cee8cce4cba5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/uiowa-bar/zipball/71c7c368241d39c88114b692176cee8cce4cba5b",
+                "reference": "71c7c368241d39c88114b692176cee8cce4cba5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "4.*",
+                "silverstripe/framework": "4.*"
+            },
+            "type": "silverstripe-vendormodule",
+            "description": "The University of Iowa Bar",
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/tree/2.x",
+                "issues": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/issues"
+            },
+            "time": "2020-05-29T13:55:18+00:00"
         },
         {
             "name": "monolog/monolog",

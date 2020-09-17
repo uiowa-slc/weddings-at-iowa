@@ -31,7 +31,7 @@
 	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body class="$ClassName.ATT <%if $CoverImage %>with-cover-image<% end_if %>">
-
+	<% include UiowaBar %>
 	<% if $ClassName != "VenuePage" %>
 		<% include TopBar %>
 	<% end_if %>
