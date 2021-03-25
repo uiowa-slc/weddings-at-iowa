@@ -8,7 +8,7 @@
 		</ul>
 		<section class="top-bar-section">
 			<%-- Left Nav Section --%>
-			<nav>
+		
 			<ul class="left">
 				<% loop Menu(1) %>
 				<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>">
@@ -28,7 +28,7 @@
 				  </div>
 				</li>--%>
 			</ul>
-			</nav>
+			
 				<% include TopBarSecondaryLinksWhite %>
 		</section>
 	</nav>

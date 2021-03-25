@@ -1,120 +1,123 @@
 .resource-card-list {
-	list-style-type: none;
-	margin: 0;
+    list-style-type: none;
+    margin: 0;
 
-	@include block-grid($per-row: 1);
+    @include block-grid($per-row: 1);
 
-	@media #{$medium-up} {
-		@include block-grid($per-row: 2);
-	}
+    @media #{$medium-up} {
+        @include block-grid($per-row: 2);
+    }
 
-	@media #{$large-up} {
-		@include block-grid($per-row: 4, $spacing: rem-calc(20));
-	}
+    @media #{$large-up} {
+        @include block-grid($per-row: 4, $spacing: rem-calc(20));
+    }
 
-	&.small {
-		@include block-grid($per-row: 1);
+    &.small {
+        @include block-grid($per-row: 1);
 
-		@media #{$medium-up} {
-			@include block-grid($per-row: 2);
-		}
+        @media #{$medium-up} {
+            @include block-grid($per-row: 2);
+        }
 
-		.resource-card {
-			.resource-card-bg {
-				height: 300px;
-			}
-		}
-	}
-	.resource-card-content--with-bg{
-		background-color: rgba(#FFF, 0.6);
-		box-shadow: 1px 11px 29px 7px rgba(0,0,0,0.20);
-		height: 240px;
+        .resource-card {
+            .resource-card-bg {
+                height: 300px;
+            }
+        }
+    }
+
+    .resource-card-content--with-bg {
+        background-color: rgba(#FFF, 0.8);
+        box-shadow: 1px 11px 29px 7px rgba(0, 0, 0, 0.20);
+        height: 240px;
+        -webkit-backdrop-filter: blur(10px);
 
 
-	}
-	.resource-card {
-		margin-bottom: 0;
-		text-align: center;
+    }
 
-		&:hover {
-			* {
-				text-decoration: underline;
-				color: $primary-color;
-			}
-		}
+    .resource-card {
+        margin-bottom: 0;
+        text-align: center;
 
-		.resource-card-bg {
-			height: 200px;
-			background-position: 50% 50%;
-			background-size: cover;
-			position: relative;
-			transition: all 1s ease-in-out;
-			-moz-transition: all 1s ease-in-out;
-			-webkit-transition: all 1s ease-in-out;
+        &:hover {
+            * {
+                text-decoration: underline;
+                color: $primary-color;
+            }
+        }
 
-			&:hover {
-				.card-pin {
-					display: block;
+        .resource-card-bg {
+            height: 200px;
+            background-position: 50% 50%;
+            background-size: cover;
+            position: relative;
+            transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -webkit-transition: all 1s ease-in-out;
 
-					img {
-						border: 3px solid $secondary-color;
-						border-radius: 100px;
-					}
-				}
+            &:hover {
+                .card-pin {
+                    display: block;
 
-				.pin-screen {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				}
-			}
+                    img {
+                        border: 3px solid $secondary-color;
+                        border-radius: 100px;
+                    }
+                }
 
-			.pin-screen {
-				background: rgba(36, 36, 36, 0.65);
-				display: none;
-				width: 100%;
-				height: 100%;
-			}
+                .pin-screen {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
 
-			.card-pin {
-				display: none;
-			}
-		}
+            .pin-screen {
+                background: rgba(36, 36, 36, 0.65);
+                display: none;
+                width: 100%;
+                height: 100%;
+            }
 
-		.resource-card-content {
-			padding: 15px;
+            .card-pin {
+                display: none;
+            }
+        }
 
-			&:hover {
-				h3 {
-					//color: $primary-color;
-			
-				}
-			}
-		}
-	}
+        .resource-card-content {
+            padding: 15px;
 
-	li {
-		list-style-type: none;
+            &:hover {
+                h3 {
+                    //color: $primary-color;
 
-		a {
-			color: $body-font-color;
+                }
+            }
+        }
+    }
 
-			&:hover {
-				//color: $primary-color;
-		
-			}
-		}
+    li {
+        list-style-type: none;
 
-		span {
-			color: $anchor-font-color;
-		}
-	}
+        a {
+            color: $body-font-color;
 
-	li img {
-		display: block;
-	}
+            &:hover {
+                //color: $primary-color;
 
-	.feature-card-link {
-		text-decoration: inherit;
-	}
+            }
+        }
+
+        span {
+            color: $anchor-font-color;
+        }
+    }
+
+    li img {
+        display: block;
+    }
+
+    .feature-card-link {
+        text-decoration: inherit;
+    }
 }
