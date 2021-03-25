@@ -4,10 +4,11 @@
 			<li class="name">
 				<h1><a href="{$baseUrl}">Weddings at Iowa</a></h1>
 			</li>
-			<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 		</ul>
 		<section class="top-bar-section">
 			<%-- Left Nav Section --%>
+			<nav>
 			<ul class="left">
 				<% loop Menu(1) %>
 				<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>">
@@ -26,7 +27,8 @@
 				    </div>
 				  </div>
 				</li>--%>
-			</ul> 
+			</ul>
+			</nav>
 				<% include TopBarSecondaryLinksWhite %>
 		</section>
 	</nav>
