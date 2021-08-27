@@ -4,7 +4,7 @@
     "require": {
         "php": ">=5.3.2",
         "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-cms": "4.7.*@stable",
+        "silverstripe/recipe-cms": "4.8.*@stable",
         "undefinedoffset/sortablegridfield": "*",
         "colymba/gridfield-bulk-editing-tools": "*",
         "jonom/focuspoint": "*",
