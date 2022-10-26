@@ -133,9 +133,7 @@ class VenuePage extends Page {
 		$fields->addFieldToTab('Root.Features', new CheckboxField('Indoors'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('AirConditioned'));
 		$fields->addFieldToTab('Root.Features', new CheckboxField('Catering'));
-		$useTagField = TagField::create('UseTags', 'This venue is used for (ex: Ceremonies, Receptions, etc):', UseTag::get(), $this->UseTags())
-		                                                                                                                            ->setShouldLazyLoad(true)// tags should be lazy loaded
-		                                                                                                                            ->setCanCreate(true);// new tag DataObjects can be created
+		$useTagField = TagField::create('UseTags', 'This venue is used for (ex: Ceremonies, Receptions, etc):', UseTag::get(), $this->UseTags())->setShouldLazyLoad(true)->setCanCreate(true);
 		$fields->addFieldToTab("Root.Features", $useTagField);
 
 		$fields->addFieldToTab('Root.Features', new HeaderField('Custom Features', 3));
