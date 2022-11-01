@@ -25,19 +25,19 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
+            "url": "https://github.com/uiowa-slc/division-bar"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
+            "url": "https://github.com/uiowa-slc/division-analytics"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
+            "url": "https://github.com/uiowa-slc/silverstripe-saml"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar"
+            "url": "https://github.com/uiowa-slc/uiowa-bar"
         }
     ],
     "extra": {
